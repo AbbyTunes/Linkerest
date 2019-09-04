@@ -1,9 +1,4 @@
 class Api::UsersController < ApplicationController
-# later added "Api::"
-
-	# def new
-	# 	@user = User.new
-	# end
 
 	def create
 		@user = User.new(user_params)

@@ -7,9 +7,9 @@ class Api::SessionsController < ApplicationController
 
 	def create
 		@user = User.find_by_credentials(
-			params[:user][:email], params[:user][:passsword]
+			params[:user][:email], params[:user][:password]
 		)
-		if user
+		if @user
 			login(@user)
 			render 'api/users/show'
 			# redirect_to index_page
