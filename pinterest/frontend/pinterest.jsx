@@ -4,14 +4,40 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 
 document.addEventListener("DOMContentLoaded", () => {
+	
+	// make a store variable
+	let store;
+	
+	// if currentUser exists // in views/root.html.erb
+	if (window.currentUser) {
+		const { currentUser } = window;
+		const { id } = currentUser;
+		const preloadedState = {
+			entities: {
+				users: {
+					[id]: currentUser
+				}
+			},
+			session: { id }
+		};
+		store = configureStore(preloadedState);
+
+		// Clean up after ourselves so we don't accidentally use the
+		// global currentUser instead of the one in the store
+		delete window.currentUser;
+
+	} else {
+		store = configureStore();
+	}
+
 	const root = document.getElementById("root");
-	const store = configureStore();
 	ReactDOM.render(<Root store={store} />, root);
+	
+	window.getState = store.getState;
+	window.dispatch = store.dispatch;
 });
 
-// window.getState = store.getState;
-// window.dispatch = store.dispatch;
-
+// for testing
 // window.signup = signup;
 // window.login = login;
 // window.logout = logout;

@@ -6,7 +6,6 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = {
 			username: "",
-			email: "",
 			password: ""
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,14 +17,35 @@ class SessionForm extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		this.props.formAction(this.state);
+		const user = Object.assign({}, this.state)
+		this.props.formAction(user);
+		// why assign object
+		// after submit, how to redirect to the index_page?
+	}
+
+	renderErrors() {
+		const sessionErrors = this.props.errors.map((error, idx) => {
+			return (
+				<li key={`error-${idx}`}>{ error }</li>
+			)
+		});
+
+		return (
+			<ul>
+				{ sessionErrors }
+			</ul>
+		);
 	}
 
 	// hope the username only shows when signup, but not login 
 	render() {
 		return (
 			<div>
-				<form>
+				<form onSubmit={this.handleSubmit}>
+					<br/>
+					<p>Please {this.props.formType} or {this.props.navLink}</p>
+					<div>{this.renderErrors()}</div>
+					<br/>
 
 					<label>
 						Username: 
@@ -37,23 +57,14 @@ class SessionForm extends React.Component {
 
 					<br/>
 					<label>
-						Email:
-						<input type="text" 
-							value={this.state.email} 
-							onChange={this.handleInput("email")} 
-						/>
-					</label>
-
-					<br />
-					<label>
-						password:
+						Password:
 						<input type="password" 
 							value={this.state.password} 
 							onChange={this.handleInput("password")} 
 						/>
 					</label>
-					<br />
-					<button type="submit" value={this.props.formType}></button>
+					<br/>
+					<button type="submit" >{this.props.formType}</button>
 
 				</form>
 			</div>

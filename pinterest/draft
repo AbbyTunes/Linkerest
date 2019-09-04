@@ -1,0 +1,18 @@
+error => session_errors => 
+
+if didn't put in anything, press login 
+	=> please enter username and password
+
+
+session_form:
+
+	handleSubmit: 		
+		// why assign object
+		// after submit, how to redirect to the index_page?
+
+
+app:
+
+// home_index using one route "/"
+// what if the home page needs to render different components 
+// some only shows when logged_in
