@@ -9,9 +9,15 @@ const sessionReducer = (state = _nullUser, action) => {
 	Object.freeze(state);
 	switch (action.type) {
 		case RECEIVE_CURRENT_USER:
-			// const { id } = action.currentUser;
-			// return Object.assign({}, { id });
-			return { id: action.currentUser };
+			return { id: action.currentUser.id };
+
+			// const id = Object.keys(action.currentUser)[0];
+			// first key of the key array
+
+			// return { id: id }
+			// first id is a string, second id gets evaluated
+			// { [id]: id } => both gets evaluated
+
 		case LOGOUT_CURRENT_USER:
 			return _nullUser;
 		default:

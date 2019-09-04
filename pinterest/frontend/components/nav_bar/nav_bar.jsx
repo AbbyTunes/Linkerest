@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // if logged_in, shows the navBar
-
+// how to style each of them
 const NavBar = (currentUser, logout) => {
 	return (
 		<nav className="nav-bar">
@@ -19,12 +19,13 @@ const NavBar = (currentUser, logout) => {
 				<Link to="/">Following</Link>
 				<Link to="/">{currentUser.username}_Dashboard</Link>
 				<Link to="/">Notifications</Link>
-				<Link to="/">Logout</Link>
+				
 				<button onClick={() => logout}>Log Out</button>
 			</div>
 		</nav>
-		
 	);
 }
 
 export default NavBar;
+
+// <a href="/">logout link or button</a>

@@ -13,13 +13,27 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
 	)} />
 );
 
+
 // renders component if logged in, otherwise redirects to the login page
+
 const Protected = ({ component: Component, path, loggedIn, exact }) => (
 	<Route path={path} exact={exact} render={(props) => (
 		loggedIn ? (
 			<Component {...props} />
 		) : (
 				<Redirect to="/login" />
+			)
+	)} />
+);
+
+// renders component if logged in, otherwise No display
+
+const Conditional = ({ component: Component, path, loggedIn, exact }) => (
+	<Route path={path} exact={exact} render={(props) => (
+		loggedIn ? (
+			<Component {...props} />
+		) : (
+				null
 			)
 	)} />
 );
@@ -34,3 +48,5 @@ export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
 
 // connect Protected to the redux state
 export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
+
+export const ConditionalRoute = withRouter(connect(mapStateToProps)(Conditional));

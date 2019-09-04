@@ -8,23 +8,34 @@ document.addEventListener("DOMContentLoaded", () => {
 	// make a store variable
 	let store;
 	
-	// if currentUser exists // in views/root.html.erb
+	// if currentUser exists on window 
+	// in views/root.html.erb
 	if (window.currentUser) {
-		const { currentUser } = window;
-		const { id } = currentUser;
+
+		// [values array] // take out the id in front;
+		// const currentUser = Object.values(window.currentUser)[0]; 
+		
+		const currentUser = window.currentUser;
+		// const { currentUser } = window;
+		
+		const id = currentUser.id;
+		// const { id } = currentUser;
+
 		const preloadedState = {
 			entities: {
 				users: {
 					[id]: currentUser
+					// currentUser.id: currentUser
 				}
 			},
-			session: { id }
+			session: { id: currentUser.id }
+			// session: { id }
 		};
 		store = configureStore(preloadedState);
 
 		// Clean up after ourselves so we don't accidentally use the
 		// global currentUser instead of the one in the store
-		delete window.currentUser;
+		// delete window.currentUser;
 
 	} else {
 		store = configureStore();
