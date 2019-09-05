@@ -12,11 +12,12 @@ import PinContainer from "./pin/pin_container";
 const App = () => (
 	<div>
 		<ConditionalRoute path="/" component={NavBarContainer} />
-		<Route path="/" component={PinContainer} />
+		
 
 		<Switch>
 			<AuthRoute exact path="/login" component={LoginFormContainer} />
 			<AuthRoute exact path="/signup" component={SignupFormContainer} />
+			<ProtectedRoute path="/" component={PinContainer} />
 		</Switch>
 	</div>
 );

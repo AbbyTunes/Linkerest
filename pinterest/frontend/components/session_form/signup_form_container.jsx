@@ -4,16 +4,43 @@ import { Link } from "react-router-dom";
 import SessionForm from "./session_form";
 import { signup } from "../../actions/session_actions";
 
+class SignUpForm extends React.Component {
+	
+	render() {
+		const { errors, formType, formAction } = this.props;
+		return (
+			<div className="background">
+				
 
+				<div className="session">
+
+					<div className="content">
+
+						<div className="logo-session"> </div>
+						<h1>Welcome back</h1>
+						<h4>find new ideas to try</h4>
+						
+						<SessionForm errors={errors} formType={formType} formAction={formAction} />
+
+						<Link to="/login">Already a member? Log in</Link>
+					</div>
+					
+				</div>
+				
+			</div>
+		)
+	}
+}
 
 const mapState = (state) => ({
-	errors: state.errors.session,
-	formType: 'signup',
-	navLink: <Link to="/login">Already a member? Log in</Link>
+		errors: state.errors.session,
+		formType: 'signup'
 });
 
 const mapDispatch = (dispatch) => ({
 	formAction: (user) => dispatch(signup(user))
 });
 
-export default connect(mapState, mapDispatch)(SessionForm);
+export default connect(mapState, mapDispatch)(SignUpForm);
+
+// <div className="shade"></div>

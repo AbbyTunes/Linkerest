@@ -1,9 +1,4 @@
 class Api::SessionsController < ApplicationController
-# later added "Api::", not when generated
-
-	# def new
-	# 	render :new
-	# end
 
 	def create
 		@user = User.find_by_credentials(

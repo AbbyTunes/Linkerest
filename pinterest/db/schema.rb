@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_04_041125) do
+ActiveRecord::Schema.define(version: 2019_09_04_210951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boards", force: :cascade do |t|
+    t.integer "authorId", null: false
+    t.string "title"
+    t.text "description"
+    t.boolean "isPrivate", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["authorId", "title"], name: "index_boards_on_authorId_and_title", unique: true
+    t.index ["authorId"], name: "index_boards_on_authorId"
+  end
+
+  create_table "boardsPins", force: :cascade do |t|
+    t.integer "boardId", null: false
+    t.integer "pinId", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["boardId"], name: "index_boardsPins_on_boardId"
+    t.index ["pinId"], name: "index_boardsPins_on_pinId"
+  end
+
+  create_table "pins", force: :cascade do |t|
+    t.integer "authorId", null: false
+    t.string "title"
+    t.text "description"
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["authorId", "title"], name: "index_pins_on_authorId_and_title", unique: true
+    t.index ["authorId"], name: "index_pins_on_authorId"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false

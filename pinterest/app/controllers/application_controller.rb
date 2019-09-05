@@ -35,16 +35,3 @@ class ApplicationController < ActionController::Base
 	end
 
 end
-
-	# def login_page
-	# 	new_api_session
-	# end
-
-	# def new_user_form
-	# 	new_api_user
-	# end
-
-	# def index_page
-	# 	puts "you've reached the Index home page"
-	# end
-

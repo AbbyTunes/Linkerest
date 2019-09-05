@@ -1,0 +1,128 @@
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+	width: 100vw;
+	border-bottom: 1px solid rgb(192, 192, 192);
+	padding: 5px;
+}
+
+.nav-left {
+
+}
+
+.nav-middle {
+	display: flex;
+	height: 100%;
+	background-color: rgb(211, 209, 209);
+	border-radius: 5px;
+	
+}
+
+.search {
+	background-color: rgb(211, 209, 209);
+	display: block;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: grey;
+	size: 18px;
+	font-weight: 700;
+	box-sizing: border-box;
+	min-height: 20px;
+	min-width: 350px;
+	border: 0px;
+	margin: 0px 20px;
+	
+}
+
+.search-icon {
+	left: 60px;
+	height: 30px;
+	width: 30px;
+	background: image-url("search.png");
+	background-size: contain;
+	margin: auto;
+	padding: 5px;
+	min-height: 20px;
+}
+
+.nav-right {
+	display: flex;
+	margin-right: 40px;
+}
+
+.nav-link {
+	display: flex;
+}
+
+.nav-link a {
+	padding: 15px 15px;
+	height: 30px;
+    border-radius: 10rem;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-decoration: none;
+	color: grey;
+	size: 18px;
+	font-weight: 700;
+}
+
+.nav-link a:hover {
+	background: rgb(211, 209, 209);
+}
+
+.hamburger {
+	right: 50px;
+	height: 30px;
+	width: 30px;
+	border-radius: 10rem;
+	background: image-url("hamburger.png");
+	background-size: contain;
+	margin: auto 0;
+}
+
+.hamburger:hover {
+	right: 50px;
+	height: 30px;
+	width: 30px;
+	background: image-url("hamburger2.png");
+	background-size: contain;
+	margin: auto 0;
+}
+
+
+.logout-button {
+  background-color: white;
+  border: 1px solid rgb(173, 173, 173);
+  color: grey;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.logo-nav {
+	margin-right: 60px;
+	height: 35px;
+	width: 35px;
+	background: image-url("logo.png");
+	background-size: contain;
+	margin: auto;
+}
+
+
+
+// .logo-nav:hover {
+// 	border-radius: 10rem;
+// 	background: rgb(214, 214, 214);
+// }
+// need to use another background picture instead
+
+// if screen narrows down, switch text to image
+//
+	// background: image-url("question.png");
+	// background-size: contain;
+	// background-repeat: no-repeat;
