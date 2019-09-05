@@ -15,7 +15,9 @@ const NavBar = ({currentUser, logout}) => {
 			<nav className="nav-bar">
 
 				<div className="nav-left">
-					<div className="logo-nav"> </div>
+					<div className="logo-nav"> 
+						<Link to="/"></Link>
+					</div>
 				</div>
 
 				<div className="nav-middle">
@@ -27,7 +29,7 @@ const NavBar = ({currentUser, logout}) => {
 					<div className="nav-link">
 						<Link to="/">Home</Link>
 						<Link to="/">Following</Link>
-						<Link to="/">{ currentUser.username }_Dashboard</Link>
+						<Link to="/">{ currentUser.username }</Link>
 						<Link to="/">Notifications</Link>
 					</div>
 					
@@ -44,9 +46,3 @@ const NavBar = ({currentUser, logout}) => {
 }
 
 export default NavBar;
-
-// Works: // <button onClick={logout}>logout</button>
-
-// <a href="/">logout link or button</a>
-// <input type="submit" onSubmit={logout} value="logout_onSubmit"/>
-

@@ -20,9 +20,14 @@ class SignUpForm extends React.Component {
 						<h1>Welcome back</h1>
 						<h4>find new ideas to try</h4>
 						
-						<SessionForm errors={errors} formType={formType} formAction={formAction} />
-
-						<Link to="/login">Already a member? Log in</Link>
+						<div className="botton-field">
+							<SessionForm errors={errors} formType={formType} formAction={formAction} />
+						</div>
+						
+						<div className="info-session">
+							<Link to="/login">Already a member? Log in</Link>
+						</div>
+						
 					</div>
 					
 				</div>
@@ -43,4 +48,3 @@ const mapDispatch = (dispatch) => ({
 
 export default connect(mapState, mapDispatch)(SignUpForm);
 
-// <div className="shade"></div>

@@ -13,12 +13,6 @@
 	display: flex;
 }
 
-.shade {
-	width: 100vw;
-	height: 100vh;
-	background-color: grey;
-	opacity: 0.4
-}
 
 .container {
 	margin: auto;
@@ -44,6 +38,10 @@
     border-width: 1px;
 	padding: 8px 14px;
 	margin-top: 15px;
+}
+
+.botton-field{
+
 }
 
 .button {
@@ -102,4 +100,12 @@
 .error {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: red;
+}
+
+.info-session {
+	margin: 5px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #717171;
+	text-decoration: none;
 }

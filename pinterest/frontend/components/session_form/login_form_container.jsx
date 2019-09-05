@@ -10,7 +10,7 @@ class LogInForm extends React.Component {
 		const { errors, formType, formAction } = this.props;
 		return (
 			<div className="background">
-				<div className="container">
+
 				<div className="session">
 
 					<div className="content">
@@ -19,16 +19,20 @@ class LogInForm extends React.Component {
 
 						<h1>Welcome to Pinterest</h1>
 						
-						<SessionForm errors={errors} formType={formType} formAction={formAction} />
-						<h4>or</h4>
-						<button className="button">Log in via Facebook</button>
-						<button className="button">Log in via Google</button>
-						<br/>
-						<Link to="/signup">Need an account? Sign up now</Link>
+						<div className="botton-field">
+							<SessionForm errors={errors} formType={formType} formAction={formAction} />
+							<h4>or</h4>
+							<button className="button">Log in via Facebook</button>
+							<button className="button">Log in via Google</button>	
+						</div>
+						<div className="info-session">
+							<Link to="/signup">Need an account? Sign up now</Link>
+						</div>
+						
 					</div>
 				</div>
-				</div>
 			</div>
+
 		)
 	}
 }
@@ -43,5 +47,3 @@ const mapDispatch = (dispatch) => ({
 });
 
 export default connect(mapState, mapDispatch)(LogInForm);
-
-// <div className="shade"></div>

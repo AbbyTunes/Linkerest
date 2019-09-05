@@ -1,76 +1,108 @@
 .nav-bar {
+	// position: fixed;
 	display: flex;
+	height: 56px;
+	width: 100%;	
+	box-sizing: border-box;
 	justify-content: space-between;
 	align-items: center;
-	height: 40px;
-	width: 100vw;
-	border-bottom: 1px solid rgb(192, 192, 192);
-	padding: 5px;
+	border-bottom: 1px solid rgb(170, 170, 170);
+	padding-bottom: 5px;
 }
 
 .nav-left {
+	position: relative;
+	margin: 5px;
+	width: 5vw;
+	border-radius: 50%;
+	min-width: 56px;
+}
 
+.logo-nav {
+	height: 30px;
+	width: 30px;
+	background: image-url("logo.png");
+	background-size: contain;
+	margin: auto;
+	cursor: pointer;
+}
+
+.logo-nav:hover {
+	height: 30px;
+	width: 30px;
+	background: image-url("logo2.png");
+	background-size: contain;
+	margin: auto;
 }
 
 .nav-middle {
 	display: flex;
-	height: 100%;
-	background-color: rgb(211, 209, 209);
+	padding-left: 15px;
+	padding-right: 15px;
+	flex: 1 1 auto;
+	height: 85%;
+	background-color: rgb(226, 226, 226);
 	border-radius: 5px;
-	
+	margin: 5px;
+
+	// align-items: center;
+	// box-sizing: border-box;
+	// min-width: 407px;
+	// min-height: 0;	
 }
 
 .search {
-	background-color: rgb(211, 209, 209);
-	display: block;
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	color: grey;
+	font-size: 16px;
+	font-weight: 600;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	padding-left: 10px;
 	padding-right: 10px;
-	color: grey;
-	size: 18px;
-	font-weight: 700;
 	box-sizing: border-box;
 	min-height: 20px;
 	min-width: 350px;
-	border: 0px;
-	margin: 0px 20px;
-	
 }
 
 .search-icon {
-	left: 60px;
-	height: 30px;
-	width: 30px;
+	margin-right: 12px;
+	height: 20px;
+	width: 20px;
 	background: image-url("search.png");
 	background-size: contain;
 	margin: auto;
 	padding: 5px;
-	min-height: 20px;
+
 }
 
 .nav-right {
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
 	display: flex;
-	margin-right: 40px;
-}
-
-.nav-link {
-	display: flex;
+	margin-right: 30px;
+	margin: 5px;
+	height: 80%;
 }
 
 .nav-link a {
-	padding: 15px 15px;
-	height: 30px;
+	list-style-type: none;
+	padding: 12px;
+	height: 25px;
     border-radius: 10rem;
 	text-align: center;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-decoration: none;
 	color: grey;
 	size: 18px;
-	font-weight: 700;
+	font-weight: bold;
+	min-height: 25px;
 }
 
 .nav-link a:hover {
-	background: rgb(211, 209, 209);
+	background: rgb(226, 226, 226);
 }
 
 .hamburger {
@@ -80,7 +112,8 @@
 	border-radius: 10rem;
 	background: image-url("hamburger.png");
 	background-size: contain;
-	margin: auto 0;
+	margin: 5 auto;
+	cursor: pointer;
 }
 
 .hamburger:hover {
@@ -94,35 +127,16 @@
 
 
 .logout-button {
-  background-color: white;
-  border: 1px solid rgb(173, 173, 173);
-  color: grey;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+	position: relative;
+	float: right;
+	background-color: white;
+	border: 1px solid rgb(173, 173, 173);
+	color: grey;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 5px;
+	cursor: pointer;
 }
-
-.logo-nav {
-	margin-right: 60px;
-	height: 35px;
-	width: 35px;
-	background: image-url("logo.png");
-	background-size: contain;
-	margin: auto;
-}
-
-
-
-// .logo-nav:hover {
-// 	border-radius: 10rem;
-// 	background: rgb(214, 214, 214);
-// }
-// need to use another background picture instead
-
-// if screen narrows down, switch text to image
-//
-	// background: image-url("question.png");
-	// background-size: contain;
-	// background-repeat: no-repeat;
