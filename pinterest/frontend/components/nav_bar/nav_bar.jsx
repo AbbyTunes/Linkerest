@@ -33,7 +33,9 @@ const NavBar = ({currentUser, logout}) => {
 						<Link to="/">Notifications</Link>
 					</div>
 					
-					<div className="hamburger"></div>
+					<div className="hamburger">
+						
+					</div>
 				</div>
 
 				

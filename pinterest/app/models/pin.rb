@@ -16,6 +16,8 @@ class Pin < ApplicationRecord
 	validates :authorId, presence: true
 	validates :title, uniqueness: { scope: :authorId }
 
+	has_one_attached :photo
+
 	belongs_to :author,
 	foreign_key: :authorId,
 	class_name: 'User'
