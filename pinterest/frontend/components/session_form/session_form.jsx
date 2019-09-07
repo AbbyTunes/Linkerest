@@ -19,8 +19,7 @@ class SessionForm extends React.Component {
 		e.preventDefault();
 		const user = Object.assign({}, this.state)
 		this.props.formAction(user);
-		// why assign object
-		// after submit, how to redirect to the index_page?
+		// this.props.clearup();
 	}
 
 	renderErrors() {
@@ -37,7 +36,6 @@ class SessionForm extends React.Component {
 		);
 	}
 
-	// hope the username only shows when signup, but not login 
 	render() {
 		return (
 			<div>

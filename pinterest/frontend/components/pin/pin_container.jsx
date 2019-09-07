@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import {  } from "../../actions/session_actions";
+import {  } from "../../actions/pin_actions";
 import Pin from "./pin";
 
 // ideally: show pins related to you when you logged in
@@ -15,7 +15,7 @@ const mapState = (state) => {
 };
 
 const mapDispatch = (dispatch) => ({
-	// logout: () => dispatch(logout())
+	// get pins
 });
 
 export default connect(mapState, mapDispatch)(Pin);

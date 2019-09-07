@@ -6,11 +6,8 @@ class Api::UsersController < ApplicationController
 			login(@user)
 			render 'api/users/show'
 			# don't need a show method
-			# redirect_to index_page
 		else
 			render json: @user.errors.full_messages, status: 422
-			# render :new 
-			# render jbuilder file?
 		end
 	end
 

@@ -22,6 +22,13 @@ export const logout = () => (
 		method: 'DELETE',
 		url: '/api/session'
 	})
-)
+);
 
+// clearup errors
+// export const clearup = () => (
+// 	$.ajax({
+// 		method: `DELETE`,
+// 		url: ''
+// 	})
+// )
 

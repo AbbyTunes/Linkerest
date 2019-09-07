@@ -2,12 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import SessionForm from "./session_form";
-import { signup } from "../../actions/session_actions";
+import { signup, clearup } from "../../actions/session_actions";
 
 class SignUpForm extends React.Component {
 	
 	render() {
-		const { errors, formType, formAction } = this.props;
+		const { errors, formType, formAction, clearup } = this.props;
 		return (
 			<div className="background">
 				
@@ -21,11 +21,15 @@ class SignUpForm extends React.Component {
 						<h4>find new ideas to try</h4>
 						
 						<div className="botton-field">
-							<SessionForm errors={errors} formType={formType} formAction={formAction} />
+							<SessionForm errors={errors} 
+										formType={formType} 
+										formAction={formAction} 
+										// clearup={clearup} 
+										/>
 						</div>
 						
 						<div className="info-session">
-							<Link to="/login">Already a member? Log in</Link>
+							<Link to="/login" onSubmit={clearup}>Already a member? Log in</Link>
 						</div>
 						
 					</div>
@@ -43,7 +47,8 @@ const mapState = (state) => ({
 });
 
 const mapDispatch = (dispatch) => ({
-	formAction: (user) => dispatch(signup(user))
+	formAction: (user) => dispatch(signup(user)),
+	clearup: () => dispatch(clearup())
 });
 
 export default connect(mapState, mapDispatch)(SignUpForm);
