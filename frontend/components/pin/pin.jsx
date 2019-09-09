@@ -1,11 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Pin = (props) => {
+	// debugger
+	// const pins = 
+
 	return (
 		<div className="pin-frame">
 			<p>Show all the pins</p>
-			<h1>pin.title</h1>
-			<img src="url_for(pin.photo)" alt="background"/>
+			<ul>
+				{/* {pins} */}
+			</ul>
 
 		</div>
 	);

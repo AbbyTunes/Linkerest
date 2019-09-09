@@ -44,7 +44,7 @@ export const logout = () => dispatch => (
 	.then(response => dispatch(logoutCurrentUser()))
 );
 
-export const clearup = () => dispatch => {
-	return () => dispatch({ type: CLEAR_SESSION_ERRORS })
+export const clearup = (dispatch) => {
+	return dispatch({ type: CLEAR_SESSION_ERRORS })
 }
 

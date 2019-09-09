@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import {  } from "../../actions/pin_actions";
+import { fetchPins, fetchPin, createPin, removePin } from "../../actions/pin_actions";
 import Pin from "./pin";
 
-// ideally: show pins related to you when you logged in
-
+// ideally: show pins related to you when you logged in 
 // generally: show all the pins
 
 const mapState = (state) => {
@@ -15,7 +14,11 @@ const mapState = (state) => {
 };
 
 const mapDispatch = (dispatch) => ({
-	// get pins
+	// get pins, upload pin etc
+	fetchPins: () => dispatch(fetchPins()),
+	fetchPin: (id) => dispatch(fetchPin(id)),
+	createPin: (pin) => dispatch(createPin(pin)),
+	removePin: (id) => dispatch(removePin(id))
 });
 
 export default connect(mapState, mapDispatch)(Pin);

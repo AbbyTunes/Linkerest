@@ -2,10 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import SessionForm from "./session_form";
-import { signup, clearup } from "../../actions/session_actions";
+import { signup, CLEAR_SESSION_ERRORS } from "../../actions/session_actions";
 
 class SignUpForm extends React.Component {
-	
+
+	componentWillUnmount() {
+		this.props.clearup();
+	}
+
 	render() {
 		const { errors, formType, formAction, clearup } = this.props;
 		return (
@@ -29,7 +33,7 @@ class SignUpForm extends React.Component {
 						</div>
 						
 						<div className="info-session">
-							<Link to="/login" onSubmit={clearup}>Already a member? Log in</Link>
+							<Link to="/login" onClick={clearup}>Already a member? Log in</Link>
 						</div>
 						
 					</div>
@@ -48,7 +52,7 @@ const mapState = (state) => ({
 
 const mapDispatch = (dispatch) => ({
 	formAction: (user) => dispatch(signup(user)),
-	clearup: () => dispatch(clearup())
+	clearup: () => dispatch({ type: CLEAR_SESSION_ERRORS })
 });
 
 export default connect(mapState, mapDispatch)(SignUpForm);
