@@ -6270,3 +6270,25 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 2595ms (Views: 2546.3ms | ActiveRecord: 33.4ms)
 
 
+Started GET "/" for ::1 at 2019-09-09 11:12:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1XsrP6E0wObfwiHrSJfIJg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (3.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 434ms (Views: 421.8ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/" for ::1 at 2019-09-09 11:12:55 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/better_errors-2.5.1/lib/better_errors/middleware.rb:84
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1XsrP6E0wObfwiHrSJfIJg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 7701ms (Views: 7670.3ms | ActiveRecord: 26.4ms)
+
+

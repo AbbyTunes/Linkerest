@@ -18,7 +18,7 @@ class Board < ApplicationRecord
 	validates :inPrivate, inclusion: [true, false]
 
 	belongs_to :author,
-	foreign_key :authorId,
+	foreign_key: :authorId,
 	class_name: 'User'	
 
 	has_many :boardPins,
