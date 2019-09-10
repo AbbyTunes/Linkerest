@@ -22,15 +22,11 @@ class PinIndex extends React.Component {
 					<Link to="/create-pin"></Link>
 				</div>
 
-				<p>Show all the pins</p>
-
 				<div className="grid">
 					<ul>
 						{pins}
 					</ul>
 				</div>
-
-				
 
 			</div>
 		);
