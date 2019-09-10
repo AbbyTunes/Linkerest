@@ -1,5 +1,4 @@
 import * as PinApiUtil from '../util/pin_api_util';
-import Pin from '../components/pin/pin';
 
 export const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS";
 export const RECEIVE_PIN = "RECEIVE_PIN";

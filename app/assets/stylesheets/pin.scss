@@ -1,3 +1,36 @@
 .pin-frame {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.grid {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	width: 520px;
+	height: 5000px;
 	
+}
+
+.pin-pic {
+	background: image-url("");
+	background-size: contain;
+	height: 100px;
+	width: 200px;
+	min-height: 40px;
+	min-width: 60px;
+}
+
+.createPin {
+	float: left;
+	display: block;
+	background: image-url("plus.png");
+	background-size: contain;
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
 }

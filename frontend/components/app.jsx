@@ -6,8 +6,10 @@ import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 
 import NavBarContainer from "./nav_bar/nav_bar_container";
-import PinContainer from "./pin/pin_container";
 
+import PinIndexContainer from "./pin/pin_index_container";
+import PinShowContainer from "./pin/pin_show_container";
+import CreatePinContainer from "./pin/create_pin_container";
 
 const App = () => (
 	<div>
@@ -17,7 +19,9 @@ const App = () => (
 		<Switch>
 			<AuthRoute exact path="/login" component={LoginFormContainer} />
 			<AuthRoute exact path="/signup" component={SignupFormContainer} />
-			<ProtectedRoute path="/" component={PinContainer} />
+			<ProtectedRoute path="/" component={PinIndexContainer} />
+			<Route exact path="/pins/:pinId" component={PinShowContainer} />
+			<Route exact path="/create-pin" component={CreatePinContainer} />
 		</Switch>
 	</div>
 );
