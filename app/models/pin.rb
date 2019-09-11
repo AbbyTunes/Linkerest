@@ -18,6 +18,7 @@ class Pin < ApplicationRecord
 
 	has_one_attached :photo
 
+	# pin.author.username
 	belongs_to :author,
 	foreign_key: :authorId,
 	class_name: 'User'

@@ -11,10 +11,29 @@ class PinIndex extends React.Component {
 
 	render() {
 		// const { users } = this.props;
-		const pins = this.props.pins.map((pin) => {
-			return <PinIndexItem key={pin.id} pin={pin} users={this.props.users} />
-		});
+		// users={this.props.users}
+
+		// const pins = this.props.pins.map((pin) => {
+		// 	return <PinIndexItem key={pin.id} pin={pin} />				
+		// });
+		
 		// debugger
+		const columns = [[], [], [], []];
+		const pins = this.props.pins.map((pin, idx) => {
+			let bucket_idx = idx % 4;
+			columns[bucket_idx].push(pin);
+		});
+
+		const columnPins = columns.map((col, idx) => {
+			return (
+				<div className="col" key={`col-${idx}`} >
+					{col.map((pin) => {
+						return <PinIndexItem key={pin.id} pin={pin} />
+					})}
+				</div>
+			)
+		});
+
 		return (
 			<div className="pin-frame">
 
@@ -23,9 +42,7 @@ class PinIndex extends React.Component {
 				</div>
 
 				<div className="grid">
-					<ul>
-						{pins}
-					</ul>
+					{columnPins}
 				</div>
 
 			</div>

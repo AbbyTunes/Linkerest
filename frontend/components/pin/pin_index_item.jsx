@@ -1,26 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PinIndexItem = ({ pin, users }) => {
+const PinIndexItem = ({ pin}) => {
 	
-	const authorId = pin.authorId;
-	const user = users[authorId];
 	return (
 	<div>
 		<div className="pin-pic">
 
 			<Link to={`/pins/${pin.id}`}>
 
+				<img src={pin.photo}/>
+
 				<div className="pin-info">
 					<h3>{pin.title}</h3>
 					<h5>{pin.description}</h5>
 					<h4>{pin.link}</h4>
+					<h3>{pin.authorName}</h3>
 				</div>
-				<img src={pin.photo} alt={pin.title}/>
+				
 			</Link>
 
 		</div>
-		
+
 	</div>
 )};
 
