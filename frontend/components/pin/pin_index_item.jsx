@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PinIndexItem = ({ pin}) => {
+const PinIndexItem = ({ pin }) => {
 	
 	return (
 	<div>
@@ -11,11 +11,17 @@ const PinIndexItem = ({ pin}) => {
 
 				<img src={pin.photo}/>
 
+				<div className="grey"></div>
+
 				<div className="pin-info">
-					<h3>{pin.title}</h3>
-					<h5>{pin.description}</h5>
-					<h4>{pin.link}</h4>
-					<h3>{pin.authorName}</h3>
+
+					<div className="board-frame">
+						<div className="white"><p>v</p></div>
+						<div className="red"><p>save</p></div>
+					</div>
+
+					<div className="pin-link">{pin.link}</div>
+
 				</div>
 				
 			</Link>

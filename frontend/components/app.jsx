@@ -25,7 +25,5 @@ const App = () => (
 		</Switch>
 	</div>
 );
-// home_index using one route "/"
-// what if the home page needs to render different components 
 
 export default App;

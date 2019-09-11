@@ -33,7 +33,7 @@ const NavBar = ({currentUser, logout}) => {
 						<Link to="/">Notifications</Link>
 					</div>
 					
-					<div className="hamburger">
+					<div className="hamburger" onClick={logout}>
 						
 					</div>
 				</div>
@@ -41,7 +41,7 @@ const NavBar = ({currentUser, logout}) => {
 				
 			</nav>
 
-			<button className="logout-button" onClick={logout}>logout</button>
+			<button className="logout-button" >logout</button>
 		</div>
 		
 	);

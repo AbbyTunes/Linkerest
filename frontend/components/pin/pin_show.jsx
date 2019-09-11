@@ -15,13 +15,13 @@ class PinShow extends React.Component {
 		// const user = users[authorId];
 		return (
 			<div>
-				<div>
-					<div className="pin-pic">
-						<Link to={`/pins/${pin.id}`}></Link>
-					</div>
+				<div className="pin-show">
+					
 					<h3>{pin.title}</h3>
 					<h5>{pin.description}</h5>
 					<h4>{pin.link}</h4>
+					<h3>{pin.authorName}</h3>
+
 					<Link to='/'>back to Index</Link>
 				</div>				
 			</div>
