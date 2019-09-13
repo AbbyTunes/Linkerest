@@ -10,6 +10,10 @@ const NavBar = ({ currentUser, logout }) => {
 	// 		<img src="question.png" alt="icon"/>
 	// 	)
 	// }
+
+	if (!currentUser) {
+		return (<div></div>)
+	}
 	return (
 		<div>
 			<nav className="nav-bar">
