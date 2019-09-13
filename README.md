@@ -1,24 +1,55 @@
-# README
+It is a Pinterest clone project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+tables designed for Pinterest clone project
 
-* Ruby version
+## `Users`
+column name      | data type | details
+-----------------|-----------|-----------------------
+`id`             | integer   | not null, primary key
+`username`       | string    | not null, unique
+`email`          | string    | not null, unique
+`passwordDigest` | string    | not null
+`sessionToken`   | string    | not null, unique
 
-* System dependencies
+## `Boards`
+column name      | data type | details
+-----------------|-----------|-----------------------
+`id`             | integer   | not null, primary key
+`authorId`       | integer   | not null
+`title`          | string    | not null
+`description`    | text      | 
+`isPrivate`      | boolean   | not null
+`topic`          | string    | 
 
-* Configuration
+## `Pins` (with image)
+column name      | data type | details
+-----------------|-----------|-----------------------
+`id`             | integer   | not null, primary key
+`authorId`       | integer   | not null
+`title`          | string    | not null
+`description`    | string    | 
+`link`           | string    | not null
 
-* Database creation
+## `BoardsPins`
+column name      | data type | details
+-----------------|-----------|-----------------------
+`id`             | integer   | not null, primary key
+`boardId`        | integer   | not null
+`pinId`          | integer   | not null
 
-* Database initialization
+## `FollowUsers`
+column name      | data type | details
+-----------------|-----------|-----------------------
+`id`             | integer   | not null, primary key
+`followerId`     | integer   | not null
+`followeeId`     | integer   | not null
 
-* How to run the test suite
+## `FollowBoards` (bonus)
+column name      | data type | details
+-----------------|-----------|-----------------------
+`id`             | integer   | not null, primary key
+`userId`         | integer   | not null
+`boardId`        | integer   | not null
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Images (Store in frontend)
