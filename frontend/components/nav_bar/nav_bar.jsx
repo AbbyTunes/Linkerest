@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // if logged_in, shows the navBar
 // how to style each of them
 
-const NavBar = ({currentUser, logout}) => {
+const NavBar = ({ currentUser, logout }) => {
 	// const icon = () => {
 	// 	return (
 	// 		<img src="question.png" alt="icon"/>
@@ -29,7 +29,7 @@ const NavBar = ({currentUser, logout}) => {
 					<div className="nav-link">
 						<Link to="/">Home</Link>
 						<Link to="/">Following</Link>
-						<Link to="/">{ currentUser.username }</Link>
+						<Link to="/boards">{ currentUser.username }</Link>
 						<Link to="/">Notifications</Link>
 					</div>
 					

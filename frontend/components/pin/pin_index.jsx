@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import CreatePinContainer from "./create_pin_container";
 import PinIndexItem from "./pin_index_item";
 
 class PinIndex extends React.Component {
@@ -36,10 +35,6 @@ class PinIndex extends React.Component {
 
 		return (
 			<div className="pin-frame">
-
-				<div className="createPin">
-					<Link to="/create-pin"></Link>
-				</div>
 
 				<div className="grid">
 					{columnPins}

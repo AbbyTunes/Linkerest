@@ -7,6 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+# require 'open-uri'
+# ​
+# Pin.create({ authorId: 5, title: "pin22", description: "pin22", link: "www.pinterest.com" }
+# file = open('https://linkerest-dev.s3-us-west-2.amazonaws.com/8spn4iMGtwgqyWtn9tNok47W')
+# #('the/url/where/the/pin/is/hosted')
+# pin.photo.attach(io: file, filename: "some_filename")
+
+
+
 pins = Pin.create([
 	{ authorId: 1, title: "pin2", description: "pin2", link: "www.pinterest.com" }, 
 	{ authorId: 2, title: "pin3", description: "pin3", link: "www.pinterest.com" }, 
@@ -23,4 +32,31 @@ pins = Pin.create([
 	{ authorId: 3, title: "pin14", description: "pin14", link: "www.pinterest.com" }, 
 	{ authorId: 4, title: "pin15", description: "pin15", link: "www.pinterest.com" }, 
 	{ authorId: 5, title: "pin16", description: "pin16", link: "www.pinterest.com" }
-])
+]);
+
+pins2 = Pin.create([
+	{ authorId: 1, title: "pin17", description: "pin17", link: "www.pinterest.com" }, 
+	{ authorId: 2, title: "pin18", description: "pin18", link: "www.pinterest.com" }, 
+	{ authorId: 3, title: "pin19", description: "pin19", link: "www.pinterest.com" }, 
+	{ authorId: 4, title: "pin20", description: "pin20", link: "www.pinterest.com" }, 
+	{ authorId: 5, title: "pin21", description: "pin21", link: "www.pinterest.com" }
+]);
+
+board = Board.create([ 
+	{ authorId: 5, title: "board1", description: "board1", isPrivate: false}, 
+	{ authorId: 5, title: "board2", description: "board2", isPrivate: false},
+	{ authorId: 5, title: "board4", description: "board4", isPrivate: false}, 
+	{ authorId: 5, title: "board3", description: "board3", isPrivate: false}
+]);
+
+boardPin = BoardPin.create([
+	{ boardId: 1, pinId: 11 },
+	{ boardId: 1, pinId: 13 },
+	{ boardId: 2, pinId: 10 },
+	{ boardId: 2, pinId: 9 },
+	{ boardId: 3, pinId: 4 },
+	{ boardId: 3, pinId: 15 },
+	{ boardId: 3, pinId: 12 },
+	{ boardId: 4, pinId: 2 },
+	{ boardId: 4, pinId: 6 }
+]);

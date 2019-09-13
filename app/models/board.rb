@@ -13,9 +13,9 @@
 
 class Board < ApplicationRecord
 
-	validates :authorId, :isPrivate, presence: true
+	# validates :authorId, :isPrivate, presence: true
 	validates :title, uniqueness: {scope: :authorId}
-	validates :inPrivate, inclusion: [true, false]
+	validates :isPrivate, inclusion: [true, false]
 
 	belongs_to :author,
 	foreign_key: :authorId,
@@ -29,6 +29,7 @@ class Board < ApplicationRecord
 	through: :boardPins,
 	source: :pin
 
+	# need to use :boardPins assiciation
 	# has_many :pins,
 	# foreign_key: :pinId,
 	# class_name: 'Pin'

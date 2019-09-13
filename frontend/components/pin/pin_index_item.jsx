@@ -11,12 +11,12 @@ const PinIndexItem = ({ pin }) => {
 
 				<img src={pin.photo}/>
 
-				<div className="grey"></div>
+				<div className="shade"></div>
 
 				<div className="pin-info">
 
-					<div className="board-frame">
-						<div className="white"><p>v</p></div>
+					<div className="pin-option">
+						<div className="white"><p>board_options</p></div>
 						<div className="red"><p>save</p></div>
 					</div>
 

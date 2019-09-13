@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_05_214352) do
+ActiveRecord::Schema.define(version: 2019_09_12_223735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 2019_09_05_214352) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "board_pins", force: :cascade do |t|
+    t.integer "boardId", null: false
+    t.integer "pinId", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["boardId"], name: "index_board_pins_on_boardId"
+    t.index ["pinId"], name: "index_board_pins_on_pinId"
+  end
+
   create_table "boards", force: :cascade do |t|
     t.integer "authorId", null: false
     t.string "title"
@@ -45,15 +54,6 @@ ActiveRecord::Schema.define(version: 2019_09_05_214352) do
     t.datetime "updated_at", null: false
     t.index ["authorId", "title"], name: "index_boards_on_authorId_and_title", unique: true
     t.index ["authorId"], name: "index_boards_on_authorId"
-  end
-
-  create_table "boardsPins", force: :cascade do |t|
-    t.integer "boardId", null: false
-    t.integer "pinId", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["boardId"], name: "index_boardsPins_on_boardId"
-    t.index ["pinId"], name: "index_boardsPins_on_pinId"
   end
 
   create_table "pins", force: :cascade do |t|

@@ -51,7 +51,7 @@ const mapState = (state) => ({
 });
 
 const mapDispatch = (dispatch) => ({
-	formAction: (user) => dispatch(signup(user)),
+	formAction: (currentUser) => dispatch(signup(currentUser)),
 	clearup: () => dispatch({ type: CLEAR_SESSION_ERRORS })
 });
 
