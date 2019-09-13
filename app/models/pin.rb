@@ -13,7 +13,7 @@
 
 class Pin < ApplicationRecord
 
-	validates :authorId, presence: true
+	# validates :authorId, presence: true
 	validates :title, uniqueness: { scope: :authorId }
 
 	has_one_attached :photo

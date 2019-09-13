@@ -5,30 +5,30 @@
 			4: {
 				id: 4,
 				username: "name_1",
-				password_digest: "1_password_digetst_string",
-				session_token: "1_a_password_digetst_string",
+				passwordDigest: "1_password_digetst_string",
+				sessionToken: "1_a_password_digetst_string",
 			},
 			5: {
 				id: 5,
 				username: "name_2",
-				password_digest: "2_password_digetst_string",
-				session_token: "2_password_digetst_string",
+				passwordDigest: "2_password_digetst_string",
+				sessionToken: "2_password_digetst_string",
 			}
 		},
 		boards: {
 			1: {
 				id: 1,
-				author_id: 2,
+				authorId: 2,
 				title: "board_1",
 				description: "board_1_belongs_to_user_2",
-				is_private: false,
+				isPrivate: false,
 				topic: "topic_1",
 			},
 		},
 		pins: {
 			1: {
 				id: 1,
-				author_id: 1,
+				authorId: 1,
 				title: "pin_1",
 				description: "pin_1_belongs_to_user_1",
 				link: "www.google.com",
@@ -37,27 +37,27 @@
 		notifications: {
 			1: {
 				id: 1,
-				user_id: 2,
+				userId: 2,
 				body: "user_2_received_notice_1",
 			},
 		},
 		boardsPins: {
 			1: {
 				id: 1,
-				board_id: 1,
-				pin_id: 1,
+				boardId: 1,
+				pinId: 1,
 			},
 		},
 		followUsers: {
 			1: {
 				id: 1,
-				follower_id: 1,
-				followee_id: 2,
+				followerId: 1,
+				followeeId: 2,
 			},
 			2: {
 				id: 2,
-				follower_id: 2,
-				followee_id: 1,
+				followerId: 2,
+				followeeId: 1,
 			},
 		},
 		topics: {
@@ -73,13 +73,13 @@
 		followTopics: {
 			1: {
 				id: 1,
-				user_id: 1,
-				topic_id: 1,
+				userId: 1,
+				topicId: 1,
 			},
 			2: {
 				id: 2,
-				user_id: 2,
-				topic_id: 2,
+				userId: 2,
+				topicId: 2,
 			},
 		},
 	},
