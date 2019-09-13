@@ -77,7 +77,15 @@
 	height: 30px;
 	// radius overflow, NOT hidden
 	overflow: hidden;
-	
+}
+
+.white p {
+	text-align: center;
+	text-decoration: none;
+	color: grey;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .red {
@@ -88,12 +96,12 @@
 	text-align: center;
 }
 
-p {
+.red p {
 	text-align: center;
 	text-decoration: none;
-	justify-content: space-between;
-	align-items: center;
-	color: grey;
+	// justify-content: space-between;
+	// align-items: center;
+	color: white;
 	font-size: 14px;
 	font-weight: 400;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
