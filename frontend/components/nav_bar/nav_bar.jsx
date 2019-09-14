@@ -5,11 +5,6 @@ import { Link } from "react-router-dom";
 // how to style each of them
 
 const NavBar = ({ currentUser, logout }) => {
-	// const icon = () => {
-	// 	return (
-	// 		<img src="question.png" alt="icon"/>
-	// 	)
-	// }
 
 	if (!currentUser) {
 		return (<div></div>)

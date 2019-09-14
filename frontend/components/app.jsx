@@ -27,10 +27,10 @@ const App = () => (
 			<ProtectedRoute exact path="/boards" component={BoardIndexContainer} />
 
 			<Route exact path="/pins/:pinId" component={PinShowContainer} />
-			{/* <Route exact path="/boards/:boardId" component={BoardShowContainer} /> */}
+			<Route exact path="/boards/:boardId" component={BoardShowContainer} />
 
-			<ProtectedRoute exact path="/create-pin" component={CreatePinContainer} />
-			{/* <ProtectedRoute exact path="/create-board" component={CreateBoardContainer} /> */}
+			{/* <ProtectedRoute exact path="/create-pin" component={CreatePinContainer} />
+			<ProtectedRoute exact path="/create-board" component={CreateBoardContainer} /> */}
 			
 		</Switch>
 	</div>

@@ -11,7 +11,6 @@ const mapState = (state, ownProps) => {
 const mapDispatch = (dispatch, ownProps) => {
 	const pinId = ownProps.match.params.pinId;
 	return { fetchPin: () => dispatch(fetchPin(pinId)) }
-		// fetchUser: (id) => dispatch(fetchUser(id))
 }
 
 export default connect(mapState, mapDispatch)(PinShow);

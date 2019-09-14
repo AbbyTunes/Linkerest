@@ -3,13 +3,13 @@
 	display: block;
 	margin: 0 auto;
 	box-sizing: border-box;
+	padding: 40px;
 }
 
 .grid {
 	display: flex;
 	margin-left: auto;
-	margin-right: auto;
-	padding-top: 25px;
+	padding-top: 5px;
 	height: 3000px;
 }
 
@@ -23,34 +23,37 @@
 .pin-pic {
 	display: flex;
 	position: relative;
-	width: 220px;
 	height: auto;
 	min-height: 50px;
-	// outer frame
-	// border: 1px solid rgb(170, 170, 170);
-	border-radius: 4px;
+	border-radius: 7px;
 	margin: 5px;
+	padding: 5px;
+	padding-bottom: 8px;
+}
+
+.pin-pic:hover {
+	background-color: rgb(228, 228, 228);
+	border-radius: 7px;
 }
 
 .pin-pic img {
-	width: 200px;
+	width: 230px;
 	height: auto;
 	min-height: 150px;
 	margin: 10px;
-	border-radius: 4px;
-	
+	border-radius: 7px;
 }
 
 .shade {
 	display: none;
-	background: gainsboro; // grey
-	opacity: 0.5;
-	z-index: 2;
 }
 
-.pin-pic:hover .shade {
-	display: flex;
-}
+// .pin-pic:hover .shade {
+// 	display: flex;
+// 	background: gainsboro; // grey
+// 	opacity: 0.5;
+// 	z-index: 2;
+// }
 
 .pin-pic:hover .pin-info {
 	display: flex;
@@ -58,17 +61,27 @@
 
 .pin-info {
 	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 230px;
+	height: auto;
+	min-height: 150px;
+	margin: 10px;
+	border-radius: 7px;
+	z-index: 1;
+	// border: 1px solid rgb(170, 170, 170);
 }
 
 .pin-option {
 	display: flex;
 	position: absolute;
-	top: 15px;
-	left: 20px;
-	width: 160px;
+	top: 30px;
+	left: 30px;
+	width: 200px;
 	height: 30px;
 	margin: 10px;
-	border-radius: 4px;
+	border-radius: 7px;
 }
 
 .white {
@@ -109,8 +122,8 @@
 
 .pin-link {
 	position: absolute;
-	left: 30px;
-	top: 120px;
+	left: 40px;
+	top: 160px;
 	text-decoration: none;
 	color: white;
 	font-size: 14px;
@@ -118,7 +131,7 @@
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background-color: black;
 	opacity: 0.65;
-	border-radius: 8px;
+	border-radius: 7px;
 	padding: 5px;
 	z-index: 1;
 }

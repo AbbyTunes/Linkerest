@@ -5,8 +5,6 @@ class PinShow extends React.Component {
 
 	componentDidMount() {
 		this.props.fetchPin();
-		// const id = this.props.match.params.postId;
-		// this.props.fetchPost(id);
 	}
 
 	render() {
@@ -15,15 +13,22 @@ class PinShow extends React.Component {
 		// const user = users[authorId];
 		return (
 			<div>
-				<div className="pin-show">
-					
-					<h3>{pin.title}</h3>
-					<h5>{pin.description}</h5>
-					<h4>{pin.link}</h4>
-					<h3>{pin.authorName}</h3>
+				<Link to='/'>
+					<div className="back-button"></div>
+				</Link>
 
-					<Link to='/'>back to Index</Link>
-				</div>				
+				<div className="pin-canvas">
+					<div className="pin-show">
+
+						<img src={pin.photo} />
+
+						<p className="pin-title">{pin.title}</p>
+						<p className="pin-description">{pin.description}</p>
+						<p className="link-to-pin">{pin.link}</p>
+						<p className="pin-author">{pin.authorName}</p>
+						
+					</div>
+				</div>					
 			</div>
 		);
 	}
