@@ -21,21 +21,21 @@ class LogInForm extends React.Component {
 
 						<div className="logo-session"> </div>
 
-						<h1>Welcome to Pinterest</h1>
+						<h1>Welcome back</h1>
 						
-						<div className="botton-field">
+						<div className="input-field">
 							<SessionForm errors={errors} 
 										formType={formType} 
 										formAction={formAction} 
-										// clearup={clearup}
 										/>
-							<h4>or</h4>
-							<button className="button">Log in via Facebook</button>
-							<button className="button">Log in via Google</button>	
+							
+							<div className="or">or</div>
+							<button className="button" onClick={ () => formAction({ username: "demo_user", password: "password"}) } >Demo User Login</button>
+							<div className="info-session">
+								<Link to="/signup" onClick={ clearup }>Need an account? Sign up now</Link>
+							</div>
 						</div>
-						<div className="info-session">
-							<Link to="/signup" onClick={clearup}>Need an account? Sign up now</Link>
-						</div>
+						
 						
 					</div>
 				</div>
@@ -47,7 +47,7 @@ class LogInForm extends React.Component {
 
 const mapState = (state) => ({
 		errors: state.errors.session,
-		formType: 'login'
+		formType: 'Log in'
 });
 
 const mapDispatch = (dispatch) => ({

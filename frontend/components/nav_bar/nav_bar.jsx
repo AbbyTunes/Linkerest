@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// if logged_in, shows the navBar
-// how to style each of them
+import Dropdown from "./dropdown";
 
 const NavBar = ({ currentUser, logout }) => {
 
@@ -31,18 +29,10 @@ const NavBar = ({ currentUser, logout }) => {
 						<Link to="/boards">{ currentUser.username }</Link>
 						<Link to="/">Notifications</Link>
 					</div>
-					
-					<div className="hamburger" onClick={logout}>
-						
-					</div>
-				</div>
-
-				
+					<Dropdown logout={logout} currentUser={currentUser} />
+				</div>	
 			</nav>
-
-			<button className="logout-button" >logout</button>
 		</div>
-		
 	);
 }
 
