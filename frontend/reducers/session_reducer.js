@@ -11,18 +11,6 @@ const sessionReducer = (state = _nullUser, action) => {
 		case RECEIVE_CURRENT_USER:
 			return { id: action.currentUser.id };
 
-			// const id = Object.keys(action.currentUser)[0];
-			// first key of the key array
-
-			// return { id: id }
-			// first id is a string, second id gets evaluated
-			// { [id]: id } => both gets evaluated
-
-			// return Object.assign( {}, state, action.currentUser );
-			// achieved/structured in jbuilder: { id: { currentUser} }
-
-			// return Object.assign({}, state, { [action.currentUser.id]: action.currentUser });
-
 		case LOGOUT_CURRENT_USER:
 			return _nullUser;
 		default:

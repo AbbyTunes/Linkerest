@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import SessionForm from "./session_form";
-import { signup, CLEAR_SESSION_ERRORS } from "../../actions/session_actions";
+import { signup, login, CLEAR_SESSION_ERRORS } from "../../actions/session_actions";
 
 class SignUpForm extends React.Component {
 
@@ -11,7 +11,7 @@ class SignUpForm extends React.Component {
 	}
 
 	render() {
-		const { errors, formType, formAction, clearup } = this.props;
+		const { errors, formType, formAction, demoLogin, clearup } = this.props;
 		return (
 			<div className="background">
 				
@@ -21,17 +21,18 @@ class SignUpForm extends React.Component {
 					<div className="content">
 
 						<div className="logo-session"> </div>
-						<h1>Welcome back</h1>
+						<h1>Welcome to Pinterest</h1>
 						<h4>find new ideas to try</h4>
 						
-						<div className="botton-field">
+						<div className="input-field">
 							<SessionForm errors={errors} 
 										formType={formType} 
 										formAction={formAction} 
-										// clearup={clearup} 
 										/>
 						</div>
-						
+						<div className="or">or</div>
+						<button className="button" onClick={() => demoLogin({ username: "demo_user", password: "password" })} >Demo User Login</button>
+
 						<div className="info-session">
 							<Link to="/login" onClick={clearup}>Already a member? Log in</Link>
 						</div>
@@ -47,11 +48,12 @@ class SignUpForm extends React.Component {
 
 const mapState = (state) => ({
 		errors: state.errors.session,
-		formType: 'signup'
+		formType: 'Sign up'
 });
 
 const mapDispatch = (dispatch) => ({
 	formAction: (currentUser) => dispatch(signup(currentUser)),
+	demoLogin: (currentUser) => dispatch(login(currentUser)),
 	clearup: () => dispatch({ type: CLEAR_SESSION_ERRORS })
 });
 
