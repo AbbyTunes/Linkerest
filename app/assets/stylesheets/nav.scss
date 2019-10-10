@@ -1,9 +1,12 @@
 .nav-bar {
-	// position: fixed;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 300;
+	background-color: white;
 	display: flex;
 	height: 56px;
-	// width: auto;
-	width: 100%;
 	box-sizing: border-box;
 	justify-content: space-between;
 	align-items: center;
