@@ -2,16 +2,19 @@
 #
 # Table name: board_pins
 #
-#  id         :bigint           not null, primary key
-#  boardId    :integer          not null
-#  pinId      :integer          not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :bigint           not null, primary key
+#  boardId     :integer          not null
+#  pinId       :integer          not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  title       :string
+#  description :string
+#  authorId    :integer
 #
 
 class BoardPin < ApplicationRecord
 
-	validates :boardId, :pinId, presence: true
+	validates :boardId, :pinId, :authorId, presence: true
 
 	belongs_to :board,
 	foreign_key: :boardId,
@@ -20,4 +23,9 @@ class BoardPin < ApplicationRecord
 	belongs_to :pin,
 	foreign_key: :pinId,
 	class_name: 'Pin'
+
+	belongs_to :author,
+	foreign_key: :authorId,
+	class_name: 'User'
+
 end

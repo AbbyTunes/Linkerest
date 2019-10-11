@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// if currentUser exists on window 
 	// in views/root.html.erb
 	if (window.currentUser) {
-
-		// [values array] // take out the id in front;
+		
 		// const currentUser = Object.values(window.currentUser)[0]; 
 		
 		const currentUser = window.currentUser;
@@ -32,10 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			// session: { id }
 		};
 		store = configureStore(preloadedState);
-
-		// Clean up after ourselves so we don't accidentally use the
-		// global currentUser instead of the one in the store
-		// delete window.currentUser;
 
 	} else {
 		store = configureStore();

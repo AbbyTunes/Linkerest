@@ -1,7 +1,6 @@
-import React from "react";
 import { connect } from "react-redux";
 
-import { fetchBoards, fetchBoard, removeBoard } from "../../actions/board_actions";
+import { fetchBoards, removeBoard } from "../../actions/board_actions";
 import BoardIndex from "./board_index";
 
 // user.boards => user.myBoards

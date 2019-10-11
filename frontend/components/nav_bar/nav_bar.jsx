@@ -26,12 +26,13 @@ const NavBar = ({ currentUser, logout }) => {
 					<div className="nav-link">
 						<Link to="/">Home</Link>
 						<Link to="/">Following</Link>
-						<Link to="/boards">{ currentUser.username }</Link>
+						<Link to="/my-boards">{ currentUser.username }</Link>
 						<Link to="/">Notifications</Link>
 					</div>
 					<Dropdown logout={logout} currentUser={currentUser} />
 				</div>	
 			</nav>
+			<div></div>
 		</div>
 	);
 }
