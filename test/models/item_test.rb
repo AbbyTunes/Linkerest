@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: board_pins
+# Table name: items
 #
 #  id          :bigint           not null, primary key
 #  boardId     :integer          not null
@@ -14,7 +14,7 @@
 
 require 'test_helper'
 
-class BoardPinTest < ActiveSupport::TestCase
+class ItemTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

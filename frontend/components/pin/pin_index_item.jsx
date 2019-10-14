@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const PinIndexItem = ({ pin }) => {
 	
 	return (
-	<div>
+
 		<div className="pin-pic">
 
 			<Link to={`/pins/${pin.id}`}>
@@ -27,8 +27,6 @@ const PinIndexItem = ({ pin }) => {
 			</Link>
 
 		</div>
-
-	</div>
 )};
 
 export default PinIndexItem;

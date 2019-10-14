@@ -30,13 +30,44 @@
 	font-weight: 400;
 }
 
-.create-option {
-	display: none;
+.create-dropdown {
+	position: relative;
 }
 
-// .create:hover .create-option {
-// 	display: block;
-// }
+.create-dropdown ul {
+	position: absolute;
+	left: 10px;
+	top: 50px;
+	display: block;
+	border-radius: 8px;
+	border: 1px solid #adadad;
+	width: 200px;
+	height: auto;
+	min-height: 20px;
+	background-color: white;
+	z-index: 200;
+	padding: 0;
+}
+
+.create-dropdown li {
+    height: 20px;
+    border-bottom: 1px solid #adadad;
+    padding: 10px 25px;
+	font-size: 17px;
+	font-weight: bold;
+	color: rgb(77, 77, 77);
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+}
+
+.create-dropdown a {
+	text-decoration: none;
+}
+
+.create-dropdown li:hover {
+	background-color: rgb(226, 226, 226);
+}
 
 .board-canvas {
 	width: 100vw;

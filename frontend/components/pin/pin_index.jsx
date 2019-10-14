@@ -9,17 +9,11 @@ class PinIndex extends React.Component {
 	}
 
 	render() {
-		// const { users } = this.props;
-		// users={this.props.users}
 
-		// const pins = this.props.pins.map((pin) => {
-		// 	return <PinIndexItem key={pin.id} pin={pin} />				
-		// });
-		
-		// debugger
 		const columns = [[], [], [], [], []];
 		const pins = this.props.pins.map((pin, idx) => {
 			let bucket_idx = idx % 5;
+			// if (pin.photo) {}
 			columns[bucket_idx].push(pin);
 		});
 
