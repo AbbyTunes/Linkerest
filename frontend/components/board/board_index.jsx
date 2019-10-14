@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import BoardIndexItem from "./board_index_item";
+import CreateDropdown from "./create_dropdown";
 // import CreatePinContainer from "../pin/create_pin_container";
 // import CreateBoardContainer from "./create_board_container";
 
@@ -32,14 +33,7 @@ class BoardIndex extends React.Component {
 
 		return (
 			<div className="board-canvas">
-
-				<div className="create">
-					<div className="create-option">
-						<Link to="/create-pin">Create Pin</Link>
-						<Link to="/create-board">Create Board</Link>
-					</div>
-				</div>
-
+				<CreateDropdown />
 				<div className="myName">{ currentUser.username }</div>
 				
 				<div className="dashboard-nav">

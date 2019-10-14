@@ -16,7 +16,6 @@ class ApplicationController < ActionController::Base
 	def login(user)
 		user.reset_session_token
 		session[:session_token] = user.session_token
-		# session[:session_token] = user.reset_session_token
 		@current_user = user
 	end
 
@@ -24,14 +23,12 @@ class ApplicationController < ActionController::Base
 	def logout
 		current_user.reset_session_token
 		session[:session_token] = nil
-		# @current_user = nil
 	end
 
 	def ensure_login
 		unless logged_in? # unless current_user
 			render json: ['you are not logged_in'], status: 401
 		end
-		# redirect_to login_page unless logged_in?
 	end
 
 end

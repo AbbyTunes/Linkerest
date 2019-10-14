@@ -13,17 +13,18 @@ class Api::PinsController < ApplicationController
 	def create
 		@pin = Pin.new(pin_params)
 		@pin.authorId = current_user.id 
-		if @pin.save
+
+		@item = Item.new(item_params)
+
+
+		if @pin.save && @item.save
 			render 'api/pins/show'
 		else
-			render json: @pin.errors.full_messages
+			render json: @pin.errors.full_messages, status: 422
 		end
-		# have at least a photo
-		# name/link/description (not required)
 	end
 
 	def destroy
-		# delete the pin
 		@pin = Pin.find(params[:id])
 		@pin.destroy
 		render json: "the pin has been deleted"
@@ -32,7 +33,12 @@ class Api::PinsController < ApplicationController
 
 	private
 	def pin_params
-		params.require(:pin).permit(:title, :description, :link, :photo)
+		params.require(:pin).permit(:link, :photo)
+	end
+
+	private
+	def item_params
+		params.require(:item).permit(:title, :description)
 	end
 
 end

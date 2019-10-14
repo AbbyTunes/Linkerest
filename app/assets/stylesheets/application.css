@@ -14,7 +14,7 @@
  *= require_self
  */
 
- body {
+ html body h4 {
 	padding: 0;
 	margin: 0;
  }

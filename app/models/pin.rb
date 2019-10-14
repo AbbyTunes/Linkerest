@@ -2,19 +2,16 @@
 #
 # Table name: pins
 #
-#  id          :bigint           not null, primary key
-#  authorId    :integer          not null
-#  title       :string
-#  description :text
-#  link        :string
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id         :bigint           not null, primary key
+#  authorId   :integer          not null
+#  link       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 class Pin < ApplicationRecord
 
-	# validates :authorId, presence: true
-	validates :title, uniqueness: { scope: :authorId }
+	validate :ensure_photo
 
 	has_one_attached :photo
 
@@ -34,4 +31,10 @@ class Pin < ApplicationRecord
 	# has_many :boards,
 	# foreign_key: :boardId,
 	# class_name: 'Board'
+
+	def ensure_photo
+		unless self.photo.attached?
+			errors[:photo] << "photo must be attached"
+		end
+	end
 end

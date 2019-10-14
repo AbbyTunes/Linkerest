@@ -2,13 +2,11 @@
 #
 # Table name: pins
 #
-#  id          :bigint           not null, primary key
-#  authorId    :integer          not null
-#  title       :string
-#  description :text
-#  link        :string
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id         :bigint           not null, primary key
+#  authorId   :integer          not null
+#  link       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -20,6 +20,11 @@ class User < ApplicationRecord
 	foreign_key: :authorId,
 	class_name: 'Board'
 
+	has_many :boardPins,
+	foreign_key: :authorId,
+	class_name: 'BoardPin'
+
+
 	validates :username, :password_digest, :session_token, presence: true
 	validates :username, :session_token, uniqueness: true
 	validates :password, length: { minimum: 6, allow_nil: true }
