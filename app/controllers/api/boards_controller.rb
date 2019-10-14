@@ -1,7 +1,6 @@
 class Api::BoardsController < ApplicationController
 
 	def index
-
 		@boards = current_user.boards
 		render 'api/boards/index'
 	end

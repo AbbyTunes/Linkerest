@@ -36,7 +36,6 @@ class Api::PinsController < ApplicationController
 		params.require(:pin).permit(:link, :photo)
 	end
 
-	private
 	def item_params
 		params.require(:item).permit(:title, :description)
 	end

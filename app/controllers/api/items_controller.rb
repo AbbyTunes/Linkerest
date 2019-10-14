@@ -13,8 +13,9 @@ class Api::ItemsController < ApplicationController
 	def create
 		@item = Item.new(item_params)
 		@item.authorId = current_user.id
-		@item.boardId = 
-		@item.pinId = 
+		# debugger
+		@item.boardId = params[:board_id]
+		@item.pinId = params[:pin_id]
 		if @item.save
 			render 'api/items/show'
 		else

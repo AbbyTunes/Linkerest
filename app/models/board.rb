@@ -21,15 +21,15 @@ class Board < ApplicationRecord
 	foreign_key: :authorId,
 	class_name: 'User'	
 
-	has_many :boardPins,
+	has_many :items,
 	foreign_key: :boardId,
-	class_name: 'BoardPin'
+	class_name: 'Item'
 
 	has_many :pins,
-	through: :boardPins,
+	through: :items,
 	source: :pin
 
-	# need to use :boardPins assiciation
+	# need to use :items assiciation
 	# has_many :pins,
 	# foreign_key: :pinId,
 	# class_name: 'Pin'
