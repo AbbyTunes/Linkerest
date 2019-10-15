@@ -9,7 +9,6 @@ class BoardShow extends React.Component {
 	render() {
 
 		const { board, items } = this.props;
-		debugger;
 		if (!board) {
 			return null;
 		}

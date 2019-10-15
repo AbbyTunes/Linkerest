@@ -15,9 +15,7 @@ const mapState = (state, ownProps) => {
 
 	const items = board.itemIds.map((itemId) => {
 		return state.entities.items[itemId] 
-		// state entities have no items
 	});
-	debugger
 	return { currentUser, board, items }
 }
 
