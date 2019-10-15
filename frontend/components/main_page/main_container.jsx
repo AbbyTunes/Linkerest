@@ -10,7 +10,6 @@ const mapState = (state) => {
 };
 
 const mapDispatch = (dispatch) => ({
-	// logout: () => dispatch(logout())
 });
 
 export default connect(mapState, mapDispatch)(MainPage);
