@@ -16,7 +16,7 @@ const BoardIndexItem = ({ board }) => {
 
 						<div className="board-option">
 							<div className="board-title">{board.title}</div>
-							<div className="edit-button"></div>
+							<div className="edit-button">edit</div>
 						</div>
 
 					</div>

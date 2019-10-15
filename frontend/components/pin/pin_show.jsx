@@ -9,8 +9,6 @@ class PinShow extends React.Component {
 
 	render() {
 		const { pin } = this.props;
-		// const authorId = pin.authorId;
-		// const user = users[authorId];
 		return (
 			<div>
 				<Link to='/'>

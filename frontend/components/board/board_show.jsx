@@ -1,4 +1,6 @@
 import React from "react";
+// import BoardShowItem from "./board_show_item";
+import PinIndexItem from "../pin/pin_index_item";
 
 class BoardShow extends React.Component {
 
@@ -6,26 +8,42 @@ class BoardShow extends React.Component {
 		this.props.fetchBoard();
 	}
 
+	componentDidUpdate(prevProps) {
+		if (prevProps.board.id != this.props.match.params.id) {
+			this.props.fetchBoard();
+		}
+	}
+
 	render() {
 
 		const { board, items } = this.props;
-		debugger;
+
 		if (!board) {
 			return null;
 		}
 
-		const pinItems = items.map((item) => {
-			return <div>hasn't built ItemComponent</div>
-			// return <ItemIndividual item={item} /> 
-		})
+		const columns = [[], [], [], [], []];
+		const colItems = items.map((item, idx) => {
+			let bucket_idx = idx % 5;
+			columns[bucket_idx].push(item);
+		});
+
+		const columnItems = columns.map((col, idx) => {
+			return (
+				<div className="col" key={`col-${idx}`} >
+					{col.map((pin) => {
+						return <PinIndexItem pin={pin} key={`item-${idx}`} />
+					})}
+				</div>
+			)
+		});
 
 		return (
-			<div>
-				{ pinItems }
+			<div className="grid">
+				{columnItems}
 			</div>
-		)
+		);
 	}
-	
 }
 
 export default BoardShow;
