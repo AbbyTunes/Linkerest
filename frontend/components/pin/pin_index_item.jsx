@@ -16,12 +16,14 @@ const PinIndexItem = ({ pin }) => {
 				<div className="pin-info">
 
 					<div className="pin-option">
-						<div className="white"><p>board_options</p></div>
-						<div className="red"><p>save</p></div>
+						<div className="white">board_options</div>
+						<div className="red">save</div>
 					</div>
 
-					<div className="pin-link">{pin.link}</div>
-
+					<div className="pin-link">
+						{pin.link}
+					</div>
+					
 				</div>
 				
 			</Link>

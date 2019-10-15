@@ -5,8 +5,9 @@ if pin.photo.attached?
 end
 
 json.authorName pin.author.username
-	
+
+# has authorId, need to show user.name	
 # json.author do
 # 	json.partial! 'api/users/user', user: pin.author
 # end
-# has authorId, need to show user.name
+

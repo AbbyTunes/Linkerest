@@ -6,10 +6,11 @@ const BoardIndexItem = ({ board }) => {
 	return (
 		<div>
 			<Link to={`/my-boards/${board.id}`}>
+				{/* frontend route */}
 				
 				<div className="board-outer">
 
-					<img src={board.photo} />
+					<img src={board.boardPhoto} />
 
 					<div className="board-info">
 

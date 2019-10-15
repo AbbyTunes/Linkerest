@@ -61,12 +61,12 @@
     list-style-type: none;
 }
 
-.create-dropdown a {
-	text-decoration: none;
-}
-
 .create-dropdown li:hover {
 	background-color: rgb(226, 226, 226);
+}
+
+.create-dropdown a {
+	text-decoration: none;
 }
 
 .board-canvas {

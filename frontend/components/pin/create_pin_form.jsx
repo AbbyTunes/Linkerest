@@ -103,7 +103,7 @@ class CreatePinForm extends React.Component {
 				<select className="selector" value={ this.state.boardId } onChange={this.handleInput("boardId")} >
 					{boardOptions}
 				</select>
-				<button type="submit" className="save-button">create Pin</button>
+				<button type="submit" className="save-button">Save</button>
 			</div>
 		)
 	}
@@ -125,7 +125,7 @@ class CreatePinForm extends React.Component {
 						</div>
 						
 						<div className="right-form">
-							
+
 							<input type="title" value={this.state.title} 
 									className="title-input"
 									placeholder="Add your title"
