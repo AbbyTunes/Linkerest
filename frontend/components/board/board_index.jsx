@@ -13,17 +13,10 @@ class BoardIndex extends React.Component {
 	}
 
 	render() {
-		// currentUser.username
-		// profile pic
-		// create Pin/Board
-		// share button
-
-		// return ( <div> </div> )
-
 		const { currentUser, boards, removeBoard } = this.props;
 		
 		const myBoards = boards.map((board) => {
-			
+			// debugger;
 			return (
 				<div>
 					<BoardIndexItem key={board.id} board={board} />
@@ -37,7 +30,8 @@ class BoardIndex extends React.Component {
 				<div className="myName">{ currentUser.username }</div>
 				
 				<div className="dashboard-nav">
-					<a href="">Boards</a>
+					<Link to="/my-boards">Boards</Link>
+					{/* <a href="">Boards</a> */}
 					<a href="">Pins</a>
 					<a href="">Topics</a>
 					<a href="">Hardcode</a>

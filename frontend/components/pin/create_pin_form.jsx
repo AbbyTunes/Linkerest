@@ -10,7 +10,7 @@ class CreatePinForm extends React.Component {
 			photoUrl: null,
 			boardId: null,
 			// newly added
-			pinId: null,
+			// pinId: null,
 			title: "",
 			description: ""
 		}
@@ -77,10 +77,8 @@ class CreatePinForm extends React.Component {
 
 	constructBoardSelection() {
 		const { boards } = this.props;
-		// debugger
 
-		const currentBoards = [];
-		
+		const currentBoards = [];	
 		boards.forEach(board => currentBoards.push(board));
 
 		if (currentBoards.length > 0 && currentBoards[0] && !this.state.boardId) {
@@ -88,8 +86,10 @@ class CreatePinForm extends React.Component {
 		}
 
 		if (boards.length === 0) {
-			return <div> currentUser has no Boards </div> 
-			// return <CreateBoardForm createBoard={CreateBoard} />
+			return ( <div> 
+					<p>you don't have Boards yet</p>
+					{/* <CreateBoardForm createBoard={CreateBoard} /> */}
+				</div> ) 
 		}
 
 		let boardOptions;
@@ -99,11 +99,11 @@ class CreatePinForm extends React.Component {
 		})
 
 		return (
-			<div className="board-selector">
-				<h3>boards</h3>
-				<select name="selector" value={ this.state.boardId } onChange={this.handleInput("boardId")} >
+			<div className="upper-form">
+				<select className="selector" value={ this.state.boardId } onChange={this.handleInput("boardId")} >
 					{boardOptions}
 				</select>
+				<button type="submit" className="save-button">create Pin</button>
 			</div>
 		)
 	}
@@ -112,32 +112,39 @@ class CreatePinForm extends React.Component {
 		// console.log(this.state);
 		const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
 		return (
-			<div>
-				<form onSubmit={this.handleSubmit}>
+			<div className="form-canvas">
 
-					<label>
-						Link
-						<input type="link" value={this.state.link} onChange={this.handleInput("link")} />
-					</label>
+				<form onSubmit={this.handleSubmit} className="form-session">
+
+					{this.constructBoardSelection()}
+					<div className="lower-form">
+
+						<div className="left-form">
+							<input type="file" className="preview" onChange={this.handleFile} />
+							{ preview }
+						</div>
+						
+						<div className="right-form">
+							
+							<input type="title" value={this.state.title} 
+									className="title-input"
+									placeholder="Add your title"
+									onChange={this.handleInput("title")} />
+
+							<input type="description" value={this.state.description}
+									className="description-input"
+									placeholder="Tell everyone what your pin is about"
+									onChange={this.handleInput("description")} />
+
+							<input type="link" value={this.state.link}
+									className="link-input"
+									placeholder="Add a destination link"
+									onChange={this.handleInput("link")} />
+						</div>
+					</div>
+
+					{/* { this.constructBoardSelection() } */}
 					
-
-					<input type="file" onChange={this.handleFile} />
-					<h3>photo preview</h3>
-					{preview}
-
-					{ this.constructBoardSelection() }
-
-					<label>
-						Title
-						<input type="title" value={this.state.title} onChange={this.handleInput("title")} />
-					</label>
-
-					<label>
-						Description
-						<input type="description" value={this.state.description} onChange={this.handleInput("description")} />
-					</label>
-
-					<button type="submit">create Pin</button>
 				</form>
 			</div>
 		);

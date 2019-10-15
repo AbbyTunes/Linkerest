@@ -13,11 +13,9 @@ class Api::PinsController < ApplicationController
 	def create
 		@pin = Pin.new(pin_params)
 		@pin.authorId = current_user.id 
-
-		@item = Item.new(item_params)
-
-
-		if @pin.save && @item.save
+		# @item = Item.new(item_params)
+		
+		if @pin.save # && @item.save
 			render 'api/pins/show'
 		else
 			render json: @pin.errors.full_messages, status: 422

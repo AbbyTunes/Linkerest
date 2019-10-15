@@ -1,0 +1,77 @@
+.form-canvas {
+	background-color: rgb(236, 236, 236);
+	position: absolute;
+	top: 65px;
+	left: 0;
+	right: 0;
+	bottom: -150px;
+}
+
+.form-session {
+	display: block;
+	background-color: white;
+	position: relative;
+	top: 50px;
+	// bottom: -100px;
+	margin: auto;
+	padding: 50px;
+	width: 780px;
+	height: 600px;
+	border-radius: 10px;
+}
+
+.upper-form {
+	display: flex;
+	position: relative;
+	top: 70px;
+	left: 70px;
+	width: 150px;
+	height: 65px;
+	border-radius: 10px;
+	background-color: aquamarine;
+}
+
+.selector {
+
+}
+
+.save-button {
+
+}
+
+.lower-form {
+	background-color: beige;
+	display: flex;
+}
+
+.left-form {
+	display: block;
+}
+
+
+
+.preview {
+	position: relative;
+	left: 100px;
+	top: 120px;
+	width: 200px;
+	height: 350px;
+	border: 1px solid rgb(170, 170, 170);
+}
+
+.lower-form img {
+	position: relative;
+	left: 100px;
+	top: 120px;
+	width: 200px;
+	height: 350px;
+	border: 1px solid rgb(170, 170, 170);
+}
+
+.right-form {
+	display: block;
+}
+
+.link-input {
+	
+}

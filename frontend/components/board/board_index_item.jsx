@@ -5,7 +5,7 @@ const BoardIndexItem = ({ board }) => {
 
 	return (
 		<div>
-			<Link to={`/boards/${board.id}`}>
+			<Link to={`/my-boards/${board.id}`}>
 				
 				<div className="board-outer">
 
