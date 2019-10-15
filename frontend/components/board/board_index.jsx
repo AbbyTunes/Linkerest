@@ -17,10 +17,9 @@ class BoardIndex extends React.Component {
 		const { currentUser, boards, removeBoard } = this.props;
 		
 		const myBoards = boards.map((board) => {
-			// debugger;
 			return (
 				<div>
-					<BoardIndexItem key={board.id} board={board} />
+					<BoardIndexItem key={`board-${board.id}`} board={board} />
 				</div>
 			);
 		});
