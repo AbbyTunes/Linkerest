@@ -7,17 +7,25 @@ class BoardShow extends React.Component {
 	}
 
 	render() {
-		// pins that belongs to that board
-		// { board } = this.props;
-		// debugger
-		// const board = 
+
+		const { board, items } = this.props;
+		debugger;
+		if (!board) {
+			return null;
+		}
+
+		const pinItems = items.map((item) => {
+			return <div>hasn't built ItemComponent</div>
+			// return <ItemIndividual item={item} /> 
+		})
+
 		return (
 			<div>
-
+				{ pinItems }
 			</div>
 		)
 	}
-
+	
 }
 
 export default BoardShow;

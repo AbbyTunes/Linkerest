@@ -20,9 +20,9 @@ class User < ApplicationRecord
 	foreign_key: :authorId,
 	class_name: 'Board'
 
-	has_many :boardPins,
+	has_many :items,
 	foreign_key: :authorId,
-	class_name: 'BoardPin'
+	class_name: 'Item'
 
 
 	validates :username, :password_digest, :session_token, presence: true

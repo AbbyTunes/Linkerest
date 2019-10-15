@@ -16,8 +16,10 @@ const MainPage = () => (
 			<ProtectedRoute exact path="/" component={PinIndexContainer} />
 			<ProtectedRoute exact path="/my-boards" component={BoardIndexContainer} />
 
-			<Route exact path="/pins/:pinId" component={PinShowContainer} />
-			<Route exact path="/boards/:boardId" component={BoardShowContainer} />
+			<Route exact path="/pins/:id" component={PinShowContainer} />
+			<Route exact path="/my-boards/:id" component={BoardShowContainer} />
+			{/* <Route exact path="/pins/:pinId" component={PinShowContainer} />
+			<Route exact path="/boards/:boardId" component={BoardShowContainer} /> */}
 
 			<ProtectedRoute exact path="/create-pin" component={CreatePinContainer} />
 			<ProtectedRoute exact path="/create-board" component={CreateBoardContainer} />

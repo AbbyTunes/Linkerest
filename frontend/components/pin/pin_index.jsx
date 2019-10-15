@@ -13,7 +13,6 @@ class PinIndex extends React.Component {
 		const columns = [[], [], [], [], []];
 		const pins = this.props.pins.map((pin, idx) => {
 			let bucket_idx = idx % 5;
-			// if (pin.photo) {}
 			columns[bucket_idx].push(pin);
 		});
 
@@ -28,12 +27,8 @@ class PinIndex extends React.Component {
 		});
 
 		return (
-			<div className="pin-frame">
-
-				<div className="grid">
-					{columnPins}
-				</div>
-
+			<div className="grid">
+				{columnPins}
 			</div>
 		);
 	}

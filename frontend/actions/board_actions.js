@@ -9,7 +9,7 @@ export const fetchBoards = () => dispatch => (
 );
 
 export const fetchBoard = (id) => dispatch => (
-	BoardApiUtil.fetchBoard(id).then((board) => dispatch({ type: RECEIVE_BOARD, board }))
+	BoardApiUtil.fetchBoard(id).then((response) => dispatch({ type: RECEIVE_BOARD, board: response.board, items: response.items }))
 );
 
 export const createBoard = (board) => dispatch => (
