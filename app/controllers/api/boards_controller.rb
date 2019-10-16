@@ -23,8 +23,9 @@ class Api::BoardsController < ApplicationController
 	def destroy
 		@board = Board.find(params[:id])
 		@board.destroy
-		render json: "the board has been deleted"
-		# render 'api/board/index'
+		render json: @board.id 
+		# render json: "the board has been deleted"
+		
 	end
 
 	private

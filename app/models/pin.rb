@@ -20,9 +20,10 @@ class Pin < ApplicationRecord
 	foreign_key: :authorId,
 	class_name: 'User'
 
-	has_many :items,
+	has_many :items, 
 	foreign_key: :pinId,
-	class_name: 'Item'
+	class_name: 'Item',
+	dependent: :destroy
 
 	has_many :boards,
 	through: :items,

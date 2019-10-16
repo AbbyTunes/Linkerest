@@ -23,7 +23,8 @@ class Board < ApplicationRecord
 
 	has_many :items,
 	foreign_key: :boardId,
-	class_name: 'Item'
+	class_name: 'Item',
+	dependent: :destroy
 
 	has_many :pins,
 	through: :items,

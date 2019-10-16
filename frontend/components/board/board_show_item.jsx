@@ -9,9 +9,9 @@ const BoardShowItem = ({ item }) => {
 	return (
 		<div className="pin-pic">
 
-			<Link to={`/pins/${item.id}`}>
+			<Link to={`/pins/${item.pinId}`}>
 
-				<img src={item.itemPhoto} />
+				<img src={item.photo} />
 
 				<div className="shade"></div>
 
@@ -32,10 +32,6 @@ const BoardShowItem = ({ item }) => {
 
 		</div>
 	)
-	// return (
-	// 	<div>hasn't built ItemComponent</div>
-	// )
-
 }
 
 export default BoardShowItem;
