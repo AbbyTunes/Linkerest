@@ -9,17 +9,29 @@ import CreateDropdown from "./create_dropdown";
 
 class BoardIndex extends React.Component {
 
+	constructor(props) {
+		super(props)
+		this.state = {
+			tabName: "Boards"
+
+		}
+	}
+
+	changeTab() {
+		setState
+	}
 	componentDidMount() {
 		this.props.fetchBoards();
 	}
 
 	render() {
-		const { currentUser, boards, removeBoard } = this.props;
+		const { currentUser, boards, removeBoard, removeItem } = this.props;
 		
 		const myBoards = boards.map((board) => {
 			return (
 				<div>
-					<BoardIndexItem key={`board-${board.id}`} board={board} />
+					<BoardIndexItem key={`board-${board.id}`} board={board}
+							removeBoard={removeBoard} removeItem={removeItem} />
 				</div>
 			);
 		});
@@ -30,6 +42,7 @@ class BoardIndex extends React.Component {
 				<div className="myName">{ currentUser.username }</div>
 				
 				<div className="dashboard-nav">
+					<Board />
 					<Link to="/my-boards"><span>Boards</span></Link>
 					<a href="">Pins</a>
 					<a href="">Hardcode</a>

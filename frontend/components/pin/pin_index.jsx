@@ -20,7 +20,7 @@ class PinIndex extends React.Component {
 			return (
 				<div className="col" key={`col-${idx}`} >
 					{col.map((pin) => {
-						return <PinIndexItem key={pin.id} pin={pin} />
+						return <PinIndexItem key={`pin-${pin.id}`} pin={pin} />
 					})}
 				</div>
 			)

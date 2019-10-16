@@ -17,5 +17,5 @@ export const createBoard = (board) => dispatch => (
 );
 
 export const removeBoard = (id) => dispatch => (
-	BoardApiUtil.removeBoard(id).then((board) => dispatch({ type: REMOVE_BOARD, boardId: board.id }))
+	BoardApiUtil.removeBoard(id).then((response) => dispatch({ type: REMOVE_BOARD, boardId: response }))
 );

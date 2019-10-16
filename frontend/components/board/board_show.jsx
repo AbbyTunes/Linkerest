@@ -1,6 +1,6 @@
 import React from "react";
-// import BoardShowItem from "./board_show_item";
-import PinIndexItem from "../pin/pin_index_item";
+import BoardShowItem from "./board_show_item";
+// import PinIndexItem from "../pin/pin_index_item";
 
 class BoardShow extends React.Component {
 
@@ -31,8 +31,8 @@ class BoardShow extends React.Component {
 		const columnItems = columns.map((col, idx) => {
 			return (
 				<div className="col" key={`col-${idx}`} >
-					{col.map((pin) => {
-						return <PinIndexItem pin={pin} key={`item-${idx}`} />
+					{col.map((item) => {
+						return <BoardShowItem item={item} key={`item-${idx}`} />
 					})}
 				</div>
 			)
