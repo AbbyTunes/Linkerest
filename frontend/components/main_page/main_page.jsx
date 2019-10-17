@@ -6,7 +6,8 @@ import PinIndexContainer from "../pin/pin_index_container";
 import PinShowContainer from "../pin/pin_show_container";
 import CreatePinContainer from "../pin/create_pin_container";
 
-import BoardIndexContainer from "../board/board_index_container";
+// import BoardIndexContainer from "../board/board_index_container";
+import BoardHeaderContainer from "../board/board_header_container";
 import BoardShowContainer from "../board/board_show_container";
 import CreateBoardContainer from "../board/create_board_container";
 
@@ -14,7 +15,9 @@ const MainPage = () => (
 	<div className="main-page">
 		<Switch>
 			<ProtectedRoute exact path="/" component={PinIndexContainer} />
-			<ProtectedRoute exact path="/my-boards" component={BoardIndexContainer} />
+			{/* <ProtectedRoute exact path="/${currentUser.username}" component={BoardHeaderContainer} /> */}
+			<ProtectedRoute exact path="/my-boards" component={BoardHeaderContainer} />
+			{/* <ProtectedRoute exact path="/my-boards" component={BoardIndexContainer} /> */}
 
 			<Route exact path="/pins/:id" component={PinShowContainer} />
 			<Route exact path="/my-boards/:id" component={BoardShowContainer} />

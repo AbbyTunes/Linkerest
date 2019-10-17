@@ -13,12 +13,6 @@ class BoardIndexItem extends React.Component {
 	// handleSubmit(e) {
 		e.preventDefault();
 
-		// if (this.props.board) {
-		// 	const itemIds = this.props.board.itemIds.map((itemId) => {
-		// 		this.props.removeItem(itemId)
-		// 	})
-		// }
-
 		const boardId = this.props.board.id;
 		this.props.removeBoard(boardId)
 		// .then(() => {
@@ -29,7 +23,7 @@ class BoardIndexItem extends React.Component {
 	render() {
 		const { board, removeBoard } = this.props;
 		return (
-			<div>
+			<div className="board-link">
 				<Link to={`/my-boards/${board.id}`}>
 					{/* frontend route */}
 					
@@ -39,18 +33,14 @@ class BoardIndexItem extends React.Component {
 
 						<div className="board-info">
 
-							<div className="board-option">
+							<div className="board-left">
 								<div className="board-title">{board.title}</div>
-
-								{/* <div className="edit-button">edit board</div> */}
-
-								<button onClick={ this.removeBoard }>delete board itself</button>
-
-								{/* <div onClick={() => removeBoardandItems()}>delete Board and its items</div> */}
+								<div className="pin-num">{board.itemIds.length} Pins</div>
 							</div>
+							
+							<input type="submit" value="" onClick={ this.removeBoard } className="board-delete"/>
 
 						</div>
-
 					</div>
 				</Link>
 			</div>

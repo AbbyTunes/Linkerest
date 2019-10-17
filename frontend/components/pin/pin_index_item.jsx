@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PinIndexItem = ({ pin }) => {
-	
-	return (
 
+	// if (!pin.id) return null;
+
+	return (
 		<div className="pin-pic">
 
 			<Link to={`/pins/${pin.id}`}>

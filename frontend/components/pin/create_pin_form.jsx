@@ -9,8 +9,6 @@ class CreatePinForm extends React.Component {
 			photo: null,
 			photoUrl: null,
 			boardId: null,
-			// newly added
-			// pinId: null,
 			title: "",
 			description: ""
 		}
@@ -120,7 +118,7 @@ class CreatePinForm extends React.Component {
 					<div className="lower-form">
 
 						<div className="left-form">
-							<input type="file" className="preview" onChange={this.handleFile} />
+							<input type="file" className="preview" onChange={this.handleFile} value="" />
 							{ preview }
 						</div>
 						
@@ -130,6 +128,10 @@ class CreatePinForm extends React.Component {
 									className="title-input"
 									placeholder="Add your title"
 									onChange={this.handleInput("title")} />
+							
+							<div className="user-profile">
+								<div className="user-name">{currentUser.username}</div>
+							</div>
 
 							<input type="description" value={this.state.description}
 									className="description-input"
