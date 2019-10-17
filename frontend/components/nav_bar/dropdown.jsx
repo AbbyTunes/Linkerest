@@ -29,7 +29,7 @@ class Dropdown extends React.Component {
 							<div className="modal" onClick={ this.hideMenu }></div>
 							<ul>
 								<li>{ this.props.currentUser.username }</li>
-								<li>List 2</li>
+								<li><Link to="/my-boards">My Dashboard</Link></li>
 								<li onClick={ this.props.logout } >Log out</li>
 							</ul>
 						</div>

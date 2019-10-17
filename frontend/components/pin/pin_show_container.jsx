@@ -4,12 +4,12 @@ import { fetchPin } from '../../actions/pin_actions';
 // import { fetchUser } from "../../actions/user_actions";
 
 const mapState = (state, ownProps) => {
-	const pinId = ownProps.match.params.pinId;
+	const pinId = ownProps.match.params.id;
 	return { pin: state.entities.pins[pinId] }
 }
 
 const mapDispatch = (dispatch, ownProps) => {
-	const pinId = ownProps.match.params.pinId;
+	const pinId = ownProps.match.params.id;
 	return { fetchPin: () => dispatch(fetchPin(pinId)) }
 }
 

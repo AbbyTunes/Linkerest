@@ -33,6 +33,7 @@ class BoardShow extends React.Component {
 				<div className="col" key={`col-${idx}`} >
 					{col.map((item) => {
 						return <BoardShowItem item={item} key={`item-${idx}`} />
+						// return <PinIndexItem pin={item} key={`item-${idx}`} />
 					})}
 				</div>
 			)
