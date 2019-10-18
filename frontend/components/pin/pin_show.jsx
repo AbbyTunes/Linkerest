@@ -23,6 +23,10 @@ class PinShow extends React.Component {
 					<img src={pin.photo} className="pin-left" />
 
 					<div className="pin-right">
+						<div className="pin-option">
+							<div className="white">Board options</div>
+							<div type="submit" className="red">Save</div>
+						</div>
 						<p className="link-to-pin">{pin.link}</p>
 						<p className="pin-author">{pin.authorName}</p>
 					</div>
