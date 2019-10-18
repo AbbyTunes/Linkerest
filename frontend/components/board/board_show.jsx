@@ -9,18 +9,15 @@ class BoardShow extends React.Component {
 	}
 
 	componentDidUpdate(prevProps) {
-		if (prevProps.board.id != this.props.match.params.id) {
+		if (prevProps.match.params.id != this.props.match.params.id) {
 			this.props.fetchBoard();
 		}
 	}
 
 	render() {
 
-		const { board, items } = this.props;
-
-		if (!board) {
-			return null;
-		}
+		const { board, items, removeItem } = this.props;
+		if (!items || !items.length) return null;
 
 		const columns = [[], [], [], [], []];
 		const colItems = items.map((item, idx) => {
@@ -32,7 +29,8 @@ class BoardShow extends React.Component {
 			return (
 				<div className="col" key={`col-${idx}`} >
 					{col.map((item) => {
-						return <BoardShowItem item={item} key={`item-${idx}`} />
+						
+						return <BoardShowItem item={item} key={`item-${idx}`} removeItem={removeItem} />
 						// return <PinIndexItem pin={item} key={`item-${idx}`} />
 					})}
 				</div>

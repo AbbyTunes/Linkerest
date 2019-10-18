@@ -66,7 +66,7 @@
 	left: 0;
 	width: 130px;
 	height: 40px;
-	padding: 12px 0;
+	padding-top: 12px;
 	text-align: center;
 	text-decoration: none;
 	color: grey;
@@ -81,7 +81,7 @@
 	right: 0;
 	width: 70px;
 	height: 40px;
-	padding: 12px 0;
+	padding-top: 12px;
 	text-align: center;
 	text-decoration: none;
 	color: white;
@@ -107,28 +107,39 @@
 	z-index: 30;
 }
 
-// .pin-link p {
-// 	opacity: 1;
-// }
+.item-delete {
+	position: absolute;
+	right: 20px;
+	bottom: 48px;
+	border-radius: 20px;
+	overflow: hidden;
+	border: none;
+
+	height: 30px;
+	width: 30px;
+	background: image-url("pen2.jpg");
+	background-size: contain;
+	cursor: pointer;
+}
 	
 
-.shade {
-	display: none;
-}
+// .shade {
+// 	display: none;
+// }
 
-.pin-pic:hover .shade {
-	// display: flex;
-	position: relative;
-	left: 5px;
-	right: 5px;
-	top: 5px;
-	bottom: 25px;
-	background: gainsboro; // grey
-	opacity: 0.5;
-	z-index: 10;
-	width: 230px;
-	height: auto;
-	min-height: 150px;
-	// margin: 10px;
-	border-radius: 10px;
-}
+// .pin-pic:hover .shade {
+// 	// display: flex;
+// 	position: relative;
+// 	left: 5px;
+// 	right: 5px;
+// 	top: 5px;
+// 	bottom: 25px;
+// 	background: gainsboro; // grey
+// 	opacity: 0.5;
+// 	z-index: 10;
+// 	width: 230px;
+// 	height: auto;
+// 	min-height: 150px;
+// 	// margin: 10px;
+// 	border-radius: 10px;
+// }

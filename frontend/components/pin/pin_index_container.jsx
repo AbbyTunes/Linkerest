@@ -13,7 +13,6 @@ const mapState = (state) => {
 
 const mapDispatch = (dispatch) => ({
 	fetchPins: () => dispatch(fetchPins()),
-	fetchPin: (id) => dispatch(fetchPin(id)),
 	removePin: (id) => dispatch(removePin(id))
 });
 

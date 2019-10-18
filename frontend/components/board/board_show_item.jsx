@@ -1,37 +1,58 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BoardShowItem = ({ item }) => {
-	
-	if (!item) {
-		return null;
+// const BoardShowItem = ({ item }) => {
+
+class BoardShowItem extends React.Component {
+
+	constructor(props) {
+		super(props)
+		this.removeItemfromBoard = this.removeItemfromBoard.bind(this);
 	}
-	return (
-		<div className="pin-pic">
 
-			<Link to={`/pins/${item.pinId}`}>
+	removeItemfromBoard(e) {
+		e.preventDefault();
 
-				<img src={item.photo} />
+		const itemId = this.props.item.id;
+		this.props.removeItem(itemId)
+		// .then(() => {
+		// 	this.props.history.push("/my-boards")
+		// });
+	}
 
-				<div className="shade"></div>
+	render() {
+		const { item } = this.props;
 
-				<div className="pin-info">
+		return (
+			<div className="pin-pic">
 
-					<div className="pin-option">
-						<div className="white">board_options</div>
-						<div className="red">save</div>
+				<Link to={`/pins/${item.pinId}`}>
+
+					<img src={item.photo} />
+
+					{/* <div className="shade"></div> */}
+
+					<div className="pin-info">
+
+						<div className="pin-option">
+							<div className="white">board_options</div>
+							<div className="red">save</div>
+						</div>
+
+						<div className="pin-link">
+							{item.link}
+						</div>
+
+						<input type="submit" value="" onClick={this.removeItemfromBoard} className="item-delete" />
+
 					</div>
 
-					<div className="pin-link">
-						{item.link}
-					</div>
+				</Link>
 
-				</div>
-
-			</Link>
-
-		</div>
-	)
+			</div>
+		)
+	}
+	
 }
 
 export default BoardShowItem;

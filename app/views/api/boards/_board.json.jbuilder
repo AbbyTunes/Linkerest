@@ -1,6 +1,6 @@
 json.extract! board, :id, :authorId, :isPrivate, :title, :description
 
-if board.pins[0].photo.attached?
+if board.pins[0] && board.pins[0].photo.attached?
 	json.boardPhoto url_for(board.pins[0].photo)
 end
 

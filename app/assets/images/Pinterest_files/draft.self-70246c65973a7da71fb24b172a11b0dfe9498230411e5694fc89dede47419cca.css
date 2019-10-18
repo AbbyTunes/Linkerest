@@ -1,0 +1,845 @@
+/* line 1, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+.gridCentered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 5, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+.gridCentered .static,
+.gridCentered .Masonry-Premount .Collection-Item {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* line 10, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+.gridCentered .Masonry-Premount,
+.gridCentered .Masonry-Premount .AutoSizer,
+.gridCentered .Masonry-Premount .Collection {
+  width: auto !important;
+}
+
+@media (min-width: 0px) and (max-width: 779px) {
+  /* line 17, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 520px;
+  }
+
+  /* line 20, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+2),
+  .gridCentered .static:nth-child(-n+2) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 780px) and (max-width: 1039px) {
+  /* line 30, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 780px;
+  }
+
+  /* line 33, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+3),
+  .gridCentered .static:nth-child(-n+3) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 1040px) and (max-width: 1299px) {
+  /* line 43, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 1040px;
+  }
+
+  /* line 46, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+4),
+  .gridCentered .static:nth-child(-n+4) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1559px) {
+  /* line 56, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 1300px;
+  }
+
+  /* line 59, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+5),
+  .gridCentered .static:nth-child(-n+5) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 1560px) and (max-width: 1819px) {
+  /* line 69, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 1560px;
+  }
+
+  /* line 72, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+6),
+  .gridCentered .static:nth-child(-n+6) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 1820px) and (max-width: 2079px) {
+  /* line 82, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 1820px;
+  }
+
+  /* line 85, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+7),
+  .gridCentered .static:nth-child(-n+7) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 2080px) and (max-width: 2339px) {
+  /* line 95, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 2080px;
+  }
+
+  /* line 98, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+8),
+  .gridCentered .static:nth-child(-n+8) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 2340px) and (max-width: 2599px) {
+  /* line 108, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 2340px;
+  }
+
+  /* line 111, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+9),
+  .gridCentered .static:nth-child(-n+9) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 2600px) and (max-width: 2859px) {
+  /* line 121, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 2600px;
+  }
+
+  /* line 124, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+10),
+  .gridCentered .static:nth-child(-n+10) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 2860px) and (max-width: 3119px) {
+  /* line 134, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 2860px;
+  }
+
+  /* line 137, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+11),
+  .gridCentered .static:nth-child(-n+11) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 3120px) and (max-width: 3379px) {
+  /* line 147, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 3120px;
+  }
+
+  /* line 150, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+12),
+  .gridCentered .static:nth-child(-n+12) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 3380px) and (max-width: 3639px) {
+  /* line 160, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 3380px;
+  }
+
+  /* line 163, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+13),
+  .gridCentered .static:nth-child(-n+13) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 3640px) and (max-width: 3899px) {
+  /* line 173, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 3640px;
+  }
+
+  /* line 176, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+14),
+  .gridCentered .static:nth-child(-n+14) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 3900px) and (max-width: 4159px) {
+  /* line 186, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 3900px;
+  }
+
+  /* line 189, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+15),
+  .gridCentered .static:nth-child(-n+15) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 4160px) and (max-width: 4419px) {
+  /* line 199, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 4160px;
+  }
+
+  /* line 202, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+16),
+  .gridCentered .static:nth-child(-n+16) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 4420px) and (max-width: 4679px) {
+  /* line 212, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 4420px;
+  }
+
+  /* line 215, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+17),
+  .gridCentered .static:nth-child(-n+17) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 4680px) and (max-width: 4939px) {
+  /* line 225, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 4680px;
+  }
+
+  /* line 228, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+18),
+  .gridCentered .static:nth-child(-n+18) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 4940px) and (max-width: 5199px) {
+  /* line 238, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 4940px;
+  }
+
+  /* line 241, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+19),
+  .gridCentered .static:nth-child(-n+19) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 5200px) and (max-width: 5459px) {
+  /* line 251, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 5200px;
+  }
+
+  /* line 254, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+20),
+  .gridCentered .static:nth-child(-n+20) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 5460px) and (max-width: 5719px) {
+  /* line 264, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 5460px;
+  }
+
+  /* line 267, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+21),
+  .gridCentered .static:nth-child(-n+21) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 5720px) and (max-width: 5979px) {
+  /* line 277, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 5720px;
+  }
+
+  /* line 280, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+22),
+  .gridCentered .static:nth-child(-n+22) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 5980px) and (max-width: 6239px) {
+  /* line 290, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 5980px;
+  }
+
+  /* line 293, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+23),
+  .gridCentered .static:nth-child(-n+23) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 6240px) and (max-width: 6499px) {
+  /* line 303, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 6240px;
+  }
+
+  /* line 306, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+24),
+  .gridCentered .static:nth-child(-n+24) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 6500px) and (max-width: 6759px) {
+  /* line 316, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 6500px;
+  }
+
+  /* line 319, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+25),
+  .gridCentered .static:nth-child(-n+25) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 6760px) and (max-width: 7019px) {
+  /* line 329, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 6760px;
+  }
+
+  /* line 332, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+26),
+  .gridCentered .static:nth-child(-n+26) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 7020px) and (max-width: 7279px) {
+  /* line 342, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 7020px;
+  }
+
+  /* line 345, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+27),
+  .gridCentered .static:nth-child(-n+27) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 7280px) and (max-width: 7539px) {
+  /* line 355, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 7280px;
+  }
+
+  /* line 358, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+28),
+  .gridCentered .static:nth-child(-n+28) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 7540px) and (max-width: 7799px) {
+  /* line 368, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 7540px;
+  }
+
+  /* line 371, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+29),
+  .gridCentered .static:nth-child(-n+29) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 7800px) and (max-width: 8059px) {
+  /* line 381, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 7800px;
+  }
+
+  /* line 384, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+30),
+  .gridCentered .static:nth-child(-n+30) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 8060px) and (max-width: 8319px) {
+  /* line 394, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 8060px;
+  }
+
+  /* line 397, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+31),
+  .gridCentered .static:nth-child(-n+31) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 8320px) and (max-width: 8579px) {
+  /* line 407, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 8320px;
+  }
+
+  /* line 410, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+32),
+  .gridCentered .static:nth-child(-n+32) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 8580px) and (max-width: 8839px) {
+  /* line 420, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 8580px;
+  }
+
+  /* line 423, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+33),
+  .gridCentered .static:nth-child(-n+33) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 8840px) and (max-width: 9099px) {
+  /* line 433, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 8840px;
+  }
+
+  /* line 436, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+34),
+  .gridCentered .static:nth-child(-n+34) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 9100px) and (max-width: 9359px) {
+  /* line 446, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 9100px;
+  }
+
+  /* line 449, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+35),
+  .gridCentered .static:nth-child(-n+35) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 9360px) and (max-width: 9619px) {
+  /* line 459, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 9360px;
+  }
+
+  /* line 462, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+36),
+  .gridCentered .static:nth-child(-n+36) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 9620px) and (max-width: 9879px) {
+  /* line 472, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 9620px;
+  }
+
+  /* line 475, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+37),
+  .gridCentered .static:nth-child(-n+37) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 9880px) and (max-width: 10139px) {
+  /* line 485, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 9880px;
+  }
+
+  /* line 488, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+38),
+  .gridCentered .static:nth-child(-n+38) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 10140px) and (max-width: 10399px) {
+  /* line 498, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 10140px;
+  }
+
+  /* line 501, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+39),
+  .gridCentered .static:nth-child(-n+39) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 10400px) and (max-width: 10659px) {
+  /* line 511, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 10400px;
+  }
+
+  /* line 514, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+40),
+  .gridCentered .static:nth-child(-n+40) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 10660px) and (max-width: 10919px) {
+  /* line 524, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 10660px;
+  }
+
+  /* line 527, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+41),
+  .gridCentered .static:nth-child(-n+41) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 10920px) and (max-width: 11179px) {
+  /* line 537, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 10920px;
+  }
+
+  /* line 540, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+42),
+  .gridCentered .static:nth-child(-n+42) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 11180px) and (max-width: 11439px) {
+  /* line 550, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 11180px;
+  }
+
+  /* line 553, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+43),
+  .gridCentered .static:nth-child(-n+43) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 11440px) and (max-width: 11699px) {
+  /* line 563, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 11440px;
+  }
+
+  /* line 566, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+44),
+  .gridCentered .static:nth-child(-n+44) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 11700px) and (max-width: 11959px) {
+  /* line 576, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 11700px;
+  }
+
+  /* line 579, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+45),
+  .gridCentered .static:nth-child(-n+45) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 11960px) and (max-width: 12219px) {
+  /* line 589, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 11960px;
+  }
+
+  /* line 592, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+46),
+  .gridCentered .static:nth-child(-n+46) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 12220px) and (max-width: 12479px) {
+  /* line 602, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 12220px;
+  }
+
+  /* line 605, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+47),
+  .gridCentered .static:nth-child(-n+47) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 12480px) and (max-width: 12739px) {
+  /* line 615, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 12480px;
+  }
+
+  /* line 618, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+48),
+  .gridCentered .static:nth-child(-n+48) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 12740px) and (max-width: 12999px) {
+  /* line 628, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 12740px;
+  }
+
+  /* line 631, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+49),
+  .gridCentered .static:nth-child(-n+49) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 13000px) and (max-width: 13259px) {
+  /* line 641, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 13000px;
+  }
+
+  /* line 644, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+50),
+  .gridCentered .static:nth-child(-n+50) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 13260px) and (max-width: 13519px) {
+  /* line 654, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 13260px;
+  }
+
+  /* line 657, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+51),
+  .gridCentered .static:nth-child(-n+51) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 13520px) and (max-width: 13779px) {
+  /* line 667, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 13520px;
+  }
+
+  /* line 670, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+52),
+  .gridCentered .static:nth-child(-n+52) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 13780px) and (max-width: 14039px) {
+  /* line 680, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 13780px;
+  }
+
+  /* line 683, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+53),
+  .gridCentered .static:nth-child(-n+53) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 14040px) and (max-width: 14299px) {
+  /* line 693, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 14040px;
+  }
+
+  /* line 696, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+54),
+  .gridCentered .static:nth-child(-n+54) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 14300px) and (max-width: 14559px) {
+  /* line 706, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 14300px;
+  }
+
+  /* line 709, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+55),
+  .gridCentered .static:nth-child(-n+55) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}
+@media (min-width: 14560px) and (max-width: 14819px) {
+  /* line 719, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered {
+    width: 14560px;
+  }
+
+  /* line 722, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/draft.scss */
+  .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+56),
+  .gridCentered .static:nth-child(-n+56) {
+    position: static !important;
+    visibility: visible !important;
+    float: left;
+    display: block;
+  }
+}

@@ -49,5 +49,3 @@ class BoardIndexItem extends React.Component {
 };
 
 export default withRouter(BoardIndexItem);
-
-{/* <img src={board.photo} /> */}

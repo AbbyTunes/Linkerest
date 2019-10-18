@@ -1,7 +1,8 @@
 class Api::ItemsController < ApplicationController
 
 	def index
-		@items = Item.all
+		# @items = Item.all
+		current_user.items.
 		render 'api/items/index'
 	end
 
@@ -25,8 +26,9 @@ class Api::ItemsController < ApplicationController
 
 	def destroy
 		@item = Item.find(params[:id])
+		# @item = Item.find(params[:itemId])
 		@item.destroy
-		render json: "the boardPin item has been deleted"
+		render json: { itemId: @item.id, boardId: @item.board.id }
 	end
 
 	private
