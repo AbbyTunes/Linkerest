@@ -51,40 +51,67 @@
 .pin-option {
 	display: flex;
 	position: absolute;
-	top: 30px;
-	left: 30px;
-	right: 30px;
+	top: 25px;
+	right: 25px;
+	width: 200px;
 	height: 40px;
 	border-radius: 10px;
+	background-color: rgb(236, 236, 236);
 	overflow: hidden;
 	align-content: center;
 }
 
 .white {
-	background: white;
-	position: absolute;
+	position: relative;
 	left: 0;
+	border: none;
+	background-color: rgb(236, 236, 236);
+	color: grey;
 	width: 130px;
-	height: 40px;
-	padding: 12px 0;
+	padding-left: 8px;
 	text-align: center;
 	text-decoration: none;
-	color: grey;
 	font-size: 15px;
 	font-weight: 400;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+// .white ul {
+// 	position: absolute;
+// 	left: 20px;
+// 	top: 50px;
+// 	display: block;
+// 	border-radius: 8px;
+// 	border: 1px solid #adadad;
+// 	width: 200px;
+// 	height: auto;
+// 	min-height: 20px;
+// 	background-color: white;
+// 	z-index: 200;
+// 	padding: 0;
+// }
+
+// .white li {
+// 	height: 20px;
+//     border-bottom: 1px solid #adadad;
+//     padding: 10px 25px;
+// 	font-size: 17px;
+// 	font-weight: bold;
+// 	color: rgb(77, 77, 77);
+//     cursor: pointer;
+//     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//     list-style-type: none;
+// }
+
+// .white li:hover {
+// 	background-color: rgb(226, 226, 226);
+// }
+
 .red {
-	background: red;
-	position: absolute;
-	right: 0;
-	width: 70px;
-	height: 40px;
-	padding: 12px 0;
-	text-align: center;
-	text-decoration: none;
+	border: none;
+	background-color: red;
 	color: white;
+	width: 70px;
 	font-size: 15px;
 	font-weight: bold;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -107,28 +134,39 @@
 	z-index: 30;
 }
 
-// .pin-link p {
-// 	opacity: 1;
-// }
+.item-delete {
+	position: absolute;
+	right: 20px;
+	bottom: 48px;
+	border-radius: 20px;
+	overflow: hidden;
+	border: none;
+
+	height: 30px;
+	width: 30px;
+	background: image-url("pen2.jpg");
+	background-size: contain;
+	cursor: pointer;
+}
 	
 
-.shade {
-	display: none;
-}
+// .shade {
+// 	display: none;
+// }
 
-.pin-pic:hover .shade {
-	// display: flex;
-	position: relative;
-	left: 5px;
-	right: 5px;
-	top: 5px;
-	bottom: 25px;
-	background: gainsboro; // grey
-	opacity: 0.5;
-	z-index: 10;
-	width: 230px;
-	height: auto;
-	min-height: 150px;
-	// margin: 10px;
-	border-radius: 10px;
-}
+// .pin-pic:hover .shade {
+// 	// display: flex;
+// 	position: relative;
+// 	left: 5px;
+// 	right: 5px;
+// 	top: 5px;
+// 	bottom: 25px;
+// 	background: gainsboro; // grey
+// 	opacity: 0.5;
+// 	z-index: 10;
+// 	width: 230px;
+// 	height: auto;
+// 	min-height: 150px;
+// 	// margin: 10px;
+// 	border-radius: 10px;
+// }

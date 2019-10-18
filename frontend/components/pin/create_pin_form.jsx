@@ -70,6 +70,7 @@ class CreatePinForm extends React.Component {
 			(response) => console.log(response),
 			(response) => console.log(response.responseJSON)
 		)
+		this.props.history.push(`/my-boards/${this.state.boardId}`);
 		// this.props.createPin(this.state);
 	}
 

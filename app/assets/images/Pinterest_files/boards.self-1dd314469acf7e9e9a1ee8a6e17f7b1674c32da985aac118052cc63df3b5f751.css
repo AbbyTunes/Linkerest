@@ -1,0 +1,91 @@
+/* line 2, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 12, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-outer {
+  width: 300px;
+  height: 250px;
+  margin: 5px;
+  padding: 10px;
+  padding-bottom: 28px;
+  border-radius: 8px;
+  display: block;
+  z-index: 1;
+}
+
+/* line 23, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-outer:hover {
+  background-color: #e9e9e9;
+}
+
+/* line 28, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-link a {
+  text-decoration: none;
+}
+
+/* line 32, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-outer img {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* line 44, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-info {
+  display: flex;
+  position: relative;
+  top: 0;
+  padding: 10px;
+}
+
+/* line 51, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-left {
+  display: block;
+}
+
+/* line 54, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-title {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* line 61, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.pin-num {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 5px;
+}
+
+/* line 69, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-delete {
+  display: none;
+}
+
+/* line 73, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/boards.scss */
+.board-outer:hover .board-delete {
+  display: block;
+  position: absolute;
+  right: 10px;
+  background: url(/assets/pen-1ba1916639175324f430444c16c89f5c4283ec0f514f594d1946e54c6fec0450.png);
+  background-size: contain;
+  height: 25px;
+  width: 25px;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+}

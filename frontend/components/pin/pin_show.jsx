@@ -14,18 +14,17 @@ class PinShow extends React.Component {
 		if (!pin) return null;
 		
 		return (
-			<div>
+			<div className="pin-canvas">
 				<Link to='/'>
 					<div className="back-button"></div>
 				</Link>
 
-				<div className="pin-canvas">
-					<div className="pin-show">
+				<div className="pin-show">
+					<img src={pin.photo} className="pin-left" />
 
-						<img src={pin.photo} />
+					<div className="pin-right">
 						<p className="link-to-pin">{pin.link}</p>
 						<p className="pin-author">{pin.authorName}</p>
-						
 					</div>
 				</div>					
 			</div>

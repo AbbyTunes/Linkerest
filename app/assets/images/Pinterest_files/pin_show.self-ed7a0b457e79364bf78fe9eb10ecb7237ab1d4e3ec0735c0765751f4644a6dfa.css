@@ -1,0 +1,59 @@
+/* line 1, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/pin_show.scss */
+.session {
+  display: block;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 10px;
+  padding: 30px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* line 14, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/pin_show.scss */
+.back-button {
+  display: block;
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  background: url(/assets/back-947c0f7be07a4f2e60c2a2b845fae1ca960a2cf48a774192692173cf6939eb96.png);
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  min-height: 30px;
+  min-width: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* line 33, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/pin_show.scss */
+.pin-show {
+  display: block;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  width: 600px;
+  min-width: 400px;
+  position: relative;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 2px 10px;
+  padding: 30px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* line 47, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/pin_show.scss */
+.pin-show img {
+  width: 500px;
+  min-width: 300px;
+  margin: auto;
+}
+
+/* line 53, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/pin_show.scss */
+.pin-show p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: grey;
+  text-decoration: none;
+}

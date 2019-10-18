@@ -1,0 +1,150 @@
+/* line 1, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.create {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background: url(/assets/plus-b98f03fdde5657c2c47becfe790716a1323fbc152c97ea775e9feec4b33bdf55.png);
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  min-height: 30px;
+  min-width: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* line 16, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.create a {
+  list-style-type: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100px;
+  height: 30px;
+  border: 1px solid #aaaaaa;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: grey;
+  size: 14px;
+  font-weight: 400;
+}
+
+/* line 32, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.create-dropdown {
+  position: relative;
+}
+
+/* line 36, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.create-dropdown ul {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #adadad;
+  width: 200px;
+  height: auto;
+  min-height: 20px;
+  background-color: white;
+  z-index: 200;
+  padding: 0;
+}
+
+/* line 51, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.create-dropdown li {
+  height: 20px;
+  border-bottom: 1px solid #adadad;
+  padding: 10px 25px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #4d4d4d;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  list-style-type: none;
+}
+
+/* line 63, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.create-dropdown li:hover {
+  background-color: #e2e2e2;
+}
+
+/* line 67, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.create-dropdown a {
+  text-decoration: none;
+}
+
+/* line 72, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.board-canvas {
+  position: relative;
+  top: 20px;
+  left: 60px;
+  right: 0;
+  display: block;
+  height: auto;
+}
+
+/* line 82, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.myName {
+  position: relative;
+  top: 80px;
+  left: 30px;
+  color: #424141;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* line 92, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.tab-area {
+  position: relative;
+  top: 120px;
+  left: 0;
+  right: 100px;
+  display: block;
+}
+
+/* line 100, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.dashboard-nav {
+  position: relative;
+  top: 0;
+  left: 30px;
+  width: 200px;
+  display: flex;
+  padding: 0;
+}
+
+/* line 109, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.dashboard-nav li {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 35px;
+  letter-spacing: -.4px;
+  color: #8e8e8e;
+  border: 0;
+  border-radius: 10rem;
+  font-size: 16px;
+  font-weight: bold;
+  text-size-adjust: none;
+  padding: 10px 15px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  justify-content: center;
+  cursor: pointer;
+  margin: auto;
+}
+
+/* line 130, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.dashboard-nav li:hover {
+  background-color: #efefef;
+}
+
+/* line 134, /home/abby/Abby/App Academy/Immersive_Week_05/pinterest_clone_project/app/assets/stylesheets/board_header.scss */
+.tab-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 500px;
+}

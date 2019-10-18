@@ -10,8 +10,7 @@ const mapState = (state) => {
 
 const mapDispatch = (dispatch) => ({
 	fetchBoards: () => dispatch(fetchBoards()),
-	removeBoard: (id) => dispatch(removeBoard(id)),
-	removeItem: (id) => dispatch(removeItem(id))
+	removeBoard: (id) => dispatch(removeBoard(id))
 });
 
 export default connect(mapState, mapDispatch)(BoardIndex);

@@ -1,20 +1,24 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchPins, fetchPin, removePin } from "../../actions/pin_actions";
+import { fetchPins } from "../../actions/pin_actions";
+import { fetchBoards } from '../../actions/board_actions';
 import PinIndex from "./pin_index";
 
 const mapState = (state) => {
 	const session = state.session;
 	const users = state.entities.users;
-	const pins = state.entities.pins;
+	const currentUser = users[session.id]
 
-	return { currentUser: users[session.id], pins: Object.values(pins) }
+	const pins = Object.values(state.entities.pins);
+	const boards = Object.values(state.entities.boards);
+
+	return { currentUser, pins, boards }
 };
 
 const mapDispatch = (dispatch) => ({
 	fetchPins: () => dispatch(fetchPins()),
-	fetchPin: (id) => dispatch(fetchPin(id)),
-	removePin: (id) => dispatch(removePin(id))
+	fetchBoards: () => dispatch(fetchBoards())
+	// removePin: (id) => dispatch(removePin(id))
 });
 
 export default connect(mapState, mapDispatch)(PinIndex);
