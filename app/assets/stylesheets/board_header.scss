@@ -57,7 +57,8 @@
 	color: rgb(77, 77, 77);
     cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    list-style-type: none;
+	list-style-type: none;
+	text-decoration: none;
 }
 
 .create-dropdown li:hover {
@@ -129,6 +130,11 @@
 
 .dashboard-nav li:hover {
 	background-color: #efefef;
+}
+
+.dashboard-nav li:active {
+	box-shadow: 0 0 0 4px rgba(0, 132, 255, .5);
+    outline: 0;
 }
 
 .tab-content {

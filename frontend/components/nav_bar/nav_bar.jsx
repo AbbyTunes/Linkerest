@@ -12,9 +12,9 @@ const NavBar = ({ currentUser, logout }) => {
 			<nav className="nav-bar">
 
 				<div className="nav-left">
-					<div className="logo-nav"> 
-						<Link to="/"></Link>
-					</div>
+					<Link to="/">
+						<div className="logo-nav"></div>
+					</Link>
 				</div>
 
 				<div className="nav-middle">

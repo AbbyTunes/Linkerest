@@ -13,6 +13,13 @@ class BoardShow extends React.Component {
 		if (prevProps.match.params.id != this.props.match.params.id) {
 			this.props.fetchBoard();
 		}
+		
+		// after adding a pin to a board
+		// cannot show that pin right away, have to refresh the page
+
+		// if (prevProps.board.itemIds.length != this.props.board.itemIds.length) {
+		// 	this.props.fetchBoard();
+		// } 
 	}
 
 	render() {
@@ -34,6 +41,7 @@ class BoardShow extends React.Component {
 						return <BoardShowItem item={item} key={`item-${idx}`} 
 											boards={boards} removeItem={removeItem} />
 						// return <PinIndexItem pin={item} key={`item-${idx}`} />
+						// cannot re-use the component
 					})}
 				</div>
 			)

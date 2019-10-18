@@ -19,6 +19,7 @@ class BoardShowItem extends React.Component {
 	}
 
 	constructBoardSelection() {
+		// cannot edit a board form yet
 		const { boards } = this.props;
 
 		const currentBoards = [];
