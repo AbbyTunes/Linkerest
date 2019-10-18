@@ -2,7 +2,7 @@ node_modules/
 bundle.js 
 Bundle.js.map
 tmp/
-log/
+/log
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
