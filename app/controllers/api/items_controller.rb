@@ -2,7 +2,7 @@ class Api::ItemsController < ApplicationController
 
 	def index
 		# @items = Item.all
-		current_user.items.
+		@items = current_user.items
 		render 'api/items/index'
 	end
 
@@ -14,7 +14,6 @@ class Api::ItemsController < ApplicationController
 	def create
 		@item = Item.new(item_params)
 		@item.authorId = current_user.id
-		# debugger
 		@item.boardId = params[:board_id]
 		@item.pinId = params[:pin_id]
 		if @item.save

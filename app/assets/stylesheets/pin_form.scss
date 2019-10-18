@@ -50,6 +50,10 @@
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.selector option {
+
+}
+
 .save-button {
 	border: none;
 	background-color: red;
@@ -96,8 +100,10 @@
 	left: 0;
 	top: 0;
 	width: 320px;
-	height: auto;
+	height: 420px;
+	background-color: white;
 	object-fit: cover;
+	background-repeat: no-repeat;
 	border-radius: 10px;
 	z-index: 20;
 }

@@ -20,10 +20,7 @@ class PinShow extends React.Component {
 				</Link>
 
 				<div className="pin-show">
-					<div className="pin-left">
-
-						<img src={pin.photo} />
-					</div>
+					<img src={pin.photo} className="pin-left" />
 
 					<div className="pin-right">
 						<p className="link-to-pin">{pin.link}</p>

@@ -6,6 +6,7 @@ class BoardShow extends React.Component {
 
 	componentDidMount() {
 		this.props.fetchBoard();
+		this.props.fetchBoards();
 	}
 
 	componentDidUpdate(prevProps) {
@@ -16,8 +17,8 @@ class BoardShow extends React.Component {
 
 	render() {
 
-		const { board, items, removeItem } = this.props;
-		if (!items || !items.length) return null;
+		const { board, boards, items, removeItem } = this.props;
+		if (!items || !items.length ) return null;
 
 		const columns = [[], [], [], [], []];
 		const colItems = items.map((item, idx) => {
@@ -30,7 +31,8 @@ class BoardShow extends React.Component {
 				<div className="col" key={`col-${idx}`} >
 					{col.map((item) => {
 						
-						return <BoardShowItem item={item} key={`item-${idx}`} removeItem={removeItem} />
+						return <BoardShowItem item={item} key={`item-${idx}`} 
+											boards={boards} removeItem={removeItem} />
 						// return <PinIndexItem pin={item} key={`item-${idx}`} />
 					})}
 				</div>

@@ -6,12 +6,16 @@ class PinIndex extends React.Component {
 
 	componentDidMount() {
 		this.props.fetchPins();
+		this.props.fetchBoards();
 	}
 
 	render() {
 
+		const { pins, boards } = this.props;
+		// if (!pins.length || !boards.length) return null;
+
 		const columns = [[], [], [], [], []];
-		const pins = this.props.pins.map((pin, idx) => {
+		const pinsArray = this.props.pins.map((pin, idx) => {
 			let bucket_idx = idx % 5;
 			columns[bucket_idx].push(pin);
 		});
@@ -21,7 +25,7 @@ class PinIndex extends React.Component {
 				<div className="col" key={`col-${idx}`} >
 					{col.map((pin) => {
 						return <PinIndexItem key={`pin-${pin.id}`} 
-								pin={pin} removePin={this.props.removePin} />
+								pin={pin} boards={boards} />
 					})}
 				</div>
 			)
