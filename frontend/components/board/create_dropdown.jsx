@@ -28,11 +28,11 @@ class CreateDropdown extends React.Component {
 					<div>
 						<div className="modal" onClick={this.hideMenu}></div>
 						<ul>
-							<li><Link to="/create-pin">Create Pin</Link></li>
+							<Link to="/create-pin"><li>Create Pin</li></Link>
 							<Link to="/create-board"><li>Create Board</li></Link>
 						</ul>
 					</div>
-				) : (null)
+					) : (null)
 				}
 			</div>
 		)
