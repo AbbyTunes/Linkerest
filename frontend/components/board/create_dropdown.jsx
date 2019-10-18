@@ -29,7 +29,8 @@ class CreateDropdown extends React.Component {
 						<div className="modal" onClick={this.hideMenu}></div>
 						<ul>
 							<Link to="/create-pin"><li>Create Pin</li></Link>
-							<Link to="/create-board"><li>Create Board</li></Link>
+							<li>Create Board</li>
+							{/* <Link to="/create-board"><li>Create Board</li></Link> */}
 						</ul>
 					</div>
 					) : (null)
