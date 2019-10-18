@@ -17,6 +17,9 @@ class PinIndexItem extends React.Component {
 	}
 
 	constructBoardSelection() {
+		// cannot re-pin to a board yet
+		// need to change all the pins into items
+		// in case to fetch title and description of an item
 		const { boards } = this.props;
 
 		const currentBoards = [];
