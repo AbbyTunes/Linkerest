@@ -109,7 +109,6 @@ class CreatePinForm extends React.Component {
 	}
 
 	render() {
-		// console.log(this.state);
 		const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
 		return (
 			<div className="form-canvas">
