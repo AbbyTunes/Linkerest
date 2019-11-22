@@ -13,9 +13,8 @@ RUN npm install --silent
 COPY . /usr/src/node_app
 
 RUN npm run postinstall
-# npm run postinstall will run the command: "webpack --mode=production"
 
-FROM ruby:2.5.1-alpine3.9
+FROM ruby:2.5.1-alpine3.7
 
 RUN apk add --no-cache --update build-base \
 	linux-headers \
