@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 require 'open-uri'
 
 Item.destroy_all
@@ -78,7 +70,7 @@ file12 = open('https://linkerest-pro.s3-us-west-2.amazonaws.com/seed12.jpg')
 pin12.photo.attach(io: file12, filename: "seed12")
 pin12.save!
 
-pin13 = Pin.new({ authorId: user1.id, link: "www.pinterest.com" })
+pin13 = Pin.new({ authorId: demo_user.id, link: "www.pinterest.com" })
 file13 = open('https://linkerest-pro.s3-us-west-2.amazonaws.com/seed13.jpg')
 pin13.photo.attach(io: file13, filename: "seed13")
 pin13.save!
@@ -98,6 +90,10 @@ file16 = open('https://linkerest-pro.s3-us-west-2.amazonaws.com/seed16.jpg')
 pin16.photo.attach(io: file16, filename: "seed16")
 pin16.save!
 
+pin17 = Pin.new({ authorId: demo_user.id, link: "www.pinterest.com" })
+file17 = open('https://linkerest-pro.s3-us-west-2.amazonaws.com/background.jpg')
+pin17.photo.attach(io: file17, filename: "seed17")
+pin17.save!
 
 board = Board.create!([ 
 	{ authorId: demo_user.id, title: "board1", description: "board1", isPrivate: false},
@@ -105,7 +101,7 @@ board = Board.create!([
 	{ authorId: demo_user.id, title: "board3", description: "board3", isPrivate: false},
 	{ authorId: demo_user.id, title: "board4", description: "board4", isPrivate: false},
 	{ authorId: demo_user.id, title: "board5", description: "board5", isPrivate: false},
-	{ authorId: user1.id, title: "board6", description: "board6", isPrivate: false},
+	{ authorId: demo_user.id, title: "board6", description: "board6", isPrivate: false},
 	{ authorId: user1.id, title: "board7", description: "board7", isPrivate: false},
 	{ authorId: user2.id, title: "board8", description: "board8", isPrivate: false},
 	{ authorId: user2.id, title: "board9", description: "board9", isPrivate: false},
@@ -115,6 +111,7 @@ board = Board.create!([
 ]);
 
 item = Item.create!([
+	{ boardId: board[0].id, pinId: pin17.id, authorId: demo_user.id, title: "board1", description: "pin1" },
 	{ boardId: board[0].id, pinId: pin1.id, authorId: demo_user.id, title: "board1", description: "pin1" },
 	{ boardId: board[0].id, pinId: pin2.id, authorId: demo_user.id, title: "board1", description: "pin2" },
 	{ boardId: board[1].id, pinId: pin3.id, authorId: demo_user.id, title: "board2", description: "pin3" },

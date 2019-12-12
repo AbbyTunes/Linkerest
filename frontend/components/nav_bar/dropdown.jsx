@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { logout, currentUser } from "../../actions/session_actions";
 
 class Dropdown extends React.Component {
 
@@ -28,9 +27,12 @@ class Dropdown extends React.Component {
 						<div>
 							<div className="modal" onClick={ this.hideMenu }></div>
 							<ul>
-								<Link to="/my-boards"><li>{ this.props.currentUser.username }</li></Link>
-								<Link to="/my-boards"><li>My Dashboard</li></Link>
-								<li onClick={ this.props.logout } >Log out</li>
+								<Link to="/my-boards" onClick={this.hideMenu}><li>My Boards</li></Link>
+								<Link to="/create-pin"><li>Upload Pin</li></Link>
+								<a href="https://www.abbydeveloper.com/"><li>Abby's Portfolio</li></a>
+								<a href="https://www.linkedin.com/in/abby-jun-xu/"><li>LinkedIn</li></a>
+								<a href="https://github.com/AbbyTunes"><li>Github</li></a>
+								<li onClick= { this.props.logout } >Log out</li>
 							</ul>
 						</div>
 					) : ( null )
