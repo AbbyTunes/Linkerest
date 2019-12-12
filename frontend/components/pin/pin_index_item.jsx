@@ -63,9 +63,9 @@ class PinIndexItem extends React.Component {
 
 					<img src={pin.photo}/>
 
-					<div className="shade"></div>
+		
 
-					<div className="pin-info">
+					{/* <div className="pin-info">
 
 						{this.constructBoardSelection()}
 
@@ -73,7 +73,7 @@ class PinIndexItem extends React.Component {
 							{pin.link}
 						</div>
 						
-					</div>
+					</div> */}
 					
 				</Link>
 

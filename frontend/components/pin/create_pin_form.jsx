@@ -28,7 +28,6 @@ class CreatePinForm extends React.Component {
 	handleFile(e) {
 
 		const fileReader = new FileReader();
-		// this.setState({ photo: e.currentTarget.files[0] });
 		const file = e.currentTarget.files[0];
 		fileReader.onloadend = () => {
 			this.setState({ photoUrl: fileReader.result, photo: file });
@@ -72,7 +71,6 @@ class CreatePinForm extends React.Component {
 		)
 		
 		this.props.history.push(`/my-boards/${this.state.boardId}`);
-		// this.props.createPin(this.state);
 	}
 
 	constructBoardSelection() {
@@ -88,7 +86,6 @@ class CreatePinForm extends React.Component {
 		if (boards.length === 0) {
 			return ( <div> 
 					<p>you don't have Boards yet</p>
-					{/* <CreateBoardForm createBoard={CreateBoard} /> */}
 				</div> ) 
 		}
 
@@ -110,6 +107,14 @@ class CreatePinForm extends React.Component {
 
 	render() {
 		const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+		
+		let name;
+		if (this.props.currentUser) {
+			name = this.props.currentUser.name;
+
+		} else {
+			name = "loading";
+		}
 		return (
 			<div className="form-canvas">
 
@@ -131,7 +136,7 @@ class CreatePinForm extends React.Component {
 									onChange={this.handleInput("title")} />
 							
 							<div className="user-profile">
-								<div className="user-name">{currentUser.username}</div>
+								<div className="user-name">{name}</div>
 							</div>
 
 							<input type="description" value={this.state.description}

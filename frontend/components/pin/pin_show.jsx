@@ -19,11 +19,6 @@ class PinShow extends React.Component {
 	// }
 
 	render() {
-
-		// cannot adjust to different screen sizes
-		// hover onto the img, should have a transparent div
-		// click on the img, link to the destination link
-
 		const { pin } = this.props;
 		if (!pin) return null;
 		
@@ -31,20 +26,14 @@ class PinShow extends React.Component {
 			<div className="pin-canvas">
 				<Link to='/'>
 					<div className="back-button"></div>
-					{/* <div className="back-button" onClick={this.handleBack}></div> */}
 				</Link>
 			
 				<div className="pin-show">
 					<img src={pin.photo} className="pin-left" />
 
 					<div className="pin-right">
-						<div className="pin-option">
-							<div className="white board-text">Board options</div>
-							<button type="submit" className="red">Save</button>
-						</div>
-						{/* <p className="link-to-pin">{pin.link}</p> */}
+
 						<div className="upload">
-							
 							<div className="upload-by">Uploaded by </div> 
 							<div className="upload-name">{pin.authorName}</div>
 						</div>
@@ -52,7 +41,7 @@ class PinShow extends React.Component {
 						<div className="pin-author">
 							<div className="author-profile"></div>
 							<div className="author-name">{pin.authorName}</div>
-							<div className="author-follow">follow</div>
+							{/* <div className="author-follow">follow</div> */}
 						</div>
 						
 					</div>

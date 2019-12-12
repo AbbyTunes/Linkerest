@@ -7,10 +7,8 @@ class Api::SessionsController < ApplicationController
 		if @user
 			login(@user)
 			render 'api/users/show'
-			# redirect_to index_page
 		else
 			render json: ["Invalid username/password combo"], status: 401
-			# render :new
 		end
 	end
 
@@ -19,10 +17,8 @@ class Api::SessionsController < ApplicationController
 		if @user
 			logout
 			render json: ['Logged out successfully']
-			# render "api/users/show"
 		else
 			render json: ["you haven't signed in"], status: 404
-			# redirect_to login_page
 		end
 	end
 
