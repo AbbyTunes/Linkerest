@@ -1,3 +1,12 @@
+# This file should contain all the record creation needed to seed the database with its default values.	
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).	
+#	
+# Examples:	
+#	
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])	
+#   Character.create(name: 'Luke', movie: movies.first)	
+
+
 require "open-uri"
 
 Item.destroy_all
@@ -132,7 +141,6 @@ board = Board.create!([
 	{ authorId: demo_user.id, title: "shoes", description: "board9", isPrivate: false},
 	{ authorId: user1.id, title: "cuteCats", description: "board10", isPrivate: false},
 	{ authorId: user1.id, title: "homeDecor", description: "board11", isPrivate: false}
-
 ]);
 
 item = Item.create!([
