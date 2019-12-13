@@ -25,8 +25,8 @@ const NavBar = ({ currentUser, logout }) => {
 				<div className="nav-right">
 					<div className="nav-link">
 						<Link to="/">Home</Link>
-						<Link to="/my-boards">My Boards</Link>
-						<Link to="/create-pin">Upload Pins</Link>
+						<Link to="/my-boards">Boards</Link>
+						<Link to="/create-pin">Upload</Link>
 						<a href="https://www.abbydeveloper.com/">Portfolio</a>
 						<a href="https://www.linkedin.com/in/abby-jun-xu/">LinkedIn</a>
 					</div>

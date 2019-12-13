@@ -92,7 +92,7 @@ class CreatePinForm extends React.Component {
 		let boardOptions;
 
 		boardOptions = currentBoards.map(board => {
-			return <option key={board.id} value={board.id}>{board.title}</option>
+			return <option className="board-options" key={board.id} value={board.id}>{board.title}</option>
 		})
 
 		return (
@@ -110,7 +110,7 @@ class CreatePinForm extends React.Component {
 		
 		let name;
 		if (this.props.currentUser) {
-			name = this.props.currentUser.name;
+			name = this.props.currentUser.username;
 
 		} else {
 			name = "loading";

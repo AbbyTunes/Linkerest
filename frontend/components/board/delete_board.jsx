@@ -1,13 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-class CreateDropdown extends React.Component {
+class DeleteBoard extends React.Component {
 
 	constructor(props) {
 		super(props)
 		this.state = { showMenu: false }
 		this.showMenu = this.showMenu.bind(this);
 		this.hideMenu = this.hideMenu.bind(this);
+		this.removeBoard = this.removeBoard.bind(this);
+	}
+
+	removeBoard(e) {
+		e.preventDefault();
+		const boardId = this.props.boardId;
+		this.props.removeBoard(boardId);
 	}
 
 	showMenu() {
@@ -22,14 +28,13 @@ class CreateDropdown extends React.Component {
 		return (
 			<div className="create-dropdown">
 
-				<div className="create" onClick={this.showMenu}></div>
+				<div className="board-delete" onClick={this.showMenu}></div>
 
-				{this.state.showMenu ? (
+				{ this.state.showMenu ? (
 					<div>
 						<div className="modal" onClick={this.hideMenu}></div>
-						<ul>
-							<Link to="/create-pin"><li>Create Pin</li></Link>
-						</ul>
+						<div className="delete-popup" onClick={this.removeBoard}>Delete Board</div>
+					
 					</div>
 					) : (null)
 				}
@@ -38,4 +43,4 @@ class CreateDropdown extends React.Component {
 	}
 }
 
-export default CreateDropdown;
+export default DeleteBoard;

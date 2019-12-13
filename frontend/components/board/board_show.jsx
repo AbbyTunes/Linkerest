@@ -13,13 +13,6 @@ class BoardShow extends React.Component {
 		if (prevProps.match.params.id != this.props.match.params.id) {
 			this.props.fetchBoard();
 		}
-		
-		// after adding a pin to a board
-		// cannot show that pin right away, have to refresh the page
-
-		// if (prevProps.board.itemIds.length != this.props.board.itemIds.length) {
-		// 	this.props.fetchBoard();
-		// } 
 	}
 
 	render() {

@@ -72,14 +72,7 @@ class BoardShowItem extends React.Component {
 
 					<img src={item.photo} />
 
-					{/* <div className="shade"></div> */}
-
-					<div className="pin-info">
-
-						{/* <div className="pin-option">
-							<div className="white">board_options</div>
-							<div className="red">save</div>
-						</div> */}
+					{/* <div className="pin-info">
 						{this.constructBoardSelection()}
 
 						<div className="pin-link">
@@ -88,7 +81,7 @@ class BoardShowItem extends React.Component {
 
 						<input type="submit" value="" onClick={this.removeItemfromBoard} className="item-delete" />
 
-					</div>
+					</div> */}
 
 				</Link>
 
