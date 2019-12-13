@@ -92,7 +92,7 @@ class CreatePinForm extends React.Component {
 		let boardOptions;
 
 		boardOptions = currentBoards.map(board => {
-			return <option key={board.id} value={board.id}>{board.title}</option>
+			return <option className="board-options" key={board.id} value={board.id}>{board.title}</option>
 		})
 
 		return (
@@ -135,9 +135,9 @@ class CreatePinForm extends React.Component {
 									placeholder="Add your title"
 									onChange={this.handleInput("title")} />
 							
-							{/* <div className="user-profile">
+							<div className="user-profile">
 								<div className="user-name">{name}</div>
-							</div> */}
+							</div>
 
 							<input type="description" value={this.state.description}
 									className="description-input"

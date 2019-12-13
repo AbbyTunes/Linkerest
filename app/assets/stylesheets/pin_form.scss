@@ -39,6 +39,7 @@
 	position: relative;
 	left: 0;
 	border: none;
+	outline: none;
 	background-color: rgb(236, 236, 236);
 	color: grey;
 	width: 130px;
@@ -50,8 +51,10 @@
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.selector option {
-
+.board-options {
+	outline: none;
+	border: none;
+	height: 20px;
 }
 
 .save-button {
@@ -145,7 +148,7 @@
 
 .description-input {
 	position: absolute;
-	top: 180px;
+	top: 230px;
 	left: 0;
 	font-size: 18px;
 }
@@ -170,7 +173,7 @@
 	position: absolute;
 	left: 60px;
 	top: 15px;
-	font-size: 16px;
+	font-size: 17px;
 	font-weight: bold;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

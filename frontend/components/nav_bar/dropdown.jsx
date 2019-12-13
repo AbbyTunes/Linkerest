@@ -28,7 +28,7 @@ class Dropdown extends React.Component {
 							<div className="modal" onClick={ this.hideMenu }></div>
 							<ul>
 								<Link to="/my-boards" onClick={this.hideMenu}><li>My Boards</li></Link>
-								<Link to="/create-pin"><li>Upload Pin</li></Link>
+							<Link to="/create-pin" onClick={this.hideMenu}><li>Upload Pin</li></Link>
 								<a href="https://www.abbydeveloper.com/"><li>Abby's Portfolio</li></a>
 								<a href="https://www.linkedin.com/in/abby-jun-xu/"><li>LinkedIn</li></a>
 								<a href="https://github.com/AbbyTunes"><li>Github</li></a>
