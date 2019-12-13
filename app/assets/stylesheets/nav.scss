@@ -5,7 +5,7 @@
 	left: 0;
 	z-index: 300;
 	background-color: white;
-	opacity: 0.95;
+	opacity: 0.9;
 	display: flex;
 	height: 65px;
 	box-sizing: border-box;
@@ -98,14 +98,14 @@
 	text-align: center;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-decoration: none;
-	color: grey;
+	color: rgb(100, 100, 100);
 	size: 18px;
 	font-weight: bold;
 	min-height: 25px;
 }
 
 .nav-link a:hover {
-	background: rgb(236, 236, 236);
+	background: rgb(231, 231, 231);
 }
 
 .dropdown {
@@ -136,7 +136,7 @@
     padding: 10px 25px;
 	font-size: 17px;
 	font-weight: bold;
-	color: rgb(121, 121, 121);
+	color: rgb(106, 106, 106);
     cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     // text-decoration: none;
@@ -180,7 +180,7 @@
 }
 
 .hamburger:active {
-	box-shadow: 0 0 0 4px rgba(0, 132, 255, .5);
+	box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
     outline: 0;
 }
 
@@ -190,16 +190,16 @@
 
 
 .nav-link a:active {
-	box-shadow: 0 0 0 4px rgba(0, 132, 255, .5);
+	box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
     outline: 0;
 }
 
 .logo-nav:active {
-	box-shadow: 0 0 0 4px rgba(0, 132, 255, .5);
+	box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
     outline: 0;
 }
 
 .nav-middle:focus {
-	box-shadow: 0 0 0 4px rgba(0, 132, 255, .5);
+	box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
     outline: 0;
 }

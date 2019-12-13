@@ -23,7 +23,7 @@ class BoardIndexItem extends React.Component {
 	render() {
 		const { board, removeBoard } = this.props;
 		return (
-			<div className="board-link">
+			<div className="board-link" >
 				<Link to={`/my-boards/${board.id}`}>
 					{/* frontend route */}
 					

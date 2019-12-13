@@ -110,7 +110,7 @@ class CreatePinForm extends React.Component {
 		
 		let name;
 		if (this.props.currentUser) {
-			name = this.props.currentUser.name;
+			name = this.props.currentUser.username;
 
 		} else {
 			name = "loading";
@@ -135,9 +135,9 @@ class CreatePinForm extends React.Component {
 									placeholder="Add your title"
 									onChange={this.handleInput("title")} />
 							
-							<div className="user-profile">
+							{/* <div className="user-profile">
 								<div className="user-name">{name}</div>
-							</div>
+							</div> */}
 
 							<input type="description" value={this.state.description}
 									className="description-input"

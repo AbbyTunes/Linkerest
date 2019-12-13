@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class CreateDropdown extends React.Component {
+class DeleteBoard extends React.Component {
 
 	constructor(props) {
 		super(props)
@@ -28,7 +28,7 @@ class CreateDropdown extends React.Component {
 					<div>
 						<div className="modal" onClick={this.hideMenu}></div>
 						<ul>
-							<Link to="/create-pin"><li>Create Pin</li></Link>
+							<Link to="/create-pin"><li>Delete Board</li></Link>
 						</ul>
 					</div>
 					) : (null)
@@ -38,4 +38,4 @@ class CreateDropdown extends React.Component {
 	}
 }
 
-export default CreateDropdown;
+export default DeleteBoard;

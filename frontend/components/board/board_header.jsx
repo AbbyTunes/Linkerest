@@ -1,7 +1,6 @@
 import React from "react";
-import CreateDropdown from "./create_dropdown";
-import BoardIndex from "./board_index";
 import BoardIndexContainer from "./board_index_container";
+import CreatePinContainer from "../pin/create_pin_container";
 
 class Tabs extends React.Component {
 	
@@ -45,23 +44,25 @@ export default class BoardHeader extends React.Component {
 
 	render() {
 		const { currentUser } = this.props;
+		// console.log(currentUser);
+		// debugger
 		const tabs = [
-			{ title: 'Board', content: <BoardIndexContainer /> },
-			{ title: 'Pin', content: 'Show all your Pins' },
-			{ title: 'Hardcode', content: 'Third tab here' }
+			// { title: 'My Boards', content: <BoardIndexContainer /> },
+			// { title: 'Upload Pin', content: <CreatePinContainer /> }
+			// { title: 'Hardcode', content: 'Third tab here' }
 		];
 
 		const tab = tabs[this.state.selectedTab];
 
 		return (
-			<div>
-				<div className="board-canvas">
-					<CreateDropdown />
-					<div className="myName">{currentUser.username}</div>
+			<div className="board-canvas">
+				<div className="board-profile">
+					<div className="myName">{ currentUser.username }</div>
 				</div>
-				
 
-				<div className='tab-area'>
+				<BoardIndexContainer />
+
+				{/* <div className='tab-area'>
 					<Tabs selectedTab={this.state.selectedTab}
 							onTabChosen={this.changeTab}
 							tabs={tabs}>
@@ -71,7 +72,7 @@ export default class BoardHeader extends React.Component {
 							{tab.content}
 						</article>
 					</div>
-				</div>
+				</div> */}
 
 			</div>
 		)
