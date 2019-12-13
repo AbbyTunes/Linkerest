@@ -70,7 +70,8 @@ class CreatePinForm extends React.Component {
 			(response) => console.log(response.responseJSON)
 		)
 		
-		this.props.history.push(`/my-boards/${this.state.boardId}`);
+		// this.props.history.push(`/pins/${this.state.boardId}`);
+		// this.props.history.push(`/my-boards/${this.state.boardId}`);
 	}
 
 	constructBoardSelection() {
@@ -106,7 +107,7 @@ class CreatePinForm extends React.Component {
 	}
 
 	render() {
-		const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : ( 
+		const preview = this.state.photoUrl ? <img className="offset-img" src={this.state.photoUrl} /> : ( 
 			<div className="camera"></div>
 			);
 		
@@ -127,6 +128,7 @@ class CreatePinForm extends React.Component {
 
 						<div className="left-form">
 							<input type="file" className="preview" onChange={this.handleFile} value="" />
+							{/* <div className="camera" ></div> */}
 							{ preview }
 						</div>
 						
