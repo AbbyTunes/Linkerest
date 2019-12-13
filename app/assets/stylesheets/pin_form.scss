@@ -4,8 +4,8 @@
 	top: 65px;
 	left: 0;
 	right: 0;
-	bottom: -150px;
-	padding: 20px;
+	bottom: -85px;
+    padding: 20px;
 }
 
 .form-session {
@@ -16,7 +16,7 @@
 	margin: auto;
 	padding: 50px;
 	width: 780px;
-	height: 530px;
+	height: 480px;
 	border-radius: 10px;
 }
 
@@ -41,13 +41,14 @@
 	border: none;
 	outline: none;
 	background-color: rgb(236, 236, 236);
-	color: grey;
+	color: rgb(110, 110, 110);
 	width: 130px;
 	padding-left: 8px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 15px;
-	font-weight: 400;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -62,9 +63,14 @@
 	background-color: red;
 	color: white;
 	width: 70px;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: bold;
+	cursor: pointer;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.save-button:hover {
+	background-color: rgb(196, 28, 28);
 }
 
 .lower-form {
@@ -76,39 +82,61 @@
 	display: flex;
 }
 
+
 .left-form {
-	position: relative;
-	left: 0;
-	top: 0;
-	width: 320px;
-	height: 420px;
-	border-radius: 10px;
-	overflow: hidden;
-	z-index: 10;
-}
-
-.preview {
-	position: relative;
-	left: 0;
-	top: 0;
-	width: 320px;
-	min-height: 420px;
-	background: rgb(236, 236, 236);
-	border-radius: 10px;
-	z-index: 10;
-}
-
-.left-form img {
 	position: absolute;
 	left: 0;
 	top: 0;
+	display: flex;
 	width: 320px;
 	height: 420px;
 	background-color: white;
 	object-fit: cover;
 	background-repeat: no-repeat;
 	border-radius: 10px;
-	z-index: 20;
+	z-index: 50;
+}
+
+.offset-img {
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	width: 316px;
+	height: 419px;
+	background-color: white;
+	object-fit: cover;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	z-index: 200;
+}
+
+.preview {
+	display: block;
+	width: 100%;
+	min-height: 420px;
+	cursor: pointer;
+	border: dashed 2px rgb(165, 165, 165);
+	background: rgba(218, 218, 218, 0.3);
+	border-radius: 10px;
+	z-index: 100;
+}
+
+.preview:hover {
+	background: rgba(218, 218, 218, 0.5);
+}
+
+.camera {
+	position: absolute;
+    top: 150px;
+    left: 100px;
+	display: block;
+	width: 140px;
+	height: 140px;
+	background: url("camera.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: auto;
+	z-index: 50;
 }
 
 .preview input {
@@ -163,17 +191,21 @@
 .user-profile {
 	position: relative;
 	top: 70px;
-	height: 50px;
-	width: 50px;
 	background: image-url("profile.png");
-	background-size: contain;
+	background-size: cover;
+    height: 65px;
+	width: 65px;
+	background-repeat: no-repeat;
+	border-radius: 50%;
 }
 
 .user-name {
 	position: absolute;
-	left: 60px;
-	top: 15px;
-	font-size: 17px;
+    left: 80px;
+    top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+	color: rgb(82, 82, 82);
 	font-weight: bold;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

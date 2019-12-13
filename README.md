@@ -1,26 +1,28 @@
 # Linkerest
 
-# [linkerest.com](https://linkerest.herokuapp.com)
+# [Live Demo](https://linkerest.herokuapp.com)
 
-## Background and Overview
-
-It is a Pinterest Clone Project
-
-## Functionality and MVP
-- [ ] User Auth
-- [ ] Nav Bar
-- [ ] Pins
-- [ ] Boards
-- [ ] Upload Pins
-- [ ] Update Pin_Boards
 
 ## Technologies
- * Database: MongoDB, AWS
- * Backend: Node, Redux
- * Frontend: React, Rails
+ * Database: MongoDB
+ * Cloud Storage: AWS
+ * Backend: Node.js, Redux
+ * Frontend: JavaScript, React, Rails
 
-## Group Members and Contributions
- * Abby: https://github.com/AbbyTunes
+## Developer
+ * Abby Xu
+ * [Portfolio](https://www.abbydeveloper.com/)
+ * [LinkedIn](https://www.linkedin.com/in/abby-jun-xu/) 
+ * [Github](https://www.linkedin.com/in/abby-jun-xu/)
+
+
+
+ ## Functionality and MVP (Minimum Viable Product)
+- [ ] User Authentication
+- [ ] Nav Bar
+- [ ] Upload Pins to AWS
+- [ ] Pins Index & Show
+- [ ] Boards Index & Show
 
 ## Features and Technical Challenges
 
@@ -35,3 +37,4 @@ It is a Pinterest Clone Project
 * User Profile
 * Following & Followed
 * Comments
+

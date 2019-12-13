@@ -37,9 +37,6 @@
 	margin: auto;
 	border-radius: 8px;
 	object-fit: cover;
-	// background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: 50% 50%;
 }
 
 .board-info {
@@ -54,14 +51,14 @@
 }
 
 .board-title {
-	color: black;
+	color: rgb(82, 82, 82);
 	font-size: 20px;
 	font-weight: bold;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .pin-num {
-	color: black;
+	color: rgb(82, 82, 82);
 	font-size: 16px;
 	font-weight: 500;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
