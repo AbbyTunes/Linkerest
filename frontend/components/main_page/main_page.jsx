@@ -15,9 +15,7 @@ const MainPage = () => (
 	<div className="main-page">
 		<Switch>
 			<ProtectedRoute exact path="/" component={PinIndexContainer} />
-			{/* <ProtectedRoute exact path="/${currentUser.username}" component={BoardHeaderContainer} /> */}
 			<ProtectedRoute exact path="/my-boards" component={BoardHeaderContainer} />
-			{/* <ProtectedRoute exact path="/my-boards" component={BoardIndexContainer} /> */}
 
 			<Route exact path="/pins/:id" component={PinShowContainer} />
 			<Route exact path="/my-boards/:id" component={BoardShowContainer} />

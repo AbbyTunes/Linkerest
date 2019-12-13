@@ -15,7 +15,6 @@
 class Item < ApplicationRecord
 
 	validates :boardId, :pinId, :authorId, presence: true
-	# validates :title, uniqueness: { scope: :authorId }
 
 	belongs_to :board,
 	foreign_key: :boardId,

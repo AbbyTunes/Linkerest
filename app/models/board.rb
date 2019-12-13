@@ -13,7 +13,6 @@
 
 class Board < ApplicationRecord
 
-	# validates :authorId, :isPrivate, presence: true
 	validates :title, uniqueness: {scope: :authorId}
 	validates :isPrivate, inclusion: [true, false]
 

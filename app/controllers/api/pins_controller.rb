@@ -26,7 +26,6 @@ class Api::PinsController < ApplicationController
 		@pin = Pin.find(params[:id])
 		@pin.destroy
 		render json: "the pin has been deleted"
-		# render 'api/pin/index'
 	end
 
 	private

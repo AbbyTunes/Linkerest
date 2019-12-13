@@ -3,20 +3,18 @@ import { Link } from 'react-router-dom';
 
 class PinShow extends React.Component {
 
-	// constructor(props) {
-	// 	super(props)
+	constructor(props) {
+		super(props)
 	// 	this.handleBack = this.handleBack.bind(this)
-	// }
+	}
 
 	componentDidMount() {
 		this.props.fetchPin();
 	}
 
-	// two component use this pin_show page
-	// cannot go back to the previous page yet
-	// handleBack() {
-	// 	this.props.history.push('/my-boards');
-	// }
+	handleSubmit() {
+		
+	}
 
 	render() {
 		const { pin } = this.props;
@@ -41,7 +39,8 @@ class PinShow extends React.Component {
 						<div className="pin-author">
 							<div className="author-profile"></div>
 							<div className="author-name">{pin.authorName}</div>
-							{/* <div className="author-follow">follow</div> */}
+							<div className="delete-pin">Delete Pin</div>
+							<Link to={`${pin.link}`}><div className="link-to">{pin.link}</div></Link>
 						</div>
 						
 					</div>

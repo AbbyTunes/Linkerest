@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// const BoardShowItem = ({ item }) => {
-
 class BoardShowItem extends React.Component {
 
 	constructor(props) {
@@ -19,7 +17,6 @@ class BoardShowItem extends React.Component {
 	}
 
 	constructBoardSelection() {
-		// cannot edit a board form yet
 		const { boards } = this.props;
 
 		const currentBoards = [];
@@ -31,7 +28,7 @@ class BoardShowItem extends React.Component {
 
 		if (boards.length === 0) {
 			return (<div>
-				<p>you don't have Boards yet</p>
+				<div className="empty">you don't have Boards yet</div>
 				{/* <CreateBoardForm createBoard={CreateBoard} /> */}
 			</div>)
 		}
@@ -54,34 +51,28 @@ class BoardShowItem extends React.Component {
 
 	removeItemfromBoard(e) {
 		e.preventDefault();
-
 		const itemId = this.props.item.id;
 		this.props.removeItem(itemId)
-		// .then(() => {
-		// 	this.props.history.push("/my-boards")
-		// });
 	}
 
 	render() {
-		const { item } = this.props;
-
+		const { item, id } = this.props;
 		return (
 			<div className="pin-pic">
 
-				<Link to={`/pins/${item.pinId}`}>
+				<Link to={`/pins/${id}`}>
 
 					<img src={item.photo} />
 
-					{/* <div className="pin-info">
-						{this.constructBoardSelection()}
+					<div className="pin-info">
+						{/* {this.constructBoardSelection()}
 
 						<div className="pin-link">
 							{item.link}
-						</div>
+						</div> */}
 
 						<input type="submit" value="" onClick={this.removeItemfromBoard} className="item-delete" />
-
-					</div> */}
+					</div>
 
 				</Link>
 

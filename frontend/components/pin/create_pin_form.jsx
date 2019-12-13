@@ -42,6 +42,8 @@ class CreatePinForm extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
+		// let saveButton = document.getElementById("save-pin-button");
+		// saveButton.disabled = true;
 
 		const formData = new FormData();
 		formData.append('pin[link]', this.state.link);
@@ -62,16 +64,15 @@ class CreatePinForm extends React.Component {
 				$.ajax({
 					url: `/api/boards/${this.state.boardId}/pins/${response.id}/items`,
 					method: 'POST',
-					data: { item: { title: this.state.title, description: this.state.description }}
+					data: { item: { 
+						title: this.state.title, 
+						description: this.state.description
+					}}
 				})
 			)
-		).then(
-			(response) => console.log(response),
-			(response) => console.log(response.responseJSON)
 		)
 		
-		// this.props.history.push(`/pins/${this.state.boardId}`);
-		// this.props.history.push(`/my-boards/${this.state.boardId}`);
+		this.props.history.push(`/my-boards/${this.state.boardId}`);
 	}
 
 	constructBoardSelection() {
@@ -101,7 +102,7 @@ class CreatePinForm extends React.Component {
 				<select className="selector" value={ this.state.boardId } onChange={this.handleInput("boardId")} >
 					{boardOptions}
 				</select>
-				<button type="submit" className="save-button">Save</button>
+				<button type="submit" className="save-button" id="save-pin-button">Save</button>
 			</div>
 		)
 	}

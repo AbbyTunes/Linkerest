@@ -18,7 +18,6 @@ const mapState = (state) => {
 const mapDispatch = (dispatch) => ({
 	fetchPins: () => dispatch(fetchPins()),
 	fetchBoards: () => dispatch(fetchBoards())
-	// removePin: (id) => dispatch(removePin(id))
 });
 
 export default connect(mapState, mapDispatch)(PinIndex);

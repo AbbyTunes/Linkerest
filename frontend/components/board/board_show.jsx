@@ -1,6 +1,6 @@
 import React from "react";
 import BoardShowItem from "./board_show_item";
-// import PinIndexItem from "../pin/pin_index_item";
+import { Link } from 'react-router-dom';
 
 class BoardShow extends React.Component {
 
@@ -18,11 +18,19 @@ class BoardShow extends React.Component {
 	render() {
 
 		const { board, boards, items, removeItem } = this.props;
-		if (!items || !items.length ) return null;
+		if (!items || !items.length) {
+			return (
+				<div>
+					<div className="empty"> You don't have pins in this board yet</div>
+					<Link to="/create-pin"><div>Upload Pins</div></Link>
+				</div>
+			)
+		}
 
-		const columns = [[], [], [], [], []];
+		const columns = [[], [], [], []];
+		
 		const colItems = items.map((item, idx) => {
-			let bucket_idx = idx % 5;
+			let bucket_idx = idx % 4;
 			columns[bucket_idx].push(item);
 		});
 
@@ -30,20 +38,21 @@ class BoardShow extends React.Component {
 			return (
 				<div className="col" key={`col-${idx}`} >
 					{col.map((item) => {
-						
-						return <BoardShowItem item={item} key={`item-${idx}`} 
-											boards={boards} removeItem={removeItem} />
-						// return <PinIndexItem pin={item} key={`item-${idx}`} />
-						// cannot re-use the component
+						// uniq key is important
+						return <BoardShowItem item={item} id={item.pinId} key={`item-${item.id}`} 
+									boards={boards} removeItem={removeItem} />
 					})}
 				</div>
 			)
 		});
 
 		return (
-			<div className="grid">
-				{columnItems}
+			<div className="pin-frame-canvas">
+				<div className="grid">
+					{columnItems}
+				</div>
 			</div>
+			
 		);
 	}
 }

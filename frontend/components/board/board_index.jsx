@@ -11,10 +11,10 @@ class BoardIndex extends React.Component {
 	render() {
 		const { boards, removeBoard, removeItem } = this.props;
 		
-		const myBoards = boards.map((board, idx) => {
+		const myBoards = boards.map((board) => {
 			return (
 				<div>
-					<BoardIndexItem key={`board-${idx}`} board={board}
+					<BoardIndexItem key={`board-${board.id}`} board={board}
 							removeBoard={removeBoard} removeItem={removeItem} />
 				</div>
 			);

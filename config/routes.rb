@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 		resources :boards, only: [:index, :show, :create, :destroy] do
 			resources :pins, only: [:index] do
 				resources :items, only: [:create]
-				# delete "items", to: "items#destroy"
 			end
 		end
 		# resources :errors, only: [:index, :destroy]
