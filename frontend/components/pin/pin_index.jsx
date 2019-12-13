@@ -14,9 +14,9 @@ class PinIndex extends React.Component {
 		const { pins, boards } = this.props;
 		// if (!pins.length || !boards.length) return null;
 
-		const columns = [[], [], [], [], []];
+		const columns = [[], [], [], []];
 		const pinsArray = this.props.pins.map((pin, idx) => {
-			let bucket_idx = idx % 5;
+			let bucket_idx = idx % 4;
 			columns[bucket_idx].push(pin);
 		});
 
@@ -32,9 +32,12 @@ class PinIndex extends React.Component {
 		});
 
 		return (
-			<div className="grid">
-				{columnPins}
+			<div className="pin-frame-canvas">
+				<div className="grid">
+					{columnPins}
+				</div>
 			</div>
+			
 		);
 	}
 }
