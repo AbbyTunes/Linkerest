@@ -82,18 +82,21 @@
 .board-profile {
 	position: relative;
     top: 45px;
-    left: 40px;
-    height: 50px;
-    width: 50px;
+	left: 40px;
 	background: image-url("profile.png");
-	background-size: contain;
+	background-size: cover;
+    height: 65px;
+	width: 65px;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	// overflow: hidden;	
 }
 
 .myName {
 	position: relative;
-    top: 14px;
-    left: 65px;
-	color: rgb(66, 65, 65);
+    top: 20px;
+    left: 85px;
+	color: rgb(82, 82, 82);
 	font-size: 22px;
 	font-weight: 700;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

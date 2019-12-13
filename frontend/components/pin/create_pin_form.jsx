@@ -106,7 +106,9 @@ class CreatePinForm extends React.Component {
 	}
 
 	render() {
-		const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+		const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : ( 
+			<div className="camera"></div>
+			);
 		
 		let name;
 		if (this.props.currentUser) {
