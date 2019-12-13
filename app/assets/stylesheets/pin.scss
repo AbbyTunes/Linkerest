@@ -1,17 +1,23 @@
 
-.grid {
+.pin-frame-canvas {
 	position: relative;
 	top: 20px;
-	left: 20px;
+	left: 0;
 	right: 0;
-	display: flex;
-	height: 1700px;
+	display: block;
+}
+.grid {
+	height: 1800px;
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    padding-right: 30px;
 }
 
 .col {
 	display: flex;
 	flex-direction: column;
-	width: auto;
+	width: 350px;
 }
 
 .pin-pic {

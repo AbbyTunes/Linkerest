@@ -8,18 +8,18 @@ class BoardIndexItem extends React.Component {
 	constructor(props) {
 		super(props)
 		this.removeBoard = this.removeBoard.bind(this);
-		this.state = { showMenu: false }
-		this.showMenu = this.showMenu.bind(this);
-		this.hideMenu = this.hideMenu.bind(this);
+		// this.state = { showMenu: false }
+		// this.showMenu = this.showMenu.bind(this);
+		// this.hideMenu = this.hideMenu.bind(this);
 	}
 
-	showMenu() {
-		this.setState({ showMenu: true })
-	}
+	// showMenu() {
+	// 	this.setState({ showMenu: true })
+	// }
 
-	hideMenu() {
-		this.setState({ showMenu: false })
-	}
+	// hideMenu() {
+	// 	this.setState({ showMenu: false })
+	// }
 
 	removeBoard(e) {
 		e.preventDefault();

@@ -27,8 +27,8 @@ const NavBar = ({ currentUser, logout }) => {
 						<Link to="/">Home</Link>
 						<Link to="/my-boards">Boards</Link>
 						<Link to="/create-pin">Upload</Link>
-						<a href="https://www.abbydeveloper.com/">Portfolio</a>
 						<a href="https://www.linkedin.com/in/abby-jun-xu/">LinkedIn</a>
+						<a href="https://www.abbydeveloper.com/">About Developer</a>
 					</div>
 					<Dropdown logout={logout} currentUser={currentUser} />
 				</div>	
