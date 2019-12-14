@@ -30,7 +30,7 @@ class BoardIndexItem extends React.Component {
 	render() {
 		const { board, removeBoard } = this.props;
 		return (
-			<div className="board-link" >
+			<div className="board-link" key={`board-${board.od}`} >
 				<Link to={`/my-boards/${board.id}`}>
 					
 					<div className="board-outer">

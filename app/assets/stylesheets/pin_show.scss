@@ -103,15 +103,17 @@
 
 .delete-pin {
 	position: relative;
-    top: 270px;
-    left: 180px;
-    width: 80px;
-    color: rgb(87, 87, 87);
-    padding: 12px 14px;
+    top: 290px;
+    left: 65px;
+    width: fit-content;
+    border: none;
+    font-size: 16px;
+    color: #575757;
+    padding: 12px 15px;
     font-weight: bold;
     background-color: #ececec;
-	border-radius: 20px;
-	cursor: pointer;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .delete-pin:hover {
@@ -121,9 +123,19 @@
 
 .delete-pin:focus {
 	box-shadow: 0 0 0 4px rgba(0, 132, 255, .5);
-    outline: 0;
 }
 
 .link-to {
-	
+    position: absolute;
+    top: 150px;
+    left: 0;
+    background: rgba(214, 214, 214, 0.3);
+    border-radius: 17px;
+    padding: 8px 14px;
+	color: rgb(99, 99, 99);
+	cursor: pointer;
+}
+
+.link-to:hover {
+	background: rgba(214, 214, 214, 0.6);
 }

@@ -4,25 +4,34 @@ import { Link } from 'react-router-dom';
 
 class BoardShow extends React.Component {
 
+	constructor(props) {
+		super(props)
+		// this.state = { itemLength: this.props.board.itemIds.length }
+	}
+
 	componentDidMount() {
 		this.props.fetchBoard();
-		this.props.fetchBoards();
+		// this.props.fetchBoards();
 	}
 
 	componentDidUpdate(prevProps) {
 		if (prevProps.match.params.id != this.props.match.params.id) {
 			this.props.fetchBoard();
 		}
+		// if (this.props.board.itemIds.length !== this.props.items.length ) {
+		// 	this.props.fetchBoard();
+		// }
 	}
 
 	render() {
 
-		const { board, boards, items, removeItem } = this.props;
+		const { board, items, removeItem } = this.props;
+		// don't need boards yet
 		if (!items || !items.length) {
 			return (
-				<div>
-					<div className="empty"> You don't have pins in this board yet</div>
-					<Link to="/create-pin"><div>Upload Pins</div></Link>
+				<div className="empty-board">
+					<div className="empty-text"> You don't have pins in this board yet</div>
+					<Link to="/create-pin"><div className="upload-pin">Upload Pins</div></Link>
 				</div>
 			)
 		}
@@ -38,9 +47,10 @@ class BoardShow extends React.Component {
 			return (
 				<div className="col" key={`col-${idx}`} >
 					{col.map((item) => {
-						// uniq key is important
-						return <BoardShowItem item={item} id={item.pinId} key={`item-${item.id}`} 
-									boards={boards} removeItem={removeItem} />
+						// uniq key is important  // don't need to select boards={boards} 
+						return <BoardShowItem item={item} id={item.pinId} 
+									key={`item-${item.id}`} 
+									removeItem={removeItem} />
 					})}
 				</div>
 			)

@@ -11,7 +11,7 @@ class BoardIndex extends React.Component {
 	render() {
 		const { boards, removeBoard, removeItem } = this.props;
 		
-		const myBoards = boards.map((board) => {
+		const myBoards = boards.map((board, idx) => {
 			return (
 				<div>
 					<BoardIndexItem key={`board-${board.id}`} board={board}
@@ -20,11 +20,24 @@ class BoardIndex extends React.Component {
 			);
 		});
 
-		return (
-			<div className="board-frame">
-				{myBoards}
-			</div>
-		)
+		
+		
+		if (boards.length) {
+			return (
+				<div className="board-frame">
+					{myBoards}
+				</div>
+			) 
+		} else {
+			return(
+				<div className="board-frame">
+					<div className = "empty-board" >
+						<div className="empty-text"> You don't have pins in this board yet</div>
+						<Link to="/create-pin"><div className="upload-pin">Upload Pins</div></Link>
+					</div>
+				</div>
+			)
+		}
 	}
 }
 
