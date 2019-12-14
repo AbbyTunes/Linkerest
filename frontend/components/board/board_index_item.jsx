@@ -35,7 +35,10 @@ class BoardIndexItem extends React.Component {
 					
 					<div className="board-outer">
 
-						<img src={board.boardPhoto} />
+						<div className="board-thumbnail">
+							<img src={board.boardPhoto} />
+						</div>
+						
 
 						<div className="board-info">
 

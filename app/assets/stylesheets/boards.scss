@@ -21,16 +21,7 @@
 	z-index: 1;
 }
 
-.board-outer:hover {
-	background-color: rgb(233, 233, 233);
-	
-}
-
-.board-link a {
-	text-decoration: none;
-}
-
-.board-outer img {
+.board-thumbnail {
 	width: 300px;
 	height: 200px;
 	border: solid 1px rgb(238, 238, 238);
@@ -40,6 +31,16 @@
 	border-radius: 8px;
 	object-fit: cover;
 }
+
+.board-outer:hover {
+	background-color: rgb(233, 233, 233);
+}
+
+.board-link a {
+	text-decoration: none;
+}
+
+
 
 .board-info {
 	display: flex;
