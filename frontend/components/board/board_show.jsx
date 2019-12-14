@@ -1,28 +1,45 @@
 import React from "react";
 import BoardShowItem from "./board_show_item";
-// import PinIndexItem from "../pin/pin_index_item";
+import { Link } from 'react-router-dom';
 
 class BoardShow extends React.Component {
 
+	constructor(props) {
+		super(props)
+		// this.state = { itemLength: this.props.board.itemIds.length }
+	}
+
 	componentDidMount() {
 		this.props.fetchBoard();
-		this.props.fetchBoards();
+		// this.props.fetchBoards();
 	}
 
 	componentDidUpdate(prevProps) {
 		if (prevProps.match.params.id != this.props.match.params.id) {
 			this.props.fetchBoard();
 		}
+		// if (this.props.board.itemIds.length !== this.props.items.length ) {
+		// 	this.props.fetchBoard();
+		// }
 	}
 
 	render() {
 
-		const { board, boards, items, removeItem } = this.props;
-		if (!items || !items.length ) return null;
+		const { board, items, removeItem } = this.props;
+		// don't need boards yet
+		if (!items || !items.length) {
+			return (
+				<div className="empty-board">
+					<div className="empty-text"> You don't have pins in this board yet</div>
+					<Link to="/create-pin"><div className="upload-pin">Upload Pins</div></Link>
+				</div>
+			)
+		}
 
-		const columns = [[], [], [], [], []];
+		const columns = [[], [], [], []];
+		
 		const colItems = items.map((item, idx) => {
-			let bucket_idx = idx % 5;
+			let bucket_idx = idx % 4;
 			columns[bucket_idx].push(item);
 		});
 
@@ -30,20 +47,22 @@ class BoardShow extends React.Component {
 			return (
 				<div className="col" key={`col-${idx}`} >
 					{col.map((item) => {
-						
-						return <BoardShowItem item={item} key={`item-${idx}`} 
-											boards={boards} removeItem={removeItem} />
-						// return <PinIndexItem pin={item} key={`item-${idx}`} />
-						// cannot re-use the component
+						// uniq key is important  // don't need to select boards={boards} 
+						return <BoardShowItem item={item} id={item.pinId} 
+									key={`item-${item.id}`} 
+									removeItem={removeItem} />
 					})}
 				</div>
 			)
 		});
 
 		return (
-			<div className="grid">
-				{columnItems}
+			<div className="pin-frame-canvas">
+				<div className="grid">
+					{columnItems}
+				</div>
 			</div>
+			
 		);
 	}
 }

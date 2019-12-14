@@ -15,7 +15,6 @@ class Pin < ApplicationRecord
 
 	has_one_attached :photo
 
-	# pin.author.username
 	belongs_to :author,
 	foreign_key: :authorId,
 	class_name: 'User'
@@ -28,10 +27,6 @@ class Pin < ApplicationRecord
 	has_many :boards,
 	through: :items,
 	source: :board
-
-	# has_many :boards,
-	# foreign_key: :boardId,
-	# class_name: 'Board'
 
 	def ensure_photo
 		unless self.photo.attached?

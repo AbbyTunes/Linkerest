@@ -3,20 +3,25 @@ import { Link } from 'react-router-dom';
 
 class PinShow extends React.Component {
 
-	// constructor(props) {
-	// 	super(props)
-	// 	this.handleBack = this.handleBack.bind(this)
-	// }
+	constructor(props) {
+		super(props)
+		// this.state = { boardId: this.props.item.boardId }
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
 
 	componentDidMount() {
 		this.props.fetchPin();
+		this.props.fetchItem();
 	}
 
-	// two component use this pin_show page
-	// cannot go back to the previous page yet
-	// handleBack() {
-	// 	this.props.history.push('/my-boards');
-	// }
+	handleSubmit(e) {
+		e.preventDefault();
+		const { id , currentUser } = this.props;
+		this.props.removeItem(id);
+		this.props.removePin(id);
+		// straight to main page
+		// this.props.history.push(`/my-boards/${this.state.boardId}`);
+	}
 
 	render() {
 		const { pin } = this.props;
@@ -41,7 +46,9 @@ class PinShow extends React.Component {
 						<div className="pin-author">
 							<div className="author-profile"></div>
 							<div className="author-name">{pin.authorName}</div>
-							{/* <div className="author-follow">follow</div> */}
+							<input type="submit" value="Delete Pin" onClick={this.handleSubmit} className="delete-pin" />
+							{/* <div className="delete-pin">Delete Pin</div> */}
+							<Link to={`${pin.link}`}><div className="link-to">{pin.link}</div></Link>
 						</div>
 						
 					</div>

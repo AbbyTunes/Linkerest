@@ -1,6 +1,8 @@
-html body main {
+html body main input a {
 	margin: 0;
 	padding: 0;
+	border: none;
+	outline: none;
 }
 
 .vsc-initialized {
@@ -16,4 +18,7 @@ div input p text {
 	margin: 65px 30px 30px;
 }
 
+a {
+	text-decoration: none;
+}
 
