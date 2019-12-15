@@ -5,19 +5,29 @@
 	left: 0;
 	right: 0;
 	bottom: -85px;
-    padding: 20px;
+	padding: 20px;
+	
+	.form-session {
+		display: block;
+		background-color: white;
+		position: relative;
+		top: 25px;
+		margin: auto;
+		padding: 50px;
+		width: 780px;
+		height: 480px;
+		border-radius: 10px;
+	}
 }
 
-.form-session {
-	display: block;
-	background-color: white;
+.create-pin-empty-board {
 	position: relative;
-	top: 25px;
-	margin: auto;
-	padding: 50px;
-	width: 780px;
-	height: 480px;
-	border-radius: 10px;
+	top: 40px;
+    left: 70px;
+    width: 400px;
+	height: auto;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	z-index: 500;
 }
 
 .upper-form {

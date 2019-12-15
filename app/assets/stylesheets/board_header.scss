@@ -77,20 +77,21 @@
 	display: block;
 	height: auto;
 	margin: auto;
+
+	.board-profile {
+		position: relative;
+		top: 45px;
+		left: 40px;
+		background: image-url("profile.png");
+		background-size: cover;
+		height: 65px;
+		width: 65px;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+	}
 }
 
-.board-profile {
-	position: relative;
-    top: 45px;
-	left: 40px;
-	background: image-url("profile.png");
-	background-size: cover;
-    height: 65px;
-	width: 65px;
-	background-repeat: no-repeat;
-	border-radius: 50%;
-	// overflow: hidden;	
-}
+
 
 .myName {
 	position: relative;

@@ -5,15 +5,42 @@ class BoardShowItem extends React.Component {
 
 	constructor(props) {
 		super(props)
-		// this.state = { boardId: null }
+		// this.state = { shortLink: this.props.item.link }
 		this.removeItemfromBoard = this.removeItemfromBoard.bind(this);
 		this.handleInput = this.handleInput.bind(this);
+		this.chompLink = this.chompLink.bind(this);
 		// this.handleFile = this.handleFile.bind(this);
 		// this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleInput(field) {
 		return (e) => this.setState({ [field]: e.target.value })
+	}
+
+	chompLink() {
+		// const { shortLink } = this.state; 
+		// cannot use setState
+
+		let newLink = this.props.item.link;
+		if (newLink.startsWith("https://") && newLink.length > 28 ) {
+			console.log("chomp https");
+			newLink = newLink.slice(8);
+		};
+
+		if ( newLink.endsWith(".com") && newLink.length > 24 ) {
+			console.log("chomp .com");
+			newLink = newLink.slice(0, -4);
+		}
+
+		if (newLink.startsWith("www.") && newLink.length > 24) {
+			console.log("chomp www.");
+			newLink = newLink.slice(4);
+		};
+
+		if ( newLink.length > 20 ) {
+			newLink = newLink.slice(0, 20);
+		}
+		return newLink + "...";
 	}
 
 	// constructBoardSelection() {
@@ -57,25 +84,23 @@ class BoardShowItem extends React.Component {
 
 	render() {
 		const { item, id } = this.props;
+		const shortLink = this.chompLink();
 		return (
 			<div className="pin-pic">
 
 				<Link to={`/pins/${id}`}>
-
 					<img src={item.photo} />
-
-					<div className="pin-info">
-						{/* {this.constructBoardSelection()}
-
-						<div className="pin-link">
-							{item.link}
-						</div> */}
-
-						<input type="submit" value="" onClick={this.removeItemfromBoard} className="item-delete" />
-					</div>
-
 				</Link>
 
+				<div className="pin-info">
+					{/* {this.constructBoardSelection()} */}
+
+					<a href={`${item.link}`} className="pin-link" value={ shortLink } >
+						<div></div>
+					</a>					
+
+					<input type="submit" className="item-delete" value="" onClick={this.removeItemfromBoard} />
+				</div>
 			</div>
 		)
 	}

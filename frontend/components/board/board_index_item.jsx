@@ -1,41 +1,48 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import DeleteBoard from './delete_board';
+// import DeleteBoard from './delete_board';
 
-// const BoardIndexItem = ({ board }) => {
 class BoardIndexItem extends React.Component {
 
 	constructor(props) {
 		super(props)
 		this.removeBoard = this.removeBoard.bind(this);
-		// this.state = { showMenu: false }
-		// this.showMenu = this.showMenu.bind(this);
-		// this.hideMenu = this.hideMenu.bind(this);
 	}
-
-	// showMenu() {
-	// 	this.setState({ showMenu: true })
-	// }
-
-	// hideMenu() {
-	// 	this.setState({ showMenu: false })
-	// }
 
 	removeBoard(e) {
 		e.preventDefault();
+
+		const { board } = this.props;
+
+		if ( board && board.itemIds.length ) {
+			board.itemIds.forEach((itemId) => {
+				this.props.removeItem(itemId);
+				// console.log(`delete ${itemId}`);
+			});
+			// console.log("successfully deleted items")
+		} 
+		// else {
+		// 	console.log("no items")
+		// }
 		const boardId = this.props.board.id;
-		this.props.removeBoard(boardId)
+		this.props.removeBoard(boardId);
+		// console.log("successfully deleted board");
+
 	}
 
 	render() {
-		const { board, removeBoard } = this.props;
+		const { board } = this.props;
+		// console.log(board.itemIds);
+
 		return (
-			<div className="board-link" key={`board-${board.od}`} >
+			<div className="board-link" key={`board-${board.id}`} >
 				<Link to={`/my-boards/${board.id}`}>
 					
 					<div className="board-outer">
 
-						<img src={board.boardPhoto} />
+						<div className="board-thumbnail-frame">
+							<img className="board-thumbnail-img" src={board.boardPhoto} />
+						</div>
 
 						<div className="board-info">
 
@@ -45,24 +52,13 @@ class BoardIndexItem extends React.Component {
 							</div>
 
 							<div className="board-right">
-								{/* <div className="board-delete" onClick={this.removeBoard} ></div> */}
+								<div className="board-delete" onClick={this.removeBoard} >
+									{/* <div className="board-delete-text">Delete</div> */}
+								</div>
 								
-								{/* <div className="board-delete" onClick={this.showMenu} ></div> */}
-
-								{/* { this.state.showMenu ? (
-									<div>
-										<div className="modal" onClick={this.hideMenu}></div>
-										<div className="delete-popup" onClick={this.removeBoard}>Delete Board</div>
-
-									</div>
-									) : (null)
-								} */}
 							</div>
 						</div>
 					</div>
-					
-
-					{/* <input type="submit" value="" onClick={ this.removeBoard } className="board-delete"/> */}
 
 				</Link>
 				

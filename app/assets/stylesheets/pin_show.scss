@@ -113,7 +113,9 @@
     font-weight: bold;
     background-color: #ececec;
     border-radius: 20px;
-    cursor: pointer;
+	cursor: pointer;
+	-webkit-transition: all 0.3s; /* Safari prior 6.1 */ 
+	transition: all 0.3s; 
 }
 
 .delete-pin:hover {
