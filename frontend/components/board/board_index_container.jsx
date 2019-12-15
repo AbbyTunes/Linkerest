@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 
 import { fetchBoards, removeBoard } from "../../actions/board_actions";
+import { removeItem } from '../../actions/item_actions';
 import BoardIndex from "./board_index";
 
 const mapState = (state) => {
@@ -10,7 +11,8 @@ const mapState = (state) => {
 
 const mapDispatch = (dispatch) => ({
 	fetchBoards: () => dispatch(fetchBoards()),
-	removeBoard: (id) => dispatch(removeBoard(id))
+	removeBoard: (id) => dispatch(removeBoard(id)),
+	removeItem: (itemId) => dispatch(removeItem(itemId))
 });
 
 export default connect(mapState, mapDispatch)(BoardIndex);

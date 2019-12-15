@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class CreatePinForm extends React.Component {
 
@@ -86,9 +87,18 @@ class CreatePinForm extends React.Component {
 		}
 
 		if (boards.length === 0) {
-			return ( <div> 
-					<p>you don't have Boards yet</p>
-				</div> ) 
+			return ( 
+				<div className="create-pin-empty-board"> 
+					<div className="empty-text">you don't have Boards yet</div>
+				</div> 
+				
+				// <div className="board-frame">
+				// 	<div className="empty-board" >
+				// 		<div className="empty-text"> you don't have Boards yet</div>
+				// 		<Link to="/create-pin"><div className="upload-pin">Create Board</div></Link>
+				// 	</div>
+				// </div>
+			) 
 		}
 
 		let boardOptions;
