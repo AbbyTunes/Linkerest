@@ -32,7 +32,7 @@ class BoardIndexItem extends React.Component {
 
 	render() {
 		const { board } = this.props;
-		console.log(board.itemIds);
+		// console.log(board.itemIds);
 
 		return (
 			<div className="board-link" key={`board-${board.id}`} >
@@ -53,7 +53,7 @@ class BoardIndexItem extends React.Component {
 
 							<div className="board-right">
 								<div className="board-delete" onClick={this.removeBoard} >
-									<div className="board-delete-text">Delete</div>
+									{/* <div className="board-delete-text">Delete</div> */}
 								</div>
 								
 							</div>

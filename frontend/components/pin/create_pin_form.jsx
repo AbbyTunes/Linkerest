@@ -89,7 +89,7 @@ class CreatePinForm extends React.Component {
 		if (boards.length === 0) {
 			return ( 
 				<div className="create-pin-empty-board"> 
-					<div className="empty-text">you don't have Boards yet</div>
+					{/* <div className="empty-text">you don't have Boards yet</div> */}
 				</div> 
 				
 				// <div className="board-frame">

@@ -101,7 +101,7 @@
 	cursor: pointer;
 	-webkit-transition: all 0.45s; /* Safari prior 6.1 */ 
 	transition: all 0.45s; 
-
+	transition-timing-function: ease;
 }
 
 .board-delete:hover {
@@ -112,17 +112,10 @@
 	background: red;
 }
 
-// .board-delete:after {
-// 	content: "Delete";
-// }
-
-.board-delete:hover .board-delete-text {
+.board-delete:hover:before {
 	display: inline-block;
-}
-
-.board-delete-text {
-	display: none;
-    position: absolute;
+	content: "Delete";
+	position: absolute;
     top: 0;
 	right: 0;
 	padding: 6px 16px;
@@ -131,10 +124,27 @@
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     z-index: 200;
-    transition-delay: 0.5s;
-    -webkit-transition: all 1s;
-    transition: all 1s;
 }
+
+// .board-delete:hover .board-delete-text {
+// 	display: inline-block;
+// }
+
+// .board-delete-text {
+// 	display: none;
+//     position: absolute;
+//     top: 0;
+// 	right: 0;
+// 	padding: 6px 16px;
+//     font-size: 16px;
+//     font-weight: 600;
+//     color: white;
+//     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//     z-index: 200;
+//     transition-delay: 0.5s;
+//     -webkit-transition: all 1s;
+//     transition: all 1s;
+// }
 
 .empty-board {
 	position: relative;

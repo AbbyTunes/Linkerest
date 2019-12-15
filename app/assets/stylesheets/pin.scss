@@ -5,28 +5,35 @@
 	left: 0;
 	right: 0;
 	display: block;
-}
-.grid {
-	height: auto;
-    width: 1050px;
-    margin: auto;
-    display: flex;
-    // padding-right: 30px;
-}
 
-.col {
-	display: flex;
-	flex-direction: column;
-	width: 350px;
+	.grid {
+		height: auto;
+		width: 1050px;
+		margin: auto;
+		display: flex;
+
+		.col {
+			display: flex;
+			flex-direction: column;
+			width: 350px;
+		}
+	}
 }
 
 .pin-pic {
-	display: flex;
-	position: relative;
-	height: auto;
-	min-height: 50px;
-	border-radius: 10px;
-	margin: 5px;
+	display: block;
+    position: relative;
+    height: auto;
+    min-height: 150px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin: 7px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.pin-pic a {
 	padding-bottom: 20px;
 }
 
@@ -44,94 +51,122 @@
 }
 
 .pin-pic:hover .pin-info {
-	display: flex;
-	width: 230px;
-	height: auto;
-	z-index: 20;
+	display: block;
+	-webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .pin-info {
 	display: none;
+    position: absolute;
+    bottom: 145px;
+    left: 32px;
+    width: 75%;
+    z-index: 20;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+
+	.pin-link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 35px;
+		height: 25px;
+		text-align: center;
+		color: #4e4e4e;
+		font-size: 14px;
+		font-weight: bold;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		background-color: rgba(255, 255, 255, 0.95);
+		border-radius: 20px;
+		padding: 0;
+		padding-top: 10px;
+		overflow: hidden;
+		cursor: pointer;
+		-webkit-transition: all 0.45s; /* Safari prior 6.1 */ 
+		transition: all 0.45s; 
+		transition-timing-function: ease;
+	}
+
+	.pin-link:hover {
+		background-color: rgba(255, 255, 255, 0.85);
+		width: 100%;
+		max-width: 100%;
+		overflow: hidden;
+		transition-delay: 0.5s;
+		transition: all 0.5s;
+	}
+	.pin-link:hover:before {
+		content: attr(value);
+		// content: attr(href);
+		// content: "abbydeveloper.com";
+		transition-delay: 0.5s;
+		-webkit-transition: all 0.45s; /* Safari prior 6.1 */ 
+		transition: all 0.45s; 
+	}
+
+	.item-delete {
+		position: absolute;
+		left: 0;
+		top: 50px;
+		border-radius: 50%;
+		overflow: hidden;
+		border: none;
+		height: 35px;
+		width: 35px;
+		background: image-url("pen2.jpg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+
 }
 
-.pin-option {
-	display: flex;
-	position: absolute;
-	top: 25px;
-	right: 25px;
-	width: 200px;
-	height: 40px;
-	border-radius: 10px;
-	background-color: rgb(236, 236, 236);
-	overflow: hidden;
-	align-content: center;
-}
 
-.white {
-	position: relative;
-	left: 0;
-	border: none;
-	background-color: rgb(236, 236, 236);
-	color: black;
-	width: 130px;
-	padding-left: 8px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 15px;
-	font-weight: bold;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	opacity: 0.85;
-}
 
-.white:hover {
-	opacity: 0.9;
-}
+// .pin-option {
+// 	display: flex;
+// 	position: absolute;
+// 	top: 25px;
+// 	right: 25px;
+// 	width: 200px;
+// 	height: 40px;
+// 	border-radius: 10px;
+// 	background-color: rgb(236, 236, 236);
+// 	overflow: hidden;
+// 	align-content: center;
+// }
 
-.red {
-	border: none;
-	background-color: rgb(223, 0, 0);
-	color: white;
-	width: 70px;
-	font-size: 15px;
-	font-weight: bold;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+// .white {
+// 	position: relative;
+// 	left: 0;
+// 	border: none;
+// 	background-color: rgb(236, 236, 236);
+// 	color: black;
+// 	width: 130px;
+// 	padding-left: 8px;
+// 	text-align: center;
+// 	text-decoration: none;
+// 	font-size: 15px;
+// 	font-weight: bold;
+// 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+// 	opacity: 0.85;
+// }
 
-.red:hover {
-	background-color: rgb(200, 1, 1);
-}
+// .white:hover {
+// 	opacity: 0.9;
+// }
 
-.pin-link {
-	position: absolute;
-	left: 27px;
-	bottom: 48px;
-	text-decoration: none;
-	color: black;
-	font-size: 14px;
-	font-weight: bold;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: white;
-	opacity: 0.85;
-	border-radius: 20px;
-	padding: 10px;
-	z-index: 30;
-}
+// .red {
+// 	border: none;
+// 	background-color: rgb(223, 0, 0);
+// 	color: white;
+// 	width: 70px;
+// 	font-size: 15px;
+// 	font-weight: bold;
+// 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+// }
 
-.pin-link:hover {
-	opacity: 0.9;
-}
-
-.item-delete {
-	position: absolute;
-	right: 20px;
-	bottom: 48px;
-	border-radius: 20px;
-	overflow: hidden;
-	border: none;
-
-	height: 30px;
-	width: 30px;
-	background: image-url("pen2.jpg");
-	background-size: contain;
-	cursor: pointer;
-}
+// .red:hover {
+// 	background-color: rgb(200, 1, 1);
+// }

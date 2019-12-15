@@ -17,10 +17,10 @@ const NavBar = ({ currentUser, logout }) => {
 					</Link>
 				</div>
 
-				{/* <div className="nav-middle">
+				<div className="nav-middle">
 					<div className="search-icon"></div>
 					<input className="search" type="text" placeholder="Search"/>
-				</div> */}
+				</div>
 
 				<div className="nav-right">
 					<div className="nav-link">
