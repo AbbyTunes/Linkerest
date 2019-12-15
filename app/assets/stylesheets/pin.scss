@@ -93,17 +93,20 @@
 		width: 100%;
 		max-width: 100%;
 		overflow: hidden;
-		transition-delay: 0.5s;
-		transition: all 0.5s;
+		// transition-delay: 0.5s;
+		// transition: all 0.5s;
 	}
 	.pin-link:hover:before {
 		content: attr(value);
 		// content: attr(href);
 		// content: "abbydeveloper.com";
-		transition-delay: 0.5s;
-		-webkit-transition: all 0.45s; /* Safari prior 6.1 */ 
-		transition: all 0.45s; 
 	}
+
+
+	.pin-link:active {
+		box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
+	}
+
 
 	.item-delete {
 		position: absolute;
@@ -118,6 +121,11 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		cursor: pointer;
+	}
+
+
+	.item-delete:active {
+		box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
 	}
 
 }

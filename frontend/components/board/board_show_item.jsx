@@ -22,25 +22,26 @@ class BoardShowItem extends React.Component {
 		// cannot use setState
 
 		let newLink = this.props.item.link;
-		if (newLink.startsWith("https://") && newLink.length > 28 ) {
-			console.log("chomp https");
+		if (newLink.startsWith("https://")) {
+			// console.log("chomp https");
 			newLink = newLink.slice(8);
 		};
 
 		if ( newLink.endsWith(".com") && newLink.length > 24 ) {
-			console.log("chomp .com");
+			// console.log("chomp .com");
 			newLink = newLink.slice(0, -4);
 		}
 
-		if (newLink.startsWith("www.") && newLink.length > 24) {
-			console.log("chomp www.");
-			newLink = newLink.slice(4);
-		};
+		// if (newLink.startsWith("www.") && newLink.length > 24) {
+		// 	console.log("chomp www.");
+		// 	newLink = newLink.slice(4);
+		// };
 
 		if ( newLink.length > 20 ) {
 			newLink = newLink.slice(0, 20);
+			newLink += "...";
 		}
-		return newLink + "...";
+		return newLink;
 	}
 
 	// constructBoardSelection() {
