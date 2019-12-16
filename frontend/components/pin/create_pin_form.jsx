@@ -74,6 +74,7 @@ class CreatePinForm extends React.Component {
 		)
 		// this.props.history.push(`/`);
 		this.props.history.push(`/my-boards/${this.state.boardId}`);
+		location.reload(true);
 	}
 
 	constructBoardSelection() {

@@ -2,7 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchPins } from "../../actions/pin_actions";
 import { fetchBoards } from '../../actions/board_actions';
+import { removePin } from '../../actions/pin_actions';
 import PinIndex from "./pin_index";
+
 
 const mapState = (state) => {
 	const session = state.session;
@@ -17,7 +19,8 @@ const mapState = (state) => {
 
 const mapDispatch = (dispatch) => ({
 	fetchPins: () => dispatch(fetchPins()),
-	fetchBoards: () => dispatch(fetchBoards())
+	fetchBoards: () => dispatch(fetchBoards()),
+	removePin: (id) => dispatch(removePin(id))
 });
 
 export default connect(mapState, mapDispatch)(PinIndex);

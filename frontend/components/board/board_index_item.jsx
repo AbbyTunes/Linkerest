@@ -53,9 +53,7 @@ class BoardIndexItem extends React.Component {
 
 							<div className="board-right">
 								<div className="board-delete" onClick={this.removeBoard} >
-									{/* <div className="board-delete-text">Delete</div> */}
 								</div>
-								
 							</div>
 						</div>
 					</div>

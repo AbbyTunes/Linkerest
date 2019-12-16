@@ -8,11 +8,20 @@ class PinIndexItem extends React.Component {
 		// this.state = { boardId: null }
 		this.handleInput = this.handleInput.bind(this);
 		this.chompLink = this.chompLink.bind(this);
+		// this.removePinDependently = this.removePinDependently.bind(this);
 	}
 
 	handleInput(field) {
 		return (e) => this.setState({ [field]: e.target.value })
 	}
+
+	// removePinDependently(e) {
+	// 	e.preventDefault();
+	// 	const pinId = this.props.pin.id;
+	// 	this.props.removePin(pinId);
+	// }
+
+	// removePin() {}
 
 	// constructBoardSelection() {
 
@@ -52,6 +61,10 @@ class PinIndexItem extends React.Component {
 
 		let newLink = this.props.pin.link;
 
+		if (!newLink.length) {
+			newLink = "no link yet"
+		}
+
 		if (newLink.startsWith("https://")) {
 			newLink = newLink.slice(8);
 		};
@@ -72,17 +85,26 @@ class PinIndexItem extends React.Component {
 		const { pin } = this.props;
 		const shortLink = this.chompLink();
 
+		// debugger
 		return (
-			<div className="pin-pic">
+			<div className="pin-pic" key={`pin-${pin.id}`}>
 
-				<Link to={`/pins/${pin.id}`}>
+				<Link to={`/pins/${pin.id}`} className="pin-pic-link-bottom">
 					<img src={pin.photo}/>
 				</Link>	
 
 				<div className="pin-info">
 					{/* {this.constructBoardSelection()} */}
-					<a href={`${pin.link}`} className="pin-link" value={shortLink} ></a>
-					<input type="submit" className="item-delete" value="" onClick={this.chompLink} />
+					<a href={`${pin.link}`} className="pin-link" value={shortLink}></a>
+					
+					{/* <div className="item-delete" onClick={this.props.removePin(pin.id) } ></div> */}
+					{/* <input type="submit" className="item-delete" value="" onClick={() => this.props.removePin(pin.id)} /> */}
+					<div className="item-delete" onClick={() => {
+							this.props.removePin(pin.id);
+							location.reload(true);
+						}
+					} ></div>
+					
 				</div>
 
 			</div>
