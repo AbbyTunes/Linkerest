@@ -33,13 +33,16 @@
     transition: all 0.3s;
 }
 
-.pin-pic a {
+.pin-pic-link-bottom {
 	padding-bottom: 20px;
 }
 
 .pin-pic:hover {
-	background-color: rgb(233, 233, 233);
+	background-color: rgba(228, 228, 228, 0.8);
 	border-radius: 10px;
+	-webkit-transition: all 0.3s;
+    transition: all 0.3s;
+	// transition-timing-function: ease;
 }
 
 .pin-pic img {
@@ -52,8 +55,6 @@
 
 .pin-pic:hover .pin-info {
 	display: block;
-	-webkit-transition: all 0.3s;
-    transition: all 0.3s;
 }
 
 .pin-info {
@@ -63,74 +64,105 @@
     left: 32px;
     width: 75%;
     z-index: 20;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+}
 
-	.pin-link {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 35px;
-		height: 25px;
-		text-align: center;
-		color: #4e4e4e;
-		font-size: 14px;
-		font-weight: bold;
-		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		background-color: rgba(255, 255, 255, 0.95);
-		border-radius: 20px;
-		padding: 0;
-		padding-top: 10px;
-		overflow: hidden;
-		cursor: pointer;
-		-webkit-transition: all 0.45s; /* Safari prior 6.1 */ 
-		transition: all 0.45s; 
-		transition-timing-function: ease;
-	}
+.item-delete {
+	position: absolute;
+    left: 0;
+    top: 50px;
+	border-radius: 50%;
+	opacity: 0.8;
+    border: none;
+    height: 28px;
+    width: 36px;
+	padding-top: 7px;
+	background: image-url("pen2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	-webkit-transition: width 0.2s, height 0.2s, content 0.2s; /* Safari prior 6.1 */ 
+	transition: width 0.2s, height 0.2s, content 0.2s;
+	transition-timing-function: ease;
+}
 
-	.pin-link:hover {
-		background-color: rgba(255, 255, 255, 0.85);
-		width: 100%;
-		max-width: 100%;
-		overflow: hidden;
-		// transition-delay: 0.5s;
-		// transition: all 0.5s;
-	}
-	.pin-link:hover:before {
-		content: attr(value);
-		// content: attr(href);
-		// content: "abbydeveloper.com";
-	}
+.item-delete:hover {
+	display: block;
+    width: 64px;
+	height: 25px;
+	// opacity: 0.9;
+    border-radius: 20px;
+    background: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 8px;
+	padding-left: 19px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #4e4e4e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	z-index: 300;
+	cursor: pointer;
+}
 
+.item-delete:hover:after {
+	content: "Delete";
+}
 
-	.pin-link:active {
-		box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
-	}
-
-
-	.item-delete {
-		position: absolute;
-		left: 0;
-		top: 50px;
-		border-radius: 50%;
-		overflow: hidden;
-		border: none;
-		height: 35px;
-		width: 35px;
-		background: image-url("pen2.jpg");
-		background-size: contain;
-		background-repeat: no-repeat;
-		cursor: pointer;
-	}
-
-
-	.item-delete:active {
-		box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
-	}
-
+.item-delete:active {
+	box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
+	background-color: rgb(255, 255, 255);
 }
 
 
+.pin-link {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 35px;
+	opacity: 0.8;
+	background: image-url("link2.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	padding-top: 10px;
+	padding-left: 1px;
+	z-index: 100;
+	cursor: pointer;
+	-webkit-transition: width 0.45s, height 0.45s, content 0.45s, opacity 0.45s; /* Safari prior 6.1 */ 
+	transition: width 0.45s, height 0.45s, content 0.45s, opacity 0.45s;
+	transition-timing-function: ease;
+}
+
+.pin-link:hover {
+	// border: solid 2px orange;
+    background: none;
+	// opacity: 0.9;
+	width: 100%;
+	// width: fit-content;
+	// padding-top: 10px;
+    // padding-left: 15px;
+	// padding-right: 15px;
+	max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    color: #4e4e4e;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+	cursor: pointer;
+}
+
+.pin-link:hover:before {
+	content: attr(value);
+}
+
+.pin-link:active {
+	box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
+	background-color: rgb(255, 255, 255);
+}
 
 // .pin-option {
 // 	display: flex;

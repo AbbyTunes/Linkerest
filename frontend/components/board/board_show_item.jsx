@@ -17,11 +17,21 @@ class BoardShowItem extends React.Component {
 		return (e) => this.setState({ [field]: e.target.value })
 	}
 
+	removeItemfromBoard(e) {
+		e.preventDefault();
+		const itemId = this.props.item.id;
+		this.props.removeItem(itemId);
+	}
+
 	chompLink() {
 		// const { shortLink } = this.state; 
 		// cannot use setState
 
 		let newLink = this.props.item.link;
+
+		if (!newLink.length) {
+			newLink = "no link yet"
+		}
 		if (newLink.startsWith("https://")) {
 			// console.log("chomp https");
 			newLink = newLink.slice(8);
@@ -77,12 +87,6 @@ class BoardShowItem extends React.Component {
 	// 	)
 	// }
 
-	removeItemfromBoard(e) {
-		e.preventDefault();
-		const itemId = this.props.item.id;
-		this.props.removeItem(itemId)
-	}
-
 	render() {
 		const { item, id } = this.props;
 		const shortLink = this.chompLink();
@@ -96,11 +100,9 @@ class BoardShowItem extends React.Component {
 				<div className="pin-info">
 					{/* {this.constructBoardSelection()} */}
 
-					<a href={`${item.link}`} className="pin-link" value={ shortLink } >
-						<div></div>
-					</a>					
-
-					<input type="submit" className="item-delete" value="" onClick={this.removeItemfromBoard} />
+					<a href={`${item.link}`} className="pin-link" value={ shortLink } ></a>					
+					<div className="item-delete" onClick={this.removeItemfromBoard} ></div>
+					{/* <input type="submit" className="item-delete" value="" onClick={this.removeItemfromBoard} /> */}
 				</div>
 			</div>
 		)
