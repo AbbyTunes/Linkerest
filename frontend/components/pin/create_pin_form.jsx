@@ -16,6 +16,7 @@ class CreatePinForm extends React.Component {
 		this.handleInput = this.handleInput.bind(this);
 		this.handleFile = this.handleFile.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		// this.constructBoardSelection = this.constructBoardSelection.bind(this);
 	}
 
 	componentDidMount() {
@@ -53,39 +54,45 @@ class CreatePinForm extends React.Component {
 			formData.append('pin[photo]', this.state.photo);
 		}
 
+		let boardId = this.state.boardId ? this.state.boardId : this.props.boards[0].id;
+		console.log(boardId)
 		$.ajax({
 			url: '/api/pins',
 			method: 'POST',
 			data: formData,
 			contentType: false,
 			processData: false
-		})
-		.then(
-			(response) => (
-				$.ajax({
-					url: `/api/boards/${this.state.boardId}/pins/${response.id}/items`,
-					method: 'POST',
-					data: { item: { 
-						title: this.state.title, 
-						description: this.state.description
-					}}
-				})
+		}).then((response) => (
+				// console.log(response)
+				// return (
+					$.ajax({
+						url: `/api/boards/${boardId}/pins/${response.id}/items`,
+						method: 'POST',
+						data: { item: { 
+							title: this.state.title, 
+							description: this.state.description
+						}}
+					}).then((response) => {
+						// this.props.history.push(`/`);
+						this.props.history.push(`/my-boards/${boardId}`);
+						// location.reload(true);
+					})
+				// )
 			)
 		)
-		// this.props.history.push(`/`);
-		this.props.history.push(`/my-boards/${this.state.boardId}`);
-		location.reload(true);
 	}
 
 	constructBoardSelection() {
 		const { boards } = this.props;
+		// debugger
 
 		const currentBoards = [];	
 		boards.forEach(board => currentBoards.push(board));
 
-		if (currentBoards.length > 0 && currentBoards[0] && !this.state.boardId) {
-			this.setState({ boardId: currentBoards[0].id })
-		}
+		// if (currentBoards.length > 0 && currentBoards[0] && !this.state.boardId) {
+		// 	this.setState({ boardId: currentBoards[0].id });
+		// 	console.log(this.state.boardId);
+		// }
 
 		if (boards.length === 0) {
 			return ( 
@@ -108,9 +115,11 @@ class CreatePinForm extends React.Component {
 			return <option className="board-options" key={board.id} value={board.id}>{board.title}</option>
 		})
 
+		let boardId = this.state.boardId ? this.state.boardId : this.props.boards[0].id;
+
 		return (
 			<div className="upper-form">
-				<select className="selector" value={ this.state.boardId } onChange={this.handleInput("boardId")} >
+				<select className="selector" value={ boardId } onChange={this.handleInput("boardId")} >
 					{boardOptions}
 				</select>
 				<button type="submit" className="save-button" id="save-pin-button">Save</button>
@@ -135,7 +144,7 @@ class CreatePinForm extends React.Component {
 
 				<form onSubmit={this.handleSubmit} className="form-session">
 
-					{this.constructBoardSelection()}
+					{ this.constructBoardSelection() }
 					<div className="lower-form">
 
 						<div className="left-form">
