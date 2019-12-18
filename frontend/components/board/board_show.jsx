@@ -27,13 +27,27 @@ class BoardShow extends React.Component {
 
 		const { board, items, removeItem } = this.props;
 		// don't need boards yet
+		let emptyPin;
 		if (!items || !items.length) {
-			return (
+			emptyPin = (
 				<div className="empty-board">
 					<div className="empty-text"> You don't have pins in this board yet</div>
 					<Link to="/create-pin"><div className="upload-pin">Upload Pins</div></Link>
 				</div>
 			)
+		} else {
+			emptyPin = null;
+		}
+
+		let boardName;
+		if ( board && board.title ) {
+			boardName = (
+				<div className="board-profile">
+					<div className="boardName myName">{board.title}</div>
+				</div>
+			)
+		} else {
+			boardName = null;
 		}
 
 		const columns = [[], [], [], []];
@@ -57,10 +71,20 @@ class BoardShow extends React.Component {
 		});
 
 		return (
-			<div className="pin-frame-canvas">
-				<div className="grid">
-					{columnItems}
+
+			<div className="board-canvas">
+				
+				{ boardName }
+				<div className="board-frame">
+					{ emptyPin }
+
+					<div className="pin-frame-canvas">
+						<div className="grid">
+							{columnItems}
+						</div>
+					</div>
 				</div>
+				
 			</div>
 			
 		);

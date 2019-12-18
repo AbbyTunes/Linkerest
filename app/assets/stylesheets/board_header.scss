@@ -88,20 +88,38 @@
 		width: 65px;
 		background-repeat: no-repeat;
 		border-radius: 50%;
+
+		.myName {
+			position: relative;
+			top: 20px;
+			left: 85px;
+			color: rgb(82, 82, 82);
+			font-size: 22px;
+			font-weight: 700;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		.boardName {
+			position: relative;
+			top: 15px;
+			left: 90px;
+			width: fit-content;
+			padding-bottom: 10px;
+			border-bottom: solid 2px rgb(128, 128, 128);
+			color: rgb(128, 128, 128);
+			font-size: 22px;
+			font-weight: 700;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			// font-style: italic;
+		}
 	}
 }
 
 
 
-.myName {
-	position: relative;
-    top: 20px;
-    left: 85px;
-	color: rgb(82, 82, 82);
-	font-size: 22px;
-	font-weight: 700;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
+
+
 
 .tab-area {
 	position: relative;
