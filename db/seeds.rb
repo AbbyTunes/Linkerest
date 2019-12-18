@@ -138,14 +138,14 @@ demo_user = User.create!({ username: "demo_user", password: "password" })
 
 
 board = Board.create!([ 
-	{ authorId: demo_user.id, title: "homeDecor", description: "board1", isPrivate: false},
-	{ authorId: demo_user.id, title: "Portfolio", description: "board2", isPrivate: false},
-	{ authorId: demo_user.id, title: "cuteCats", description: "board3", isPrivate: false},
-	{ authorId: demo_user.id, title: "hairstyle", description: "board4", isPrivate: false},
-	{ authorId: demo_user.id, title: "tableSetting", description: "board5", isPrivate: false},
-	{ authorId: demo_user.id, title: "shoes", description: "board9", isPrivate: false},
-	{ authorId: user1.id, title: "cuteCats", description: "board10", isPrivate: false},
-	{ authorId: user1.id, title: "homeDecor", description: "board11", isPrivate: false}
+	{ authorId: demo_user.id, title: "Home Decor", description: "board1", isPrivate: false},
+	{ authorId: demo_user.id, title: "Cuteness", description: "board2", isPrivate: false},
+	{ authorId: demo_user.id, title: "Hairstyle", description: "board3", isPrivate: false},
+	{ authorId: demo_user.id, title: "Food Art", description: "board4", isPrivate: false},
+	{ authorId: demo_user.id, title: "Abby's Wedding", description: "board5", isPrivate: false},
+	{ authorId: demo_user.id, title: "Abby's Portfolio", description: "board9", isPrivate: false},
+	{ authorId: user1.id, title: "Interior Design", description: "board10", isPrivate: false},
+	{ authorId: user1.id, title: "Pets", description: "board11", isPrivate: false}
 ]);
 
 # item = Item.create!([
