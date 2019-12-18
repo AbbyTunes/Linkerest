@@ -104,9 +104,7 @@ class PinIndexItem extends React.Component {
 							location.reload(true);
 						}
 					} ></div>
-					
 				</div>
-
 			</div>
 		)
 	}
