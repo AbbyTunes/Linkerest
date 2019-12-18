@@ -33,8 +33,11 @@ class BoardShowItem extends React.Component {
 			newLink = "no link yet"
 		}
 		if (newLink.startsWith("https://")) {
-			// console.log("chomp https");
 			newLink = newLink.slice(8);
+		};
+
+		if (newLink.startsWith("http://")) {
+			newLink = newLink.slice(7);
 		};
 
 		if ( newLink.endsWith(".com") && newLink.length > 24 ) {
