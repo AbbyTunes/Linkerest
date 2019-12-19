@@ -17,13 +17,16 @@ class PinIndex extends React.Component {
 
 		const { pins, boards, removePin } = this.props;
 
+		let emptyPin;
 		if (!pins.length || !boards.length) {
-			return (
+			emptyPin = (
 				<div className="empty-board">
 					<div className="empty-text"> You don't have pins yet</div>
 					<Link to="/create-pin"><div className="upload-pin">Upload Pins</div></Link>
 				</div>
 			)			
+		} else {
+			emptyPin = null;
 		}
 
 		const columns = [[], [], [], []];
@@ -51,12 +54,15 @@ class PinIndex extends React.Component {
 		});
 
 		return (
-			<div className="pin-frame-canvas">
-				<div className="grid">
-					{columnPins}
+			<div className="board-canvas">
+				{emptyPin}
+
+				<div className="pin-frame-canvas">
+					<div className="grid">
+						{columnPins}
+					</div>
 				</div>
 			</div>
-			
 		);
 	}
 }
