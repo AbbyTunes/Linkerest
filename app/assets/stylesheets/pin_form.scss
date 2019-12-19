@@ -32,13 +32,12 @@
 
 .upper-form {
 	display: flex;
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 30px;
-	margin-right: 50px;
-	width: 200px;
-	height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 40px 50px;
+    width: 230px;
+    height: 40px;
 	border-radius: 10px;
 	background-color: rgb(236, 236, 236);
 	overflow: hidden;
@@ -47,18 +46,19 @@
 
 .selector {
 	position: relative;
-	left: 0;
-	border: none;
-	outline: none;
-	background-color: rgb(236, 236, 236);
-	color: rgb(110, 110, 110);
-	width: 130px;
-	padding-left: 8px;
-	text-align: center;
-	text-decoration: none;
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: bold;
+    left: 0;
+    top: 0;
+    border: none;
+    outline: none;
+    background-color: #ececec;
+    color: #6e6e6e;
+    width: 180px;
+    padding-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -69,13 +69,16 @@
 }
 
 .save-button {
-	border: none;
-	background-color: red;
-	color: white;
-	width: 70px;
-	font-size: 16px;
-	font-weight: bold;
-	cursor: pointer;
+	position: relative;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: red;
+    color: white;
+    width: 70px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
