@@ -38,7 +38,6 @@ class PinShow extends React.Component {
 		};
 
 		if (newLink.endsWith(".com") && newLink.length > 24) {
-			// console.log("chomp .com");
 			newLink = newLink.slice(0, -4);
 		}
 

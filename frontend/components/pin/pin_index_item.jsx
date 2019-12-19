@@ -85,7 +85,6 @@ class PinIndexItem extends React.Component {
 		const { pin } = this.props;
 		const shortLink = this.chompLink();
 
-		// debugger
 		return (
 			<div className="pin-pic" key={`pin-${pin.id}`}>
 

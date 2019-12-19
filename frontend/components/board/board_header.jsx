@@ -1,6 +1,5 @@
 import React from "react";
 import BoardIndexContainer from "./board_index_container";
-import CreatePinContainer from "../pin/create_pin_container";
 
 class Tabs extends React.Component {
 	
@@ -44,8 +43,7 @@ export default class BoardHeader extends React.Component {
 
 	render() {
 		const { currentUser } = this.props;
-		// console.log(currentUser);
-		// debugger
+
 		const tabs = [
 			// { title: 'My Boards', content: <BoardIndexContainer /> },
 			// { title: 'Upload Pin', content: <CreatePinContainer /> }
