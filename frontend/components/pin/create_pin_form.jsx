@@ -55,7 +55,7 @@ class CreatePinForm extends React.Component {
 		}
 
 		let boardId = this.state.boardId ? this.state.boardId : this.props.boards[0].id;
-		console.log(boardId)
+
 		$.ajax({
 			url: '/api/pins',
 			method: 'POST',
