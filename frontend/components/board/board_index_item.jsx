@@ -32,7 +32,6 @@ class BoardIndexItem extends React.Component {
 
 	render() {
 		const { board } = this.props;
-		// console.log(board.itemIds);
 
 		return (
 			<div className="board-link" key={`board-${board.id}`} >

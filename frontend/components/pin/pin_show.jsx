@@ -18,9 +18,8 @@ class PinShow extends React.Component {
 		e.preventDefault();
 		const { id , currentUser } = this.props;
 		this.props.removeItem(id);
-		this.props.removePin(id);
-		// straight to main page
-		// this.props.history.push(`/my-boards/${this.state.boardId}`);
+		this.props.removePin(id)
+		this.props.history.push("/");
 	}
 
 	chompLink() {		
@@ -38,7 +37,6 @@ class PinShow extends React.Component {
 		};
 
 		if (newLink.endsWith(".com") && newLink.length > 24) {
-			// console.log("chomp .com");
 			newLink = newLink.slice(0, -4);
 		}
 

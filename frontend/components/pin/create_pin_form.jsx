@@ -55,7 +55,7 @@ class CreatePinForm extends React.Component {
 		}
 
 		let boardId = this.state.boardId ? this.state.boardId : this.props.boards[0].id;
-		console.log(boardId)
+
 		$.ajax({
 			url: '/api/pins',
 			method: 'POST',
@@ -63,28 +63,23 @@ class CreatePinForm extends React.Component {
 			contentType: false,
 			processData: false
 		}).then((response) => (
-				// console.log(response)
-				// return (
-					$.ajax({
-						url: `/api/boards/${boardId}/pins/${response.id}/items`,
-						method: 'POST',
-						data: { item: { 
-							title: this.state.title, 
-							description: this.state.description
-						}}
-					}).then((response) => {
-						// this.props.history.push(`/`);
-						this.props.history.push(`/my-boards/${boardId}`);
-						// location.reload(true);
-					})
-				// )
-			)
-		)
+			$.ajax({
+				url: `/api/boards/${boardId}/pins/${response.id}/items`,
+				method: 'POST',
+				data: { item: { 
+					title: this.state.title, 
+					description: this.state.description
+				}}
+			}).then((response) => {
+				// this.props.history.push(`/`);
+				this.props.history.push(`/my-boards/${boardId}`);
+				// location.reload(true);
+			})
+		))
 	}
 
 	constructBoardSelection() {
 		const { boards } = this.props;
-		// debugger
 
 		const currentBoards = [];	
 		boards.forEach(board => currentBoards.push(board));
@@ -97,7 +92,6 @@ class CreatePinForm extends React.Component {
 		if (boards.length === 0) {
 			return ( 
 				<div className="create-pin-empty-board"> 
-					{/* <div className="empty-text">you don't have Boards yet</div> */}
 				</div> 
 				
 				// <div className="board-frame">
