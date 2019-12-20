@@ -16,9 +16,11 @@ https://linkerest.herokuapp.com/#/
  * [Github](https://github.com/AbbyTunes)
 
 ## Background and Overview
-Linkerest is a photo and link sharing social media site.
-Through Linkerest, users can upload photos to AWS, store them in different boards, and display the pins in a trendy tiling stile. 
-Navigation is made easy on Linkerest, and users are never more than a click away from a new sharing experience.
+ * Linkerest is a photo and link sharing social media site.
+
+ * Through Linkerest, users can upload photos to AWS, store them in different boards, and display the pins in a trendy tiling stile. 
+
+ * Navigation is made easy on Linkerest, and users are never more than a click away from a new sharing experience.
 
  ## Functionality and MVP (Minimum Viable Product)
 - [ ] User Authentication
@@ -30,7 +32,7 @@ Navigation is made easy on Linkerest, and users are never more than a click away
 ## Design
 
 Home page
-![Imgur](https://imgur.com/jIoEpOh)
+![Imgur](https://i.imgur.com/jIoEpOh.png)
 
 Boards show page
 ![Imgur](https://i.imgur.com/b5GgLPI.png)
@@ -39,7 +41,7 @@ Photo uploads and preview
 ![Imgur](https://i.imgur.com/TIXxyUa.png)
 
 Navigation bar and dropdown menu
-![Imgur](https://i.imgur.com/bfP7RwH.png)
+![Imgur](https://i.imgur.com/RAcNUhS.png)
 
 ## Sample Code
 
