@@ -1,0 +1,207 @@
+
+.pin-frame-canvas {
+	position: relative;
+	top: 20px;
+	left: 0;
+	right: 0;
+	display: block;
+	margin: auto;
+
+	.grid {
+		height: auto;
+		width: 1050px;
+		margin: auto;
+		display: flex;
+
+		.col {
+			display: flex;
+			flex-direction: column;
+			width: 350px;
+		}
+	}
+}
+
+.pin-pic {
+	display: block;
+    position: relative;
+    height: auto;
+    min-height: 150px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin: 7px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.pin-pic-link-bottom {
+	padding-bottom: 20px;
+}
+
+.pin-pic:hover {
+	background-color: rgba(228, 228, 228, 0.8);
+	border-radius: 10px;
+	-webkit-transition: all 0.3s;
+    transition: all 0.3s;
+	// transition-timing-function: ease;
+}
+
+.pin-pic img {
+	width: 230px;
+	height: auto;
+	min-height: 150px;
+	margin: 10px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pin-pic:hover .pin-info {
+	display: block;
+}
+
+.pin-info {
+	display: none;
+    position: absolute;
+    bottom: 145px;
+    left: 32px;
+    width: 75%;
+    z-index: 20;
+}
+
+.item-delete {
+	position: absolute;
+    left: 0;
+    top: 50px;
+	border-radius: 50%;
+	opacity: 0.85;
+    border: none;
+    height: 28px;
+    width: 36px;
+	padding-top: 7px;
+	background: image-url("pen2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	-webkit-transition: width 0.2s, height 0.2s, content 0.2s; /* Safari prior 6.1 */ 
+	transition: width 0.2s, height 0.2s, content 0.2s;
+	transition-timing-function: ease;
+}
+
+.item-delete:hover {
+	display: block;
+    width: 64px;
+	height: 25px;
+    border-radius: 20px;
+    background: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: 8px;
+	padding-left: 19px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #4e4e4e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	z-index: 300;
+	cursor: pointer;
+}
+
+.item-delete:hover:after {
+	content: "Delete";
+}
+
+.item-delete:active {
+	box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
+	background-color: rgb(255, 255, 255);
+}
+
+
+.pin-link {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 35px;
+	opacity: 0.85;
+	background: image-url("link2.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	padding-top: 10px;
+	padding-left: 1px;
+	z-index: 100;
+	cursor: pointer;
+	-webkit-transition: width 0.35s, height 0.35s, content 0.35s, opacity 0.35s; /* Safari prior 6.1 */ 
+	transition: width 0.35s, height 0.35s, content 0.35s, opacity 0.35s;
+	transition-timing-function: ease;
+}
+
+.pin-link:hover {
+    background: none;
+	width: 100%;
+	max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    color: #4e4e4e;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+	cursor: pointer;
+}
+
+.pin-link:hover:before {
+	content: attr(value);
+}
+
+.pin-link:active {
+	box-shadow: 0 0 0 4px rgba(0, 132, 255, .6);
+	background-color: rgb(255, 255, 255);
+}
+
+// .pin-option {
+// 	display: flex;
+// 	position: absolute;
+// 	top: 25px;
+// 	right: 25px;
+// 	width: 200px;
+// 	height: 40px;
+// 	border-radius: 10px;
+// 	background-color: rgb(236, 236, 236);
+// 	overflow: hidden;
+// 	align-content: center;
+// }
+
+// .white {
+// 	position: relative;
+// 	left: 0;
+// 	border: none;
+// 	background-color: rgb(236, 236, 236);
+// 	color: black;
+// 	width: 130px;
+// 	padding-left: 8px;
+// 	text-align: center;
+// 	text-decoration: none;
+// 	font-size: 15px;
+// 	font-weight: bold;
+// 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+// 	opacity: 0.85;
+// }
+
+// .white:hover {
+// 	opacity: 0.9;
+// }
+
+// .red {
+// 	border: none;
+// 	background-color: rgb(223, 0, 0);
+// 	color: white;
+// 	width: 70px;
+// 	font-size: 15px;
+// 	font-weight: bold;
+// 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+// }
+
+// .red:hover {
+// 	background-color: rgb(200, 1, 1);
+// }
