@@ -21,7 +21,7 @@ class SignUpForm extends React.Component {
 					<div className="content">
 
 						<div className="logo-session"> </div>
-						<h1>Welcome to Pinterest</h1>
+						<h1>Welcome to Linterest</h1>
 						<h4>find new ideas to try</h4>
 						
 						<div className="input-field">

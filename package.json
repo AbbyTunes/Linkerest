@@ -1,7 +1,7 @@
 {
 	"name": "linkerest",
 	"version": "1.0.0",
-	"description": "pinterest clone project",
+	"description": "Linkerest Project",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
