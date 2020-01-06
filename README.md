@@ -1,7 +1,6 @@
 # Linkerest
 
-# [Live Demo](https://linkerest.herokuapp.com)
-https://linkerest.herokuapp.com/#/
+# [Live Demo](https://linkerest.herokuapp.com/#/)
 
 ## Technologies
  * Frontend: JavaScript, Ruby, React, Rails
@@ -9,11 +8,15 @@ https://linkerest.herokuapp.com/#/
  * Database: PostgreSQL
  * Cloud Storage: AWS
 
-## Developer
- * Jun Xu (Abby)
- * [LinkedIn](https://www.linkedin.com/in/abby-jun-xu/)  
- * [Portfolio](https://www.abbydeveloper.com/)
- * [Github](https://github.com/AbbyTunes)
+## About Developer
+
+### Abby Xu
+JavaScript, React, Redux, GraphQL, Rails, MongoDB, Express, Node.js, PostgreSQL, and AWS
+* [Portfolio](https://www.abbydeveloper.com)
+* [Linkedin](https://www.linkedin.com/in/abby-jun-xu/)
+* [Github](https://www.github.com/AbbyTunes)
+
+![Imgur](https://i.imgur.com/GDACneq.png)
 
 ## Background and Overview
  * Linkerest is a photo and link sharing social media site.
@@ -22,41 +25,40 @@ https://linkerest.herokuapp.com/#/
 
  * Navigation is made easy on Linkerest, and users are never more than a click away from a new sharing experience.
 
- ## Functionality and MVP (Minimum Viable Product)
-- [ ] User Authentication
-- [ ] Nav Bar
-- [ ] Upload Pins to AWS
-- [ ] Pins Index & Show
-- [ ] Boards Index & Show
+ ## Features and Design
 
-## Design
+### User Authentication
 
-Home page
+![Imgur](https://i.imgur.com/5umPy2i.png)
+
+### Home Page: Pins in tiling style
+
 ![Imgur](https://i.imgur.com/jIoEpOh.png)
 
-Boards show page
-![Imgur](https://i.imgur.com/b5GgLPI.png)
+### Nav Bar
 
-Photo uploads and preview
-![Imgur](https://i.imgur.com/TIXxyUa.png)
+![Imgur](https://i.imgur.com/YK6xjp7.png)
 
-Navigation bar and dropdown menu
-![Imgur](https://i.imgur.com/RAcNUhS.png)
+### Upload Pins to AWS
 
-## Sample Code
+![Imgur](https://i.imgur.com/kMCGvgw.png)
+
+### Pin Show
+
+![Imgur](https://i.imgur.com/4rnmVzb.png)
+
+### Board Index
+
+![Imgur](https://i.imgur.com/9MplHtc.png)
+
+
+## Technical Challenges
 
 ```javascript 
 //profile.jsx
 
 ```
 
-## Challenges
-
-
-
-
 ### Upcoming Features
-* Search functionality 
-* User Profile
+* Search functionality
 * Following & Followed
-* Comments
