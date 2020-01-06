@@ -29,15 +29,11 @@ JavaScript, React, Redux, GraphQL, Rails, MongoDB, Express, Node.js, PostgreSQL,
 
 ### User Authentication
 
-![Imgur](https://i.imgur.com/5umPy2i.png)
+![Imgur](https://i.imgur.com/ooTR0RA.png)
 
 ### Home Page: Pins in tiling style
 
-![Imgur](https://i.imgur.com/jIoEpOh.png)
-
-### Nav Bar
-
-![Imgur](https://i.imgur.com/YK6xjp7.png)
+![Imgur](https://i.imgur.com/nttgKOz.png)
 
 ### Upload Pins to AWS
 
