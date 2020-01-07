@@ -141,9 +141,9 @@ $.ajax({
 ```
 
 ### Pin Show:
-### creating the logic to shorten link urls if it is too long to display in a div
+### creating the logic to shorten link urls if it is too long to display in a div, but still keep the original url in database
 
-![Imgur](https://i.imgur.com/pzgVyEQ.png)
+![Imgur](https://i.imgur.com/4rnmVzb.png)
 
 ```javascript
 
