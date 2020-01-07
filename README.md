@@ -58,8 +58,8 @@ const columnPins = columns.map((col, idx) => {
 });
 ```
 
-
-### User Authentication using Ruby on Rails framework
+### User Authentication:
+### Using Ruby on Rails framework
 
 ![Imgur](https://i.imgur.com/XVREhfF.png)
 
