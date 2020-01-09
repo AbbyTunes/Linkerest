@@ -16,7 +16,7 @@
 JavaScript, React, Redux, GraphQL, Rails, MongoDB, Express, Node.js, PostgreSQL, and AWS
 * [Portfolio](https://www.abbydeveloper.com)
 * [Linkedin](https://www.linkedin.com/in/abby-jun-xu/)
-* [Github](https://www.github.com/AbbyTunes)
+* [Github](https://github.com/AbbyTunes/Abby_Portfolio)
 
 ![Imgur](https://i.imgur.com/GDACneq.png)
 

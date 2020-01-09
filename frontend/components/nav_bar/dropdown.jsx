@@ -40,7 +40,7 @@ class Dropdown extends React.Component {
               >
                 <li>LinkedIn</li>
               </a>
-              <a target="_blank" href="https://github.com/AbbyTunes">
+			  <a target="_blank" href="https://github.com/AbbyTunes/Abby_Portfolio">
                 <li>Github</li>
               </a>
               <li onClick={this.props.logout}>Log out</li>
